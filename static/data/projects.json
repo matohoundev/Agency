@@ -1,0 +1,26 @@
+[
+	{
+		"id": "projet-1",
+		"title": "Nom du Projet 1",
+		"description": "Description détaillée du projet...",
+		"technologies": ["React", "Node.js", "MongoDB"],
+		"image": "/images/projet-1.jpg",
+		"splineModel": "https://prod.spline.design/ton-id-de-scene/scene.splinecode",
+		"githubUrl": "https://github.com/ton-username/projet-1",
+		"demoUrl": "https://demo-projet-1.com",
+		"featured": true,
+		"date": "2023-12-01"
+	},
+	{
+		"id": "projet-2",
+		"title": "Nom du Projet 2",
+		"description": "Description détaillée du projet...",
+		"technologies": ["Vue.js", "Firebase"],
+		"image": "/images/projet-2.jpg",
+		"splineModel": "https://prod.spline.design/ton-id-de-scene-2/scene.splinecode",
+		"githubUrl": "https://github.com/ton-username/projet-2",
+		"demoUrl": "https://demo-projet-2.com",
+		"featured": false,
+		"date": "2023-10-15"
+	}
+]
