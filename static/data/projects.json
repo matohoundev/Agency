@@ -1,10 +1,12 @@
 [
 	{
 		"id": "projet-1",
-		"title": "Nom du Projet 1",
+		"title": "Google",
 		"description": "Description détaillée du projet...",
 		"technologies": ["React", "Node.js", "MongoDB"],
 		"image": "/images/projet-1.jpg",
+		"videoUrl": "https://www.youtube.com/embed/rQj3XcTG5YA?si=11EzT15irym77R1A",
+		"iconUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg",
 		"splineModel": "https://prod.spline.design/ton-id-de-scene/scene.splinecode",
 		"githubUrl": "https://github.com/ton-username/projet-1",
 		"demoUrl": "https://demo-projet-1.com",
@@ -17,10 +19,26 @@
 		"description": "Description détaillée du projet...",
 		"technologies": ["Vue.js", "Firebase"],
 		"image": "/images/projet-2.jpg",
+		"videoUrl": "https://www.youtube.com/embed/rQj3XcTG5YA?si=11EzT15irym77R1A",
+		"iconUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg",
 		"splineModel": "https://prod.spline.design/ton-id-de-scene-2/scene.splinecode",
 		"githubUrl": "https://github.com/ton-username/projet-2",
 		"demoUrl": "https://demo-projet-2.com",
 		"featured": false,
 		"date": "2023-10-15"
+	},
+	{
+		"id": "projet-3",
+		"title": "Nom du Projet 3",
+		"description": "Description détaillée du projet...",
+		"technologies": ["Svelte", "Tailwind", "Firebase"],
+		"image": "/images/projet-3.jpg",
+		"videoUrl": "https://www.youtube.com/embed/rQj3XcTG5YA?si=11EzT15irym77R1A",
+		"iconUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg",
+		"splineModel": "https://prod.spline.design/ton-id-de-scene-3/scene.splinecode",
+		"githubUrl": "https://github.com/ton-username/projet-3",
+		"demoUrl": "https://demo-projet-3.com",
+		"featured": true,
+		"date": "2024-01-15"
 	}
 ]

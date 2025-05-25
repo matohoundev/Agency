@@ -7,6 +7,11 @@ settings:
 onlyBuiltDependencies:
   - esbuild
 
+dependencies:
+  swiper:
+    specifier: ^11.2.8
+    version: 11.2.8
+
 devDependencies:
   '@eslint/compat':
     specifier: ^1.2.5
@@ -2522,6 +2527,11 @@ packages:
       magic-string: 0.30.17
       zimmerframe: 1.1.2
     dev: true
+
+  /swiper@11.2.8:
+    resolution: {integrity: sha512-S5FVf6zWynPWooi7pJ7lZhSUe2snTzqLuUzbd5h5PHUOhzgvW0bLKBd2wv0ixn6/5o9vwc/IkQT74CRcLJQzeg==}
+    engines: {node: '>= 4.7.0'}
+    dev: false
 
   /tailwindcss@4.0.17:
     resolution: {integrity: sha512-OErSiGzRa6rLiOvaipsDZvLMSpsBZ4ysB4f0VKGXUrjw2jfkJRd6kjRKV2+ZmTCNvwtvgdDam5D7w6WXsdLJZw==}

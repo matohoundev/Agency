@@ -9,7 +9,7 @@
 
 <Nav />
 
-<main class="relative z-5">
+<main class="relative z-5 overflow-hidden">
 	{@render children()}
 </main>
 
