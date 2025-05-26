@@ -53,7 +53,7 @@
 	@media screen and (min-width: 768px) {
 		.title,
 		.title-effect {
-			font-size: 4.25rem;
+			font-size: 3rem;
 		}
 	}
 
@@ -61,12 +61,23 @@
 		.suptitle {
 			font-size: 1.5rem;
 		}
+	}
+
+	@media screen and (min-width: 1280px) {
 		.title,
 		.title-effect {
-			font-size: 4.8rem;
+			font-size: 3.7rem;
 		}
 	}
+
 	@media screen and (min-width: 1440px) {
+		.title,
+		.title-effect {
+			font-size: 4.5rem;
+		}
+	}
+
+	@media screen and (min-width: 1920px) {
 		.title,
 		.title-effect {
 			font-size: 5.8rem;
