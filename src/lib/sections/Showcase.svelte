@@ -57,7 +57,7 @@
 						depth: 500,
 						// depth: 100,
 						modifier: 1,
-						slideShadows: true
+						slideShadows: false
 						// scale: 1.5
 					}
 				});
