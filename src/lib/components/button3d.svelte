@@ -1,5 +1,5 @@
 <div class="button3D">
-	<button class="relative z-15 text-xl lg:text-2xl">
+	<button class="relative z-15">
 		<a href="https://atohoun-marvin.fr/" target="_blank" rel="noopener noreferrer"
 			>Réserver un appel gratuit</a
 		>
@@ -32,6 +32,8 @@
 		width: 100%;
 		/* border: 1px solid blue; */
 		margin: 21px 40px;
+		font-size: var(--text-xl) /* 1.25rem = 20px */;
+		line-height: var(--tw-leading, var(--text-xl--line-height) /* calc(1.75 / 1.25) ≈ 1.4 */);
 	}
 	button {
 		background-color: #000000;
@@ -52,6 +54,23 @@
 			margin-inline: 64px;
 		}
 	}
+
+	@media screen and (min-width: 1280px) {
+		a {
+			font-size: var(--text-2xl) /* 1.5rem = 24px */;
+			line-height: var(--tw-leading, var(--text-2xl--line-height) /* calc(2 / 1.5) ≈ 1.3333 */);
+		}
+	}
+
+	@media screen and (max-width: 1280px) {
+		.button3D {
+			max-width: 350px;
+		}
+		a {
+			margin-inline: 32px;
+		}
+	}
+
 	.button-3d {
 		width: 100%;
 		height: 100%;
