@@ -17,7 +17,7 @@
 <style>
 	/* base */
 	section {
-		height: 100vh;
+		min-height: 100vh;
 		border: 1px solid black;
 		padding-inline: 8%;
 	}
@@ -81,7 +81,7 @@
 	@media screen and (min-width: 1440px) {
 		p {
 			width: 70%;
-			font-size: 2rem;
+			font-size: 1.7rem;
 		}
 	}
 
