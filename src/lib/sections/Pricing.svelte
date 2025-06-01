@@ -30,7 +30,7 @@
 <style>
 	section {
 		min-height: 100vh;
-		border: 3px solid green;
+		/* border: 3px solid green; */
 	}
 
 	.pricing-title,
@@ -73,7 +73,7 @@
 		}
 	}
 
-	@media screen and (min-width: 1024px) {
+	@media screen and (min-width: 1920px) {
 		.pricing-title,
 		.princing-title-effect {
 			font-size: 3.5rem;

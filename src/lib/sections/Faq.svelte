@@ -72,6 +72,26 @@
 		font-family: 'Montserrat', sans-serif;
 	}
 
+	@media screen and (min-width: 768px) {
+		h5 {
+			font-size: 2.7rem;
+		}
+
+		.faq-subtitle {
+			font-size: 1.2rem;
+		}
+	}
+
+	@media screen and (min-width: 1920px) {
+		h5 {
+			font-size: 3rem;
+		}
+
+		.faq-subtitle {
+			font-size: 1.3rem;
+		}
+	}
+
 	.faq-subtitle,
 	.mail {
 		font-family: 'Manrope', sans-serif;

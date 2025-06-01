@@ -137,6 +137,22 @@
 		/* font-size: 1.2rem; */
 	}
 
+	@media screen and (min-width: 768px) {
+		h2 {
+			font-size: 2.7rem;
+		}
+	}
+
+	@media screen and (min-width: 1920px) {
+		h2 {
+			font-size: 3rem;
+		}
+
+		.Showcase-head p {
+			font-size: 1.3rem;
+		}
+	}
+
 	.swiper {
 		width: 100%;
 		height: 100%;

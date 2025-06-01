@@ -1,5 +1,5 @@
 <section
-	class="About container mx-auto sm:px-20 md:pt-20 2xl:pt-48 flex flex-col justify-center md:justify-start gap-y-12 sm:gap-y-24 2xl:gap-y-36"
+	class="About container mx-auto flex flex-col justify-center gap-y-12 sm:gap-y-24 2xl:gap-y-36"
 >
 	<div class="about-title text-center sm:w-fit">
 		<h2 class="font-bold">Bringing Vibrancy <br /> To Your Identity</h2>
@@ -18,14 +18,8 @@
 	/* base */
 	section {
 		min-height: 100vh;
-		border: 1px solid black;
+		/* border: 1px solid black; */
 		padding-inline: 8%;
-	}
-
-	@media screen and (min-width: 1280px) {
-		section {
-			padding-top: 7%;
-		}
 	}
 
 	h2 {

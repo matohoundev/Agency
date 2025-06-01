@@ -24,7 +24,7 @@
 	/* base */
 	section {
 		height: 100vh;
-		border: 1px solid green;
+		/* border: 1px solid green; */
 	}
 
 	/* custom */
