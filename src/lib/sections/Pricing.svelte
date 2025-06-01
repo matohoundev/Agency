@@ -14,7 +14,9 @@
 				>Des offres simples,<br /> adaptées à votre croissance
 			</span>
 		</div>
-		<p class="text-center princing-subtitle">Obtenez un site web qui tient ses promesses.</p>
+		<p class="text-center princing-subtitle text-lg">
+			Obtenez un site web qui tient ses promesses.
+		</p>
 		<!-- <p class="text-center princing-subtitle">3 offres pour tous les gouverner</p> -->
 	</div>
 	<div
@@ -35,7 +37,7 @@
 	.princing-title-effect {
 		font-family: 'Montserrat', sans-serif;
 		font-weight: bold;
-		font-size: 2rem;
+		font-size: 2.25rem;
 		line-height: 1.3;
 	}
 
@@ -50,8 +52,8 @@
 
 	.princing-subtitle {
 		font-family: 'Manrope', sans-serif;
-		font-weight: bold;
-		font-size: 1.1rem;
+		/* font-weight: bold; */
+		/* font-size: 1.1rem; */
 		line-height: 1.4;
 	}
 

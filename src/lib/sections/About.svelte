@@ -6,10 +6,10 @@
 	</div>
 	<div class="about-content flex justify-center sm:justify-end sm:w-fit">
 		<p>
-			"Votre projet est le mien" c'est ainsi que j'envisage une mission, votre motivation est la
-			mienne et c'est ce qui me permet d'atteindre un rendu fidèle au design. Développer de manière
-			agile et polir chaque détail avec la soif d'innover, ce sont mes valeurs. Je suis un
-			développeur passionné par le design et l'expérience utilisateur.
+			<span>"Votre projet est le mien"</span> c'est ainsi que j'envisage une mission, votre motivation
+			est la mienne et c'est ce qui me permet d'atteindre un rendu fidèle au design. Développer de manière
+			agile et polir chaque détail avec la soif d'innover, ce sont mes valeurs. Je suis un développeur
+			passionné par le design et l'expérience utilisateur.
 		</p>
 	</div>
 </section>
@@ -53,11 +53,15 @@
 	}
 
 	p {
-		font-family: 'Montserrat', sans-serif;
-		font-weight: bold;
+		font-family: 'Manrope', sans-serif;
+		font-weight: 400;
 		color: white;
 		font-size: 1.15rem;
 		text-align: justify;
+	}
+
+	p span {
+		font-weight: 900;
 	}
 
 	@media screen and (min-width: 400px) {

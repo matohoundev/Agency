@@ -72,8 +72,8 @@
 
 <section class="Showcase container mx-auto flex flex-col py-12.5 px-3 md:px-15 lg:px-0 gap-y-10.5">
 	<div class="Showcase-head flex flex-col justify-center items-center gap-y-6 md:gap-y-4">
-		<h2 class="text-center text-white">Les dernières réalisations <br /> Faites avec amour</h2>
-		<p class="text-center text-white">
+		<h2 class="text-center text-white text-4xl">Les dernières réalisations</h2>
+		<p class="text-center text-white text-lg">
 			Découvrez comment nous transformons des idées ambitieuses en sites à fort impact.
 		</p>
 	</div>
@@ -126,14 +126,15 @@
 	h2 {
 		font-family: 'Montserrat', sans-serif;
 		font-weight: bold;
-		font-size: 2.5rem;
+		/* font-size: 2.5rem; */
+		/* font-size: 2rem; */
 		line-height: 1.3;
 	}
 
 	.Showcase-head p {
 		font-family: 'Manrope', sans-serif;
-		font-weight: bold;
-		font-size: 1.2rem;
+		/* font-weight: bold; */
+		/* font-size: 1.2rem; */
 	}
 
 	.swiper {
