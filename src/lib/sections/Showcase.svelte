@@ -101,26 +101,23 @@
 								referrerpolicy="strict-origin-when-cross-origin"
 								allowfullscreen
 							></iframe>
-							<div class="project-card-subtitle flex gap-x-2">
-								<img class="w-10 h-10" src={project.iconUrl} alt="{project.title} Icon" />
+							<div class="project-card-subtitle flex gap-x-2 items-center">
+								<img src={project.iconUrl} alt="{project.title} Icon" />
 								<p class="text-white font-bold text-3xl">{project.title}</p>
 							</div>
 						</div>
 					</div>
 				{/each}
 			</div>
-
-			<div class="swiper-pagination"></div>
-			<div class="swiper-button-next"></div>
-			<div class="swiper-button-prev"></div>
 		</div>
 	{/if}
 </section>
 
 <style>
 	section {
-		height: 100vh;
-		border: 1px solid black;
+		/* height: 100vh; */
+		height: min-content;
+		/* border: 1px solid black; */
 	}
 
 	h2 {
@@ -155,8 +152,8 @@
 
 	.swiper {
 		width: 100%;
-		height: 100%;
-		border: 1px solid blue;
+		height: min-content;
+		/* border: 1px solid blue; */
 		overflow: visible !important;
 	}
 
@@ -167,9 +164,16 @@
 	}
 
 	.project-card {
-		width: 50vw;
+		width: 100%;
 		height: 60vh;
 		transition: transform 0.2s ease-out;
+	}
+
+	@media screen and (min-width: 1024px) {
+		.project-card {
+			height: 100%;
+			aspect-ratio: 16 / 9;
+		}
 	}
 
 	.project-card:hover {
@@ -179,11 +183,10 @@
 
 	.project-video {
 		width: 100%;
-		height: 92%;
-		object-fit: cover;
+		height: 100%;
 	}
 
 	.project-card-subtitle {
-		height: 8%;
+		/* height: 8%; */
 	}
 </style>
