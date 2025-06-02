@@ -30,7 +30,7 @@
 		background-color: #fbf9f7;
 	}
 
-	detail-box {
+	.detail-box {
 		/* background-color: crimson; */
 	}
 
