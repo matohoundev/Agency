@@ -2,14 +2,13 @@
 	class="About container mx-auto flex flex-col justify-center gap-y-12 sm:gap-y-24 2xl:gap-y-36"
 >
 	<div class="about-title text-center sm:w-fit">
-		<h2 class="font-bold">Bringing Vibrancy <br /> To Your Identity</h2>
+		<h2 class="font-bold">Bringing Vibrancy<br /> To Your Identity</h2>
 	</div>
 	<div class="about-content flex justify-center sm:justify-end sm:w-fit">
 		<p>
 			<span>"Votre projet est le mien"</span> c'est ainsi que j'envisage une mission, votre motivation
-			est la mienne et c'est ce qui me permet d'atteindre un rendu fidèle au design. Développer de manière
-			agile et polir chaque détail avec la soif d'innover, ce sont mes valeurs. Je suis un développeur
-			passionné par le design et l'expérience utilisateur.
+			est la mienne et c'est ce qui me permet d'atteindre un rendu fidèle au design. Creer et polir chaque détail avec toujours cette soif d'innover, ce sont mes valeurs. Développeur
+			passionné par le design et l'expérience utilisateur avec plus de 6 ans d'expérience dans le monde du web.
 		</p>
 	</div>
 </section>
