@@ -2,9 +2,16 @@
 	import { onMount } from 'svelte';
 	import Swiper from 'swiper';
 
-	import { Autoplay, EffectCoverflow, EffectCards, EffectCreative } from 'swiper/modules';
+	import {
+		Autoplay,
+		EffectCoverflow,
+		EffectCards,
+		EffectCreative,
+		Navigation
+	} from 'swiper/modules';
 
 	import 'swiper/css';
+	import 'swiper/css/navigation';
 
 	interface Project {
 		videoUrl: string;
@@ -40,7 +47,7 @@
 			if (projects.length > 0) {
 				swiper = new Swiper(swiperContainer, {
 					// modules: [Autoplay],
-					modules: [EffectCoverflow, EffectCards, EffectCreative],
+					modules: [EffectCoverflow, EffectCards, EffectCreative, Navigation],
 					slidesPerView: 1.2,
 					centeredSlides: true,
 					spaceBetween: 130,
@@ -51,14 +58,20 @@
 					grabCursor: true,
 					effect: 'coverflow',
 					coverflowEffect: {
+						rotate: 0,
 						rotate: 50,
 						// rotate: 90,
 						stretch: 0,
-						depth: 500,
+						// stretch: -170,
+						// depth: 500,
 						// depth: 100,
 						modifier: 1,
 						slideShadows: false
-						// scale: 1.5
+						// scale: 1.5,
+					},
+					navigation: {
+						nextEl: '.swiper-button-next',
+						prevEl: '.swiper-button-prev'
 					}
 				});
 			}
@@ -109,6 +122,9 @@
 					</div>
 				{/each}
 			</div>
+			<!-- Navigation buttons -->
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
 		</div>
 	{/if}
 </section>
