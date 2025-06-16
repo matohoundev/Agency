@@ -10,6 +10,25 @@
 			Avec un design impactant, une structure stratégique et un copywriting affûté.
 		</p>
 	</div>
+	<div class="Detail-content flex flex-col md:flex-row justify-center items-center gap-y-6 md:gap-x-12">
+		<div class="flex flex-col border-1">
+			<span class="text-2xl font-bold">UX/UI Design</span>
+			<img
+					src="https://images.unsplash.com/photo-1500522144261-ea64433bbe27?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+					alt="UX/UI Design"
+					class="z-10 w-1/6 rounded-lg "
+				/>
+				<div class="">
+					<p>Arrêtez de passer inaperçu. <br/> Faites partie de ceux qu'on retient.</p>
+					<div class="flex flex-col gap-y-2">
+						<p class="">Design premium-sur-mesure, adieu les templates génériques</p>
+						<p class="">Parcours utilisateur naturel et orienté conversion</p>
+						<p class="">Chaque élément est pensé pour guider, engager et pousser à l'action</p>
+					</div>
+
+				</div>
+		</div>
+	</div>
 </section>
 
 <style>
