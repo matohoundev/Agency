@@ -78,6 +78,10 @@
 			font-size: 3rem;
 		}
 
+		.detail-title-effect {
+			font-size: 3rem;
+		}
+
 		.detail-subtitle {
 			font-size: 1.3rem;
 		}
