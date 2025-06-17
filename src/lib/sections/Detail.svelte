@@ -10,23 +10,28 @@
 			Avec un design impactant, une structure stratégique et un copywriting affûté.
 		</p>
 	</div>
-	<div class="Detail-content flex flex-col md:flex-row justify-center items-center gap-y-6 md:gap-x-12">
-		<div class="flex flex-col border-1">
-			<span class="text-2xl font-bold">UX/UI Design</span>
-			<img
+	<div
+		class="Detail-content flex flex-col md:flex-row justify-center items-center gap-y-6 md:gap-x-12"
+	>
+		<div class=" relative border-1 bg-white rounded-lg">
+			<span class="detail-card-title text-2xl font-bold absolute">UX/UI DESIGN</span>
+			<div class="flex gap-x-10 items-center py-3 px-3">
+				<img
 					src="https://images.unsplash.com/photo-1500522144261-ea64433bbe27?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 					alt="UX/UI Design"
-					class="z-10 w-1/6 rounded-lg "
+					class="z-10 rounded-lg shadow-lg w-[300px] h-auto object-cover"
 				/>
-				<div class="">
-					<p>Arrêtez de passer inaperçu. <br/> Faites partie de ceux qu'on retient.</p>
-					<div class="flex flex-col gap-y-2">
+				<div class="flex flex-col gap-y-3">
+					<p class="detail-highlight">
+						Arrêtez de passer inaperçu. <br /> Faites partie de ceux qu'on retient.
+					</p>
+					<div class="detail-features flex flex-col gap-y-2">
 						<p class="">Design premium-sur-mesure, adieu les templates génériques</p>
 						<p class="">Parcours utilisateur naturel et orienté conversion</p>
 						<p class="">Chaque élément est pensé pour guider, engager et pousser à l'action</p>
 					</div>
-
 				</div>
+			</div>
 		</div>
 	</div>
 </section>
@@ -35,7 +40,8 @@
 	section {
 		height: 100vh;
 		border: 1px solid black;
-		background-color: #fbf9f7;
+		/* background-color: #fbf9f7; */
+		background-color: #ffffff;
 	}
 
 	.detail-title,
@@ -75,5 +81,31 @@
 		.detail-subtitle {
 			font-size: 1.3rem;
 		}
+	}
+
+	.detail-card-title {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: bold;
+		font-size: 2.2rem;
+		color: #000;
+		background-color: #fff;
+		top: -32px;
+		right: -5px;
+		/* border: 1px solid red; */
+		padding: 0.5rem 0 0.5rem 1rem;
+		/* border-radius: 0 0.5rem 0.5rem 0; */
+	}
+
+	.detail-highlight {
+		font-family: 'Manrope', sans-serif;
+		font-weight: bold;
+		font-size: 1.2rem;
+		color: #000000;
+	}
+
+	.detail-features {
+		font-family: 'Manrope', sans-serif;
+		font-size: 1rem;
+		color: #555;
 	}
 </style>
