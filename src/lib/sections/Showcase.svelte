@@ -47,23 +47,23 @@
 			if (projects.length > 0) {
 				swiper = new Swiper(swiperContainer, {
 					// modules: [Autoplay],
-					modules: [EffectCoverflow, EffectCards, EffectCreative, Navigation],
+					modules: [EffectCoverflow, EffectCards, EffectCreative, Navigation, Autoplay],
 					slidesPerView: 1.2,
 					centeredSlides: true,
 					spaceBetween: 130,
 					// autoplay: {
 					// 	delay: 5000,
 					// 	disableOnInteraction: false
-					// }
+					// },
 					grabCursor: true,
 					effect: 'coverflow',
 					coverflowEffect: {
-						rotate: 0,
-						rotate: 50,
-						// rotate: 90,
+						// rotate: 0,
+						// rotate: 50,
+						rotate: 90,
 						stretch: 0,
 						// stretch: -170,
-						// depth: 500,
+						depth: 500,
 						// depth: 100,
 						modifier: 1,
 						slideShadows: false
