@@ -31,7 +31,7 @@
 			</ul>
 
 			<!-- Mobile menu button -->
-			<button class="md:hidden text-white align-middle" on:click={toggleMobileMenu}>
+			<button class="md:hidden text-white" on:click={toggleMobileMenu}>
 				<Hamburger />
 			</button>
 		</nav>
@@ -39,7 +39,9 @@
 
 	<!-- Mobile menu (only visible when open) -->
 	{#if isMobileMenuOpen}
-		<div class="md:hidden absolute top-16 left-0 w-full bg-black text-white pointer-events-auto">
+		<div
+			class="md:hidden mobile-nav absolute flex flex-col text-right top-16 left-0 w-full text-white pointer-events-auto"
+		>
 			<ul class="px-4 py-2">
 				<li class="py-2">
 					<a href="/realisations" class="hover:underline" on:click={closeMobileMenu}>Réalisations</a
@@ -72,7 +74,10 @@
 	nav {
 		background-color: rgba(255, 255, 255, 0.1);
 		padding: 4px 6px;
+		/* padding: 154px 106px; */
 		border-radius: 40px;
+		/* width: 30%; */
+		/* height: 50%; */
 	}
 
 	button {
@@ -91,5 +96,11 @@
 			padding: 8px 32px;
 			border-radius: 40px;
 		}
+	}
+
+	.mobile-nav {
+		background-color: rgba(0, 0, 0, 0.8);
+		backdrop-filter: blur(10px);
+		border-radius: 0 0 5px 5px;
 	}
 </style>

@@ -1,4 +1,26 @@
-<script></script>
+<script lang="ts">
+	import { onMount } from 'svelte';
+	import { gsap } from 'gsap';
+
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+	gsap.registerPlugin(ScrollTrigger);
+
+	onMount(() => {
+		gsap.to('.detail-title-effect', {
+			scrollTrigger: {
+				trigger: '.Detail-head',
+				start: 'top 80%',
+				end: 'bottom 20%',
+				scrub: true
+			},
+			x: 10,
+			y: 10,
+			duration: 1,
+			ease: 'power1.inOut'
+		});
+	});
+</script>
 
 <section class="Detail container mx-auto flex flex-col py-12.5 px-3 md:px-15 lg:px-0 gap-y-10.5">
 	<div class="Detail-head flex flex-col justify-center items-center gap-y-6 md:gap-y-4">

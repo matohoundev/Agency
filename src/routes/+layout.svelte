@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '../app.css';
-	import Nav from '$lib/components/nav.svelte';
+	import Nav from '$lib/sections/nav.svelte';
 	import Footer from '$lib/sections/Footer.svelte';
 	import Background3d from '$lib/components/Background3d.svelte';
 
