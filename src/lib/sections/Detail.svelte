@@ -7,16 +7,16 @@
 	gsap.registerPlugin(ScrollTrigger);
 
 	onMount(() => {
-		gsap.to('.detail-title-effect', {
+		gsap.to('.detail-card', {
 			scrollTrigger: {
-				trigger: '.Detail-head',
-				start: 'top 80%',
-				end: 'bottom 20%',
+				trigger: '.Showcase',
+				start: '20px',
+				// end: 'bottom',
 				scrub: true
 			},
-			x: 10,
-			y: 10,
-			duration: 1,
+			x: 0,
+			opacity: 1,
+			duration: 3,
 			ease: 'power1.inOut'
 		});
 	});
@@ -53,7 +53,7 @@
 			</div>
 		</div>
 
-		<div class="detail-card relative border-1 bg-white rounded-lg">
+		<div class="detail-card detail-card-alternate relative border-1 bg-white rounded-lg">
 			<div
 				class="flex flex-col-reverse lg:flex-row justify-between gap-x-10 items-center px-5 pt-5 pb-7 lg:py-3 lg:pr-3 lg:pl-8"
 			>
@@ -129,6 +129,12 @@
 
 	.detail-card {
 		width: 95%;
+		transform: translateX(100px);
+		opacity: 0;
+	}
+
+	.detail-card-alternate {
+		transform: translateX(-100px);
 	}
 
 	@media screen and (min-width: 1024px) {
