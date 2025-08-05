@@ -144,7 +144,7 @@
 	.detail-card {
 		width: 95%;
 		transform: translateX(100px);
-		/* opacity: 0; */
+		/* opacity: 0.5; */
 	}
 
 	.detail-card-alternate {
