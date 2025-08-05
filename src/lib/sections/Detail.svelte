@@ -7,17 +7,31 @@
 	gsap.registerPlugin(ScrollTrigger);
 
 	onMount(() => {
-		gsap.to('.detail-card', {
+		gsap.to('.detail-card-1', {
 			scrollTrigger: {
 				trigger: '.Showcase',
-				start: '20px',
-				// end: 'bottom',
+				start: '50px',
+				// start: 'top center',
+				// end: 'bottom center',
 				scrub: true
 			},
 			x: 0,
 			// opacity: 1,
 			duration: 2,
-			ease: 'power1.inOut'
+			ease: 'back.inOut'
+		});
+		gsap.to('.detail-card-2', {
+			scrollTrigger: {
+				trigger: '.Showcase',
+				start: '100px',
+				// start: 'top center',
+				// end: 'bottom center',
+				scrub: true
+			},
+			x: 0,
+			// opacity: 1,
+			duration: 2,
+			ease: 'back.inOut'
 		});
 	});
 </script>
@@ -33,7 +47,7 @@
 		</p>
 	</div>
 	<div class="Detail-content flex flex-col justify-center items-center gap-y-6 lg:gap-x-12">
-		<div class="detail-card relative border-1 bg-white rounded-lg">
+		<div class="detail-card detail-card-1 relative border-1 bg-white rounded-lg">
 			<span class="detail-card-title text-2xl font-bold absolute">UX/UI DESIGN</span>
 			<div class="flex flex-col lg:flex-row gap-x-10 items-center pt-7 pb-5 px-5 lg:px-3 lg:py-3">
 				<img
@@ -53,7 +67,7 @@
 			</div>
 		</div>
 
-		<div class="detail-card detail-card-alternate relative border-1 bg-white rounded-lg">
+		<div class="detail-card detail-card-alternate detail-card-2 relative border-1 bg-white rounded-lg">
 			<div
 				class="flex flex-col-reverse lg:flex-row justify-between gap-x-10 items-center px-5 pt-5 pb-7 lg:py-3 lg:pr-3 lg:pl-8"
 			>
