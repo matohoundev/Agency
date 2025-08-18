@@ -10,10 +10,10 @@
 		gsap.to('.detail-card-1', {
 			scrollTrigger: {
 				trigger: '.Detail',
-				start: '50px',
+				// start: '50px',
 				// start: 'top center',
 				// end: 'bottom center',
-				end: 'bottom center',
+				end: '100px',
 				// invalidateOnRefresh: true,
 				// je veux que l'animation se déclenche à chaque fois que je scroll et que je reviens en haut
 				markers: true,
