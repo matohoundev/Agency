@@ -15,29 +15,28 @@
 				// end: 'bottom center',
 				end: '100px',
 				// invalidateOnRefresh: true,
-				// je veux que l'animation se déclenche à chaque fois que je scroll et que je reviens en haut
 				markers: true,
 				// toggleActions: 'play none none reverse',	
 				scrub: true
 			},
 			x: 0,
-			opacity: 1,
 			duration: 2,
 			ease: 'back.inOut'
 		});
-		// gsap.to('.detail-card-2', {
-		// 	scrollTrigger: {
-		// 		trigger: '.Detail',
-		// 		start: '100px',
-		// 		// start: 'top center',
-		// 		// end: 'bottom center',
-		// 		scrub: true
-		// 	},
-		// 	x: 0,
-		// 	// opacity: 1,
-		// 	duration: 2,
-		// 	ease: 'back.inOut'
-		// });
+		gsap.to('.detail-card-2', {
+			scrollTrigger: {
+				trigger: '.Detail',
+				// start: '100px',
+				// start: 'top center',
+				// end: 'bottom center',
+				end: '300px',
+				markers: true,
+				scrub: true
+			},
+			x: 0,
+			duration: 2,
+			ease: 'back.inOut'
+		});
 	});
 </script>
 
@@ -149,7 +148,6 @@
 	.detail-card {
 		width: 95%;
 		transform: translateX(100px);
-		opacity: 0.5; 
 	}
 
 	.detail-card-alternate {
