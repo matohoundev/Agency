@@ -14,7 +14,7 @@
 
 <header class="fixed w-full z-10 pointer-events-none">
 	<div
-		class="container mx-auto px-4 py-4 flex justify-between items-center align-middle pointer-events-auto"
+		class="container mx-auto px-8 xl:px-16 py-4 flex justify-between items-center align-middle pointer-events-auto"
 	>
 		<!-- Logo -->
 		<a href="/">
@@ -71,6 +71,13 @@
 		font-size: 1.5rem;
 		transition: color 0.3s ease;
 	}
+
+	@media screen and (min-width: 768px) {
+		a {
+			font-size: 1.25rem;
+		}
+	}
+
 	nav {
 		background-color: rgba(255, 255, 255, 0.1);
 		padding: 4px 6px;
