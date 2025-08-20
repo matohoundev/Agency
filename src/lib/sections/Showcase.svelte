@@ -188,7 +188,6 @@
 	@media screen and (min-width: 1024px) {
 		.project-card {
 			height: 100%;
-			aspect-ratio: 16 / 9;
 		}
 	}
 
@@ -200,6 +199,12 @@
 	.project-video {
 		width: 100%;
 		height: 100%;
+	}
+
+	@media screen and (min-width: 1024px) {
+		.project-video {
+			aspect-ratio: 16 / 9;
+		}
 	}
 
 	.project-card-subtitle {
