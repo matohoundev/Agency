@@ -44,36 +44,37 @@
 	}
 
 	.suptitle {
-		font-size: 1.25rem;
+		font-size: 1rem;
 	}
+
+		@media screen and (min-width: 1024px) {
+		.suptitle {
+			font-size: 1.3rem;
+		}
+	}
+
 	.title,
 	.title-effect {
-		font-size: 3rem;
+		font-size: 2.6rem;
 	}
 	@media screen and (min-width: 768px) {
 		.title,
 		.title-effect {
-			font-size: 3rem;
-		}
-	}
-
-	@media screen and (min-width: 1024px) {
-		.suptitle {
-			font-size: 1.5rem;
+			font-size: 3.2rem;
 		}
 	}
 
 	@media screen and (min-width: 1280px) {
 		.title,
 		.title-effect {
-			font-size: 3.7rem;
+			font-size: 3.5rem;
 		}
 	}
 
 	@media screen and (min-width: 1440px) {
 		.title,
 		.title-effect {
-			font-size: 4.5rem;
+			font-size: 4rem;
 		}
 	}
 
