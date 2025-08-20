@@ -20,7 +20,7 @@
 		<!-- <p class="text-center princing-subtitle">3 offres pour tous les gouverner</p> -->
 	</div>
 	<div
-		class="Offers flex flex-col lg:flex-row justify-center items-center gap-x-8 gap-y-10 lg:gap-y-0 sm:gap-x-12"
+		class="Offers flex flex-col sm:flex-row justify-center items-center gap-x-8 gap-y-10 lg:gap-y-0 sm:gap-x-12"
 	>
 		<BoxPricing />
 		<BoxPricing />

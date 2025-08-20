@@ -15,7 +15,7 @@
 				// end: 'bottom center',
 				end: '100px',
 				// invalidateOnRefresh: true,
-				markers: true,
+				// markers: true,
 				// toggleActions: 'play none none reverse',	
 				scrub: true
 			},
@@ -30,7 +30,7 @@
 				// start: 'top center',
 				// end: 'bottom center',
 				end: '300px',
-				markers: true,
+				// markers: true,
 				scrub: true
 			},
 			x: 0,

@@ -11,9 +11,21 @@
 <style>
 	.buttonEffect {
 		position: relative;
-		max-width: 420px;
-		width: 100%;
+		/* max-width: 420px; */
+		/* width: 100%; */
 	}
+
+		/* @media screen and (max-width: 1280px) {
+		.buttonEffect {
+			max-width: 350px;
+		}
+	} */
+
+	/* @media screen and (min-width: 1920px) {
+		.buttonEffect {
+			max-width: 420px;
+		}
+	} */
 
 	button,
 	.button-3d {
@@ -42,14 +54,7 @@
 		left: 0px;
 	}
 
-	a {
-		width: 100%;
-		/* border: 1px solid blue; */
-		margin: 21px 40px;
-		font-size: var(--text-xl) /* 1.25rem = 20px */;
-		line-height: var(--tw-leading, var(--text-xl--line-height) /* calc(1.75 / 1.25) ≈ 1.4 */);
-	}
-	button {
+		button {
 		background-color: #000000;
 		position: relative;
 		color: white;
@@ -58,6 +63,15 @@
 		text-decoration: none;
 		cursor: pointer;
 	}
+
+	a {
+		width: 100%;
+		/* border: 1px solid blue; */
+		margin: 15px 40px;
+		font-size: var(--text-lg) /* 1.25rem = 20px */;
+		line-height: var(--tw-leading, var(--text-xl--line-height) /* calc(1.75 / 1.25) ≈ 1.4 */);
+	}
+
 	@media screen and (min-width: 768px) {
 		a {
 			margin-inline: 56px;
@@ -71,17 +85,16 @@
 
 	@media screen and (min-width: 1280px) {
 		a {
-			font-size: var(--text-2xl) /* 1.5rem = 24px */;
+			font-size: var(--text-lg);
 			line-height: var(--tw-leading, var(--text-2xl--line-height) /* calc(2 / 1.5) ≈ 1.3333 */);
+			margin-inline: 32px;
 		}
 	}
 
-	@media screen and (max-width: 1280px) {
-		.buttonEffect {
-			max-width: 350px;
-		}
+		@media screen and (min-width: 1920px) {
 		a {
-			margin-inline: 32px;
+			font-size: var(--text-xl);
+			margin-block: 21px;
 		}
 	}
 
