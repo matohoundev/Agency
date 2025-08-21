@@ -3,8 +3,20 @@
 	import Nav from '$lib/sections/nav.svelte';
 	import Footer from '$lib/sections/Footer.svelte';
 	import Background3d from '$lib/components/Background3d.svelte';
+	import { onMount } from 'svelte';
+    import { initAllAnimations, cleanupAnimations } from '$lib/animations/gsapAnimations';
 
 	let { children } = $props();
+
+	onMount(() => {
+        // UN SEUL onMount pour toute l'application
+        initAllAnimations();
+
+        // Nettoyage quand le composant est détruit
+        return () => {
+            cleanupAnimations();
+        };
+    });
 </script>
 
 <Nav />

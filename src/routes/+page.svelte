@@ -14,7 +14,7 @@
 
 <Home />
 <About />
-<!-- <Showcase /> -->
+<Showcase />
 <Detail />
 <Pricing />
 <Faq />

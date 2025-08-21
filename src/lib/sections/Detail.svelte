@@ -1,43 +1,5 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { gsap } from 'gsap';
 
-	import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-	gsap.registerPlugin(ScrollTrigger);
-
-	onMount(() => {
-		gsap.to('.detail-card-1', {
-			scrollTrigger: {
-				trigger: '.Detail',
-				// start: '50px',
-				// start: 'top center',
-				// end: 'bottom center',
-				end: '100px',
-				// invalidateOnRefresh: true,
-				// markers: true,
-				// toggleActions: 'play none none reverse',	
-				scrub: true
-			},
-			x: 0,
-			duration: 2,
-			ease: 'back.inOut'
-		});
-		gsap.to('.detail-card-2', {
-			scrollTrigger: {
-				trigger: '.Detail',
-				// start: '100px',
-				// start: 'top center',
-				// end: 'bottom center',
-				end: '300px',
-				// markers: true,
-				scrub: true
-			},
-			x: 0,
-			duration: 2,
-			ease: 'back.inOut'
-		});
-	});
 </script>
 
 <section class="Detail container mx-auto flex flex-col py-12.5 px-3 md:px-15 lg:px-0 gap-y-10.5">
