@@ -91,63 +91,166 @@
 		</p>
 	</div>
 
-	{#if isLoading}
-		<div class="loading-indicator text-center text-white">
-			<p>Chargement des projets...</p>
-		</div>
-	{:else if error}
-		<div class="error-message text-center text-red-500">
-			<p>Erreur: {error}</p>
-		</div>
-	{:else}
-		<div class="swiper" bind:this={swiperContainer}>
-			<div class="swiper-wrapper">
-				{#each projects as project}
-					<div class="swiper-slide">
-						<div class="project-card flex flex-col text-white rounded-lg gap-y-4">
-							<iframe
-								class="rounded-lg project-video"
-								src={project.videoUrl}
-								title="{project.title} video"
-								frameborder="0"
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-								referrerpolicy="strict-origin-when-cross-origin"
-								allowfullscreen
-							></iframe>
-							<div class="project-card-subtitle flex gap-x-2 items-center">
-								<img src={project.iconUrl} alt="{project.title} Icon" />
-								<p class="text-white font-bold text-3xl">{project.title}</p>
+	<!-- Conteneur avec hauteur fixe pour éviter les changements de layout -->
+	<div class="showcase-content">
+		{#if isLoading}
+			<div class="loading-skeleton">
+				<div class="swiper">
+					<div class="swiper-wrapper">
+						<!-- Skeleton slides -->
+						{#each Array(3) as _, index}
+							<div class="swiper-slide">
+								<div class="project-card flex flex-col text-white rounded-lg gap-y-4">
+									<div class="video-container skeleton-video">
+										<div class="skeleton-shimmer"></div>
+									</div>
+									<div class="project-card-subtitle flex gap-x-2 items-center">
+										<div class="skeleton-icon"></div>
+										<div class="skeleton-title"></div>
+									</div>
+								</div>
+							</div>
+						{/each}
+					</div>
+				</div>
+			</div>
+		{:else if error}
+			<div class="error-message text-center text-red-500">
+				<p>Erreur: {error}</p>
+			</div>
+		{:else}
+			<div class="swiper" bind:this={swiperContainer}>
+				<div class="swiper-wrapper">
+					{#each projects as project}
+						<div class="swiper-slide">
+							<div class="project-card flex flex-col text-white rounded-lg gap-y-4">
+								<div class="video-container">
+									<iframe
+										class="rounded-lg project-video"
+										src={project.videoUrl}
+										title="{project.title} video"
+										frameborder="0"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+										referrerpolicy="strict-origin-when-cross-origin"
+										allowfullscreen
+									></iframe>
+								</div>
+								<div class="project-card-subtitle flex gap-x-2 items-center">
+									<img src={project.iconUrl} alt="{project.title} Icon" />
+									<p class="text-white font-bold text-3xl">{project.title}</p>
+								</div>
 							</div>
 						</div>
-					</div>
-				{/each}
+					{/each}
+				</div>
+				<!-- Navigation buttons -->
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
 			</div>
-			<!-- Navigation buttons -->
-			<div class="swiper-button-next"></div>
-			<div class="swiper-button-prev"></div>
-		</div>
-	{/if}
+		{/if}
+	</div>
 </section>
 
 <style>
 	section {
-		/* height: 100vh; */
-		height: min-content;
+		min-height: 100vh;
 		/* border: 1px solid black; */
+	}
+
+	/* Conteneur principal avec hauteur fixe */
+	.showcase-content {
+		min-height: 60vh; /* Hauteur minimale pour éviter les changements de layout */
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	/* États de chargement et d'erreur avec hauteur fixe */
+	.loading-skeleton {
+		width: 100%;
+		height: 60vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.error-message {
+		height: 60vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	/* Skeleton Loading Styles */
+	.skeleton-video {
+		background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+		background-size: 200% 100%;
+		animation: skeleton-loading 1.5s infinite;
+		border-radius: 0.5rem;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.skeleton-shimmer {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(
+			90deg,
+			transparent 0%,
+			rgba(255, 255, 255, 0.1) 50%,
+			transparent 100%
+		);
+		animation: shimmer 2s infinite;
+	}
+
+	.skeleton-icon {
+		width: 2rem;
+		height: 2rem;
+		background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+		background-size: 200% 100%;
+		animation: skeleton-loading 1.5s infinite;
+		border-radius: 0.25rem;
+		flex-shrink: 0;
+	}
+
+	.skeleton-title {
+		height: 1.5rem;
+		width: 60%;
+		background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+		background-size: 200% 100%;
+		animation: skeleton-loading 1.5s infinite;
+		border-radius: 0.25rem;
+	}
+
+	@keyframes skeleton-loading {
+		0% {
+			background-position: 200% 0;
+		}
+		100% {
+			background-position: -200% 0;
+		}
+	}
+
+	@keyframes shimmer {
+		0% {
+			transform: translateX(-100%);
+		}
+		100% {
+			transform: translateX(100%);
+		}
 	}
 
 	h2 {
 		font-family: 'Montserrat', sans-serif;
 		font-weight: bold;
-		/* font-size: 2.5rem; */
-		/* font-size: 2rem; */
 		line-height: 1.3;
 	}
 
 	.Showcase-head p {
 		font-family: 'Manrope', sans-serif;
-		/* font-weight: bold; */
-		/* font-size: 1.2rem; */
 	}
 
 	@media screen and (min-width: 768px) {
@@ -168,8 +271,7 @@
 
 	.swiper {
 		width: 100%;
-		height: min-content;
-		/* border: 1px solid blue; */
+		height: 100%;
 		overflow: visible !important;
 	}
 
@@ -181,14 +283,27 @@
 
 	.project-card {
 		width: 100%;
-		height: 60vh;
+		height: 100%;
+		max-width: 600px; /* Largeur maximale pour maintenir le ratio */
 		transition: transform 0.2s ease-out;
 	}
 
-	@media screen and (min-width: 1024px) {
-		.project-card {
-			height: 100%;
-		}
+	/* Conteneur vidéo avec aspect ratio 16:9 fixe */
+	.video-container {
+		width: 100%;
+		aspect-ratio: 16 / 9; /* Ratio 16:9 pour toutes les vidéos */
+		position: relative;
+		overflow: hidden;
+		border-radius: 0.5rem;
+	}
+
+	.project-video {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		object-fit: cover; /* Maintient le ratio sans déformation */
 	}
 
 	.project-card:hover {
@@ -196,18 +311,16 @@
 		transition: transform 0.3s ease-in-out;
 	}
 
-	.project-video {
-		width: 100%;
-		height: 100%;
-	}
-
-	@media screen and (min-width: 1024px) {
-		.project-video {
-			aspect-ratio: 16 / 9;
-		}
-	}
-
 	.project-card-subtitle {
-		/* height: 8%; */
+		margin-top: 1rem;
+		flex-shrink: 0; /* Évite que le titre soit compressé */
 	}
+
+	.project-card-subtitle img {
+		width: 2rem;
+		height: 2rem;
+		object-fit: contain;
+	}
+
+
 </style>
