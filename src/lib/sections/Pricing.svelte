@@ -1,5 +1,30 @@
 <script>
+	import { onMount } from 'svelte';
 	import BoxPricing from '$lib/components/boxPricing.svelte';
+
+	let offers = [];
+	let isLoading = true;
+	let error = null;
+
+	// Chargement des offres depuis le fichier JSON
+	async function loadOffers() {
+		try {
+			const response = await fetch('/data/offers.json');
+			if (!response.ok) {
+				throw new Error(`Erreur HTTP! Statut: ${response.status}`);
+			}
+			offers = await response.json();
+			isLoading = false;
+		} catch (err) {
+			console.error('Erreur lors du chargement des offres:', err);
+			error = err instanceof Error ? err.message : String(err);
+			isLoading = false;
+		}
+	}
+
+	onMount(() => {
+		loadOffers();
+	});
 </script>
 
 <section
@@ -22,8 +47,19 @@
 	<div
 		class="Offers flex flex-col sm:flex-row justify-center items-center gap-x-8 gap-y-10 lg:gap-y-0 sm:gap-x-12"
 	>
-		<BoxPricing />
-		<BoxPricing />
+		{#if isLoading}
+			<div class="loading-offers text-center">
+				<p>Chargement des offres...</p>
+			</div>
+		{:else if error}
+			<div class="error-offers text-center text-red-500">
+				<p>Erreur: {error}</p>
+			</div>
+		{:else}
+			{#each offers as offer (offer.id)}
+				<BoxPricing {offer} />
+			{/each}
+		{/if}
 	</div>
 </section>
 
@@ -31,6 +67,16 @@
 	section {
 		min-height: 100vh;
 		/* border: 3px solid green; */
+	}
+
+	.loading-offers,
+	.error-offers {
+		min-height: 200px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: 'Manrope', sans-serif;
+		font-size: 1.1rem;
 	}
 
 	.pricing-title,

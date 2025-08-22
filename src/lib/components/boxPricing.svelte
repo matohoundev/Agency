@@ -1,5 +1,17 @@
 <script>
 	import Button from '$lib/components/button3d.svelte';
+
+	// Props pour personnaliser chaque box
+	export let offer = {
+		title: 'Vitrine 3D',
+		price: '590€ HT',
+		priceNote: '(à partir de)',
+		deliveryTime: 'Livraison en 8 jours',
+		description: 'Description par défaut',
+		isPopular: true,
+		theme: 'purple',
+		features: []
+	};
 </script>
 
 <div class="BoxPricing">
@@ -8,18 +20,19 @@
 		<div class="flex flex-col">
 			<div class="flex justify-between items-center">
 				<div class="box3d-text relative">
-					<p class="relative z-15">Vitrine 3D</p>
-					<span>Vitrine 3D</span>
+					<p class="relative z-15">{offer.title}</p>
+					<span>{offer.title}</span>
 				</div>
-				<p class="badge-pop">Populaire</p>
+				{#if offer.isPopular}
+					<p class="badge-pop">Populaire</p>
+				{/if}
 			</div>
-			<p class="price text-white pb-2.5">590€ HT <span>(à partir de)</span></p>
+			<p class="price text-white pb-2.5">{offer.price} <span>{offer.priceNote}</span></p>
 			<div class="pb-5">
-				<span class="badge-date">Livraison en 8 jours</span>
+				<span class="badge-date">{offer.deliveryTime}</span>
 			</div>
 			<p class="pricing-content pb-5">
-				Une expérience 3d saisissante qui occupe tout l'écran du visiteur. Idéale comme page
-				d'accueil ou section phare de votre site. Capture l'attention dès les premières secondes.
+				{offer.description}
 			</p>
 			<div class="boxButtonPrice">
 				<Button />
@@ -28,25 +41,16 @@
 	</div>
 	<div class="pricing-details">
 		<ul>
-			<li>
-				<img src="/icons/check.svg" alt="Icon Check" />
-				<span>1 élement/section 3D personnalisée</span>
-			</li>
-			<li><img src="/icons/check.svg" alt="Icon Check" /> <span>Optimisation mobile</span></li>
-			<li>
-				<img src="/icons/check.svg" alt="Icon Check" /> <span>Formation et support 30 jours</span>
-			</li>
-			<li><img src="/icons/check.svg" alt="Icon Check" /> <span>Livraison en 8 jours</span></li>
-			<div class="stroke-appearance"></div>
-			<li><img src="/icons/check.svg" alt="Icon Check" /> <span>Copywriting complet</span></li>
-			<li><img src="/icons/check.svg" alt="Icon Check" /> <span>Livraison en 8 jours</span></li>
-			<li><img src="/icons/check.svg" alt="Icon Check" /> <span>Maquette desktop Figma</span></li>
-			<li><img src="/icons/check.svg" alt="Icon Check" /> <span>Support WhatsApp 5/7</span></li>
-			<div class="stroke-appearance"></div>
-			<li><img src="/icons/check.svg" alt="Icon Check" /> <span>Formation vidéo </span></li>
-			<li>
-				<img src="/icons/check.svg" alt="Icon Check" /> <span>Optimisation des performances</span>
-			</li>
+			{#each offer.features as feature}
+				{#if feature === '---'}
+					<div class="stroke-appearance"></div>
+				{:else}
+					<li>
+						<img src="/icons/check.svg" alt="Icon Check" />
+						<span>{feature}</span>
+					</li>
+				{/if}
+			{/each}
 		</ul>
 	</div>
 </div>

@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Vitrine 3D",
+    "price": "590€ HT",
+    "priceNote": "(à partir de)",
+    "deliveryTime": "Livraison en 8 jours",
+    "description": "Une expérience 3d saisissante qui occupe tout l'écran du visiteur. Idéale comme page d'accueil ou section phare de votre site. Capture l'attention dès les premières secondes.",
+    "isPopular": true,
+    "theme": "purple",
+    "features": [
+      "1 élement/section 3D personnalisée",
+      "Optimisation mobile",
+      "Formation et support 30 jours",
+      "Livraison en 8 jours",
+      "---",
+      "Copywriting complet",
+      "Livraison en 8 jours",
+      "Maquette desktop Figma",
+      "Support WhatsApp 5/7",
+      "---",
+      "Formation vidéo",
+      "Optimisation des performances"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Site Complet",
+    "price": "1490€ HT",
+    "priceNote": "(à partir de)",
+    "deliveryTime": "Livraison en 15 jours",
+    "description": "Un site web complet et professionnel qui convertit vos visiteurs en clients. Design moderne, optimisé pour le référencement et parfaitement responsive.",
+    "isPopular": false,
+    "theme": "pink",
+    "features": [
+      "Site web complet (5-7 pages)",
+      "Design responsive sur mesure",
+      "Optimisation SEO avancée",
+      "Formulaires de contact",
+      "---",
+      "Copywriting professionnel",
+      "Hébergement 1 an inclus",
+      "Formation complète",
+      "Support prioritaire 3 mois",
+      "---",
+      "Analytics et suivi",
+      "Maintenance 6 mois incluse"
+    ]
+  }
+]
