@@ -90,6 +90,10 @@
 		-webkit-text-stroke: 1px #000000;
 		top: 2.5px;
 		left: 4px;
+		/* top: 0;
+		left: 0;
+		opacity: 0.5; */
+		/* transform: translate(4px, 2.5px); */
 		position: absolute;
 		text-wrap: nowrap;
 	}

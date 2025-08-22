@@ -13,11 +13,13 @@ export const homeAnimations = {
   init() {
     const tl = gsap.timeline();
     
-    tl.from('.title', {
-      opacity: 0,
-      y: 50,
-      duration: 1,
-      ease: 'power2.out'
+    tl.to('.title-effect', {
+        opacity: 1,
+        x: 4,
+        y: 2.5,
+        position: 'absolute',
+        duration: 1.2,
+        ease: 'power2.out'
     });
     
     return tl;

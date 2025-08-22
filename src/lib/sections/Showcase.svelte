@@ -153,7 +153,7 @@
 
 <style>
 	section {
-		min-height: 100vh;
+		/* min-height: 100vh; */
 		/* border: 1px solid black; */
 	}
 
