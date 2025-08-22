@@ -1,10 +1,23 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 	import BoxPricing from '$lib/components/boxPricing.svelte';
 
-	let offers = [];
+	interface Offer {
+		id: string | number;
+		// Add other properties that exist in your offers
+		title: string;
+		price: string;
+		priceNote: string;
+		deliveryTime: string;
+		description: string;
+		isPopular: boolean;
+		theme: string;
+		features: string[];
+	}
+
+	let offers: Offer[] = [];
 	let isLoading = true;
-	let error = null;
+	let error: string | null = null;
 
 	// Chargement des offres depuis le fichier JSON
 	async function loadOffers() {
