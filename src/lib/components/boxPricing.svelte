@@ -14,7 +14,7 @@
 	};
 </script>
 
-<div class="BoxPricing">
+<div class="BoxPricing BoxPricing-{offer.theme}">
 	<div class="pricing-header pricing-header-{offer.theme} relative">
 		<div class="bg-opacity"></div>
 		<div class="flex flex-col">
@@ -58,6 +58,7 @@
 <style>
 	.BoxPricing {
 		width: 100%;
+		/* transform: rotate(-10deg); */
 	}
 
 	@media screen and (min-width: 1024px) {
@@ -79,13 +80,43 @@
 	}
 
 	.pricing-header {
+		position: relative;
 		padding: 1.25rem 1rem;
-		background-image: linear-gradient(225deg, #7d68da 0%, #4729cb 49%, #4729cb 100%);
+		background: none;
 		border-radius: 27px 27px 0 0;
+		overflow: hidden;
 	}
 
-	.pricing-header-pink {
-		background-image: linear-gradient(225deg, #d37b93 0%, #cd456b 49%, #cd456b 100%);
+	.pricing-header > .flex {
+		position: relative;
+		z-index: 1;
+	}
+
+	.pricing-header::before {
+		content: '';
+		position: absolute;
+		top: -50%;
+		left: -50%;
+		width: 200%;
+		height: 200%;
+		z-index: 0;
+		border-radius: 27px 27px 0 0;
+		background-image: linear-gradient(225deg, #d57d99 0%, #4729cb 49%, #4729cb 100%);
+		transform: rotate(0deg);
+		animation: rotate-bg 12s linear infinite;
+	}
+
+	@keyframes rotate-bg {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
+	.pricing-header-pink::before {
+		background-image: linear-gradient(225deg, #bed37b 0%, #cd456b 49%, #cd456b 100%);
 	}
 
 	.bg-opacity {

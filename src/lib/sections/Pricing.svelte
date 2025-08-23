@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { onMount, tick } from 'svelte';
 	import BoxPricing from '$lib/components/boxPricing.svelte';
+	import { pricingAnimations } from '$lib/animations/gsapAnimations';
 
 	interface Offer {
 		id: string | number;
@@ -28,6 +29,8 @@
 			}
 			offers = await response.json();
 			isLoading = false;
+			await tick(); // attendre le rendu des BoxPricing
+			pricingAnimations.init(); // lancer l'animation pricing
 		} catch (err) {
 			console.error('Erreur lors du chargement des offres:', err);
 			error = err instanceof Error ? err.message : String(err);

@@ -33,10 +33,10 @@ export const aboutAnimations = {
 			scrollTrigger: {
 				trigger: '.About',
 				start: 'top 80%',
-				end: 'bottom 20%',
+				end: 'bottom 40%',
 				scrub: true
 			},
-			opacity: 0,
+			opacity: 0.3,
 			y: 100,
 			duration: 1,
 			ease: 'power2.out'
@@ -46,7 +46,7 @@ export const aboutAnimations = {
 				scrollTrigger: {
 					trigger: '.About',
 					start: 'top 70%',
-					end: 'bottom 30%',
+					end: 'bottom 70%',
 					scrub: true
 				},
 				opacity: 0,
@@ -101,45 +101,88 @@ export const detailAnimations = {
 	}
 };
 
-export const pricingAnimations = {
-	init() {
-		const tl = gsap.timeline();
+// export const pricingAnimations = {
+// 	init() {
+// 		const tl = gsap.timeline();
 
-		// tl.to('.BoxPricing', {
-		//   scrollTrigger: {
-		//     trigger: '.Pricing',
-		//     start: 'top 80%',
-		//     scrub: true
-		//   },
-		//   opacity: 0,
-		//   scale: 0.8,
-		//   duration: 1,
-		//   ease: 'back.out(1.7)'
-		// })
-		// .to('.BoxPricing', {
-		//   scrollTrigger: {
-		//     trigger: '.Pricing',
-		//     start: 'top 60%',
-		//     scrub: true
-		//   },
-		//   opacity: 0,
-		//   y: 50,
-		//   duration: 1,
-		//   ease: 'power2.out',
-		//   stagger: 0.2
-		// }, '-=0.5');
+// 		tl.from('.BoxPricing-purple', {
+// 			rotate: -10,
+// 			x: -100
+// 		})
+// 			.to('.BoxPricing-purple', {
+// 				scrollTrigger: {
+// 					trigger: '.Pricing',
+// 					markers: true,
+// 					end: '100px',
+// 					scrub: true
+// 				},
+// 				rotate: 0,
+// 				x: 0,
+// 				duration: 1,
+// 				ease: 'power2.out'
+// 			})
+// 			.from('.BoxPricing-pink', {
+// 				rotate: 10,
+// 				x: 100
+// 			})
+// 			.to(
+// 				'.BoxPricing-pink',
+// 				{
+// 					scrollTrigger: {
+// 						trigger: '.Pricing',
+// 						markers: true,
+// 						end: '100px',
+// 						scrub: true
+// 					},
+// 					rotate: 0,
+// 					x: 0,
+// 					duration: 1,
+// 					ease: 'power2.out'
+// 				},
+// 				'-=0.5'
+// 			);
 
-		return tl;
-	}
-};
+// 		return tl;
+// 	}
+// };
+
+// export const pricingAnimations = {
+// 	init() {
+// 		const tl = gsap.timeline();
+
+// 		tl.from('.bg-opacity', {
+// 			scrollTrigger: {
+// 				trigger: '.Pricing',
+// 				markers: true,
+// 				end: 'bottom 90%',
+// 				scrub: true
+// 			},
+// 			y: -5000,
+// 			duration: 2,
+// 			ease: 'power2.out'
+// 		}).to('.BoxPricing-pink', {
+// 			scrollTrigger: {
+// 				trigger: '.Pricing',
+// 				markers: true,
+// 				end: '100px',
+// 				scrub: true
+// 			},
+// 			rotate: 0,
+// 			x: 0,
+// 			duration: 1,
+// 			ease: 'power2.out'
+// 		});
+
+// 		return tl;
+// 	}
+// };
 
 // Fonction pour initialiser toutes les animations
 export function initAllAnimations() {
 	masterTimeline
 		// .add(homeAnimations.init())
-		// .add(aboutAnimations.init())
-		.add(detailAnimations.init())
-		.add(pricingAnimations.init());
+		.add(aboutAnimations.init())
+		.add(detailAnimations.init());
 	// Ajoutez d'autres animations ici
 }
 
