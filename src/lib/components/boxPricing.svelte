@@ -24,14 +24,14 @@
 					<span>{offer.title}</span>
 				</div>
 				{#if offer.isPopular}
-					<p class="badge-pop">Populaire</p>
+					<p class="badge-pop relative">Populaire</p>
 				{/if}
 			</div>
-			<p class="price text-white pb-2.5">{offer.price} <span>{offer.priceNote}</span></p>
+			<p class="price text-white pb-2.5 relative">{offer.price} <span>{offer.priceNote}</span></p>
 			<div class="pb-5">
-				<span class="badge-date">{offer.deliveryTime}</span>
+				<span class="badge-date relative">{offer.deliveryTime}</span>
 			</div>
-			<p class="pricing-content pb-5">
+			<p class="pricing-content pb-5 relative">
 				{offer.description}
 			</p>
 			<div class="boxButtonPrice">
@@ -87,11 +87,6 @@
 		overflow: hidden;
 	}
 
-	.pricing-header > .flex {
-		position: relative;
-		z-index: 1;
-	}
-
 	.pricing-header::before {
 		content: '';
 		position: absolute;
@@ -100,23 +95,24 @@
 		width: 200%;
 		height: 200%;
 		z-index: 0;
-		border-radius: 27px 27px 0 0;
-		background-image: linear-gradient(225deg, #d57d99 0%, #4729cb 49%, #4729cb 100%);
-		transform: rotate(0deg);
-		animation: rotate-bg 12s linear infinite;
+		animation: arc-move 6s linear infinite alternate;
 	}
 
-	@keyframes rotate-bg {
+	@keyframes arc-move {
 		0% {
-			transform: rotate(0deg);
+			transform: rotate(-80deg);
 		}
 		100% {
-			transform: rotate(360deg);
+			transform: rotate(-120deg);
 		}
+	}
+
+	.pricing-header-purple::before {
+		background-image: linear-gradient(90deg, #d37b93 0%, #4729cb 49%, #4729cb 100%);
 	}
 
 	.pricing-header-pink::before {
-		background-image: linear-gradient(225deg, #bed37b 0%, #cd456b 49%, #cd456b 100%);
+		background-image: linear-gradient(90deg, #bed37b 0%, #cd456b 49%, #cd456b 100%);
 	}
 
 	.bg-opacity {

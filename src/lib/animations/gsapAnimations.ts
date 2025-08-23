@@ -101,50 +101,50 @@ export const detailAnimations = {
 	}
 };
 
-// export const pricingAnimations = {
-// 	init() {
-// 		const tl = gsap.timeline();
+export const pricingAnimations = {
+	init() {
+		const tl = gsap.timeline();
 
-// 		tl.from('.BoxPricing-purple', {
-// 			rotate: -10,
-// 			x: -100
-// 		})
-// 			.to('.BoxPricing-purple', {
-// 				scrollTrigger: {
-// 					trigger: '.Pricing',
-// 					markers: true,
-// 					end: '100px',
-// 					scrub: true
-// 				},
-// 				rotate: 0,
-// 				x: 0,
-// 				duration: 1,
-// 				ease: 'power2.out'
-// 			})
-// 			.from('.BoxPricing-pink', {
-// 				rotate: 10,
-// 				x: 100
-// 			})
-// 			.to(
-// 				'.BoxPricing-pink',
-// 				{
-// 					scrollTrigger: {
-// 						trigger: '.Pricing',
-// 						markers: true,
-// 						end: '100px',
-// 						scrub: true
-// 					},
-// 					rotate: 0,
-// 					x: 0,
-// 					duration: 1,
-// 					ease: 'power2.out'
-// 				},
-// 				'-=0.5'
-// 			);
+		tl.from('.BoxPricing-purple', {
+			rotate: -10,
+			x: -150
+		})
+			.to('.BoxPricing-purple', {
+				scrollTrigger: {
+					trigger: '.Pricing',
+					markers: true,
+					end: '100px',
+					scrub: true
+				},
+				rotate: 0,
+				x: 0,
+				duration: 1,
+				ease: 'power2.out'
+			})
+			.from('.BoxPricing-pink', {
+				rotate: 10,
+				x: 150
+			})
+			.to(
+				'.BoxPricing-pink',
+				{
+					scrollTrigger: {
+						trigger: '.Pricing',
+						markers: true,
+						end: '100px',
+						scrub: true
+					},
+					rotate: 0,
+					x: 0,
+					duration: 1,
+					ease: 'power2.out'
+				},
+				'-=0.5'
+			);
 
-// 		return tl;
-// 	}
-// };
+		return tl;
+	}
+};
 
 // export const pricingAnimations = {
 // 	init() {
