@@ -1,5 +1,4 @@
 <script lang="ts">
-
 </script>
 
 <section class="Detail container mx-auto flex flex-col py-12.5 px-3 md:px-15 lg:px-0 gap-y-10.5">
@@ -33,7 +32,7 @@
 			</div>
 		</div>
 
-		<div class="detail-card detail-card-alternate detail-card-2 relative border-1 bg-white rounded-lg">
+		<div class="detail-card detail-card-2 relative border-1 bg-white rounded-lg">
 			<div
 				class="flex flex-col-reverse lg:flex-row justify-between gap-x-10 items-center px-5 pt-5 pb-7 lg:py-3 lg:pr-3 lg:pl-8"
 			>
@@ -109,11 +108,6 @@
 
 	.detail-card {
 		width: 95%;
-		transform: translateX(100px);
-	}
-
-	.detail-card-alternate {
-		transform: translateX(-100px);
 	}
 
 	@media screen and (min-width: 1024px) {

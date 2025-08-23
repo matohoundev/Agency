@@ -15,7 +15,7 @@
 </script>
 
 <div class="BoxPricing">
-	<div class="pricing-header relative">
+	<div class="pricing-header pricing-header-{offer.theme} relative">
 		<div class="bg-opacity"></div>
 		<div class="flex flex-col">
 			<div class="flex justify-between items-center">
@@ -82,6 +82,10 @@
 		padding: 1.25rem 1rem;
 		background-image: linear-gradient(225deg, #7d68da 0%, #4729cb 49%, #4729cb 100%);
 		border-radius: 27px 27px 0 0;
+	}
+
+	.pricing-header-pink {
+		background-image: linear-gradient(225deg, #d37b93 0%, #cd456b 49%, #cd456b 100%);
 	}
 
 	.bg-opacity {
