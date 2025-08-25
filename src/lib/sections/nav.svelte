@@ -1,18 +1,53 @@
-<script>
+
+
+<script lang="ts">
 	import Hamburger from '$lib/icons/hamburger.svelte';
+	import { gsap } from 'gsap';
 
 	let isMobileMenuOpen = false;
 
 	function toggleMobileMenu() {
-		isMobileMenuOpen = !isMobileMenuOpen;
+		if (isMobileMenuOpen) {
+			closeMobileMenu();
+			return;
+		} else {
+			isMobileMenuOpen = !isMobileMenuOpen;
+			animateNav(true);
+		}
 	}
 
 	function closeMobileMenu() {
 		isMobileMenuOpen = false;
+		animateNav(false);
 	}
+
+	const animateNav = (isOpen: boolean) => {
+		const bubble = document.querySelector('.bubble');
+		const mobileNav = document.querySelector('.mobile-nav');
+		if (bubble && isOpen) {
+			gsap.to(
+				bubble,
+				{ scale: 10.5, duration: 0.5, ease: 'cubic-bezier(0.77, 0, 0.175, 1)' }
+			);
+			if (mobileNav) {
+				gsap.fromTo(
+					mobileNav,
+					{ y: -30 },
+					{ opacity: 1, y:0, pointerEvents: 'auto', duration: 0.5, delay: 0.2, ease: 'cubic-bezier(0.77, 0, 0.175, 1)' }
+				);
+			}
+		} else if (bubble && !isOpen) {
+			gsap.to(bubble, { scale: 1, duration: 0.5, ease: 'cubic-bezier(0.77, 0, 0.175, 1)' });
+			if (mobileNav) {
+				gsap.to(mobileNav, { opacity: 0, y: -30, pointerEvents: 'none', duration: 0.15, ease: 'cubic-bezier(0.77, 0, 0.175, 1)' });
+			}
+		}
+	}
+
+
 </script>
 
-<header class="fixed w-full z-10 pointer-events-none">
+<header class="fixed w-full z-10 ">
 	<div
 		class="container mx-auto px-8 xl:px-16 py-4 flex justify-between items-center align-middle pointer-events-auto"
 	>
@@ -22,7 +57,8 @@
 		</a>
 
 		<!-- Navigation -->
-		<nav>
+		<nav class="relative">
+			<div class="bubble"></div>
 			<ul class="hidden md:flex space-x-8 text-white">
 				<li><a href="/realisations" class="hover:underline">Réalisations</a></li>
 				<li><a href="/offre" class="hover:underline">Offre</a></li>
@@ -38,9 +74,8 @@
 	</div>
 
 	<!-- Mobile menu (only visible when open) -->
-	{#if isMobileMenuOpen}
 		<div
-			class="md:hidden mobile-nav absolute flex flex-col text-right top-16 left-0 w-full text-white pointer-events-auto"
+			class="md:hidden mobile-nav absolute flex flex-col text-right top-16 left-0 w-full text-white "
 		>
 			<ul class="px-4 py-2">
 				<li class="py-2">
@@ -58,7 +93,6 @@
 				</li>
 			</ul>
 		</div>
-	{/if}
 </header>
 
 <style>
@@ -79,12 +113,34 @@
 	}
 
 	nav {
-		background-color: rgba(255, 255, 255, 0.1);
 		padding: 4px 6px;
-		/* padding: 154px 106px; */
+	}
+
+	.bubble {
+		position: absolute;
+		padding: 25px 34px;
+		/* background-color: red; */
+		background-color: white;
+		backdrop-filter: blur(1px);
+		/* opacity: 0.9; */
+		background-color: rgba(255, 255, 255, 0.1);
 		border-radius: 40px;
-		/* width: 30%; */
-		/* height: 50%; */
+		pointer-events: none;
+		z-index: -1;
+		top: -1px;
+		left: -1px;
+		/* transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1); */
+		/* background: radial-gradient(circle at center, rgba(255, 255, 255, 0.2), transparent 70%); */
+		/* background-position: center; */
+	}
+
+	@media screen and (min-width: 768px) {
+		.bubble {
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
 	}
 
 	button {
@@ -106,8 +162,7 @@
 	}
 
 	.mobile-nav {
-		background-color: rgba(0, 0, 0, 0.8);
-		backdrop-filter: blur(10px);
-		border-radius: 0 0 5px 5px;
+		opacity: 0;
+		pointer-events: none;
 	}
 </style>

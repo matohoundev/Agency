@@ -72,7 +72,6 @@ export const detailAnimations = {
 				scrollTrigger: {
 					trigger: '.Detail',
 					end: '100px',
-					markers: true,
 					scrub: true
 				},
 				x: 0,
@@ -114,7 +113,6 @@ export const pricingAnimations = {
 			.to('.BoxPricing-purple', {
 				scrollTrigger: {
 					trigger: '.Pricing',
-					markers: true,
 					end: '100px',
 					scrub: true
 				},
@@ -133,7 +131,6 @@ export const pricingAnimations = {
 					scrollTrigger: {
 						trigger: isMobile ? '.BoxPricing-pink' : '.Pricing',
                         end: '100px',
-						markers: true,
 						scrub: true
 					},
 					rotate: 0,
