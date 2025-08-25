@@ -95,7 +95,7 @@
 		width: 200%;
 		height: 200%;
 		z-index: 0;
-		animation: arc-move 6s linear infinite alternate;
+		animation: arc-move 1.8s linear infinite alternate;
 	}
 
 	@keyframes arc-move {
