@@ -4,7 +4,7 @@
 	import Footer from '$lib/sections/Footer.svelte';
 	import Background3d from '$lib/components/Background3d.svelte';
 	import { onMount } from 'svelte';
-    import { initAllAnimations, cleanupAnimations } from '$lib/animations/gsapAnimations';
+    import { initAllAnimations, cleanupAnimations } from '$lib/animations/gsapTimeline';
 
 	let { children } = $props();
 

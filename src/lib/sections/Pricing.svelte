@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount, tick } from 'svelte';
 	import BoxPricing from '$lib/components/boxPricing.svelte';
-	import { pricingAnimations } from '$lib/animations/gsapAnimations';
+	import { pricingAnimations } from '$lib/animations/gsapTimeline';
 
 	interface Offer {
 		id: string | number;

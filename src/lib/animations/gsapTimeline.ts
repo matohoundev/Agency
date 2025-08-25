@@ -184,7 +184,7 @@ export function initAllAnimations() {
 	masterTimeline
 		// .add(homeAnimations.init())
 		.add(aboutAnimations.init())
-		.add(detailAnimations.init());
+		// .add(detailAnimations.init());
 	// Ajoutez d'autres animations ici
 }
 
