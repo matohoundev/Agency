@@ -105,6 +105,8 @@ export const pricingAnimations = {
 	init() {
 		const tl = gsap.timeline();
 
+        const isMobile = window.innerWidth < 768;
+
 		tl.from('.BoxPricing-purple', {
 			rotate: -10,
 			x: -150
@@ -129,9 +131,9 @@ export const pricingAnimations = {
 				'.BoxPricing-pink',
 				{
 					scrollTrigger: {
-						trigger: '.Pricing',
+						trigger: isMobile ? '.BoxPricing-pink' : '.Pricing',
+                        end: '100px',
 						markers: true,
-						end: '100px',
 						scrub: true
 					},
 					rotate: 0,
