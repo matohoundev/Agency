@@ -1,7 +1,7 @@
 <script lang="ts">
 </script>
 
-<section class="Detail container mx-auto flex flex-col py-12.5 px-3 md:px-15 lg:px-0 gap-y-10.5">
+<section id="offre" class="Detail container mx-auto flex flex-col py-12.5 px-3 md:px-15 lg:px-0 gap-y-10.5">
 	<div class="Detail-head flex flex-col justify-center items-center gap-y-6 md:gap-y-4">
 		<div class="relative z-10 text-black text-center">
 			<p class="relative detail-title z-15">Un site sur-mesure, beau et rapide</p>

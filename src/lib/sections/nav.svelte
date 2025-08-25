@@ -74,10 +74,10 @@
 		<nav class="relative">
 			<div class="bubble"></div>
 			<ul class="hidden md:flex space-x-8 text-white">
-				<li><a href="/realisations" class="hover:underline">Réalisations</a></li>
-				<li><a href="/offre" class="hover:underline">Offre</a></li>
-				<li><a href="/tarifs" class="hover:underline">Tarifs</a></li>
-				<li><a href="/contact" class="hover:underline">Contact</a></li>
+				<li><a href="#realisations" class="hover:underline">Réalisations</a></li>
+				<li><a href="#offre" class="hover:underline">Offre</a></li>
+				<li><a href="#tarifs" class="hover:underline">Tarifs</a></li>
+				<li><a href="#contact" class="hover:underline">Contact</a></li>
 			</ul>
 
 			<!-- Mobile menu button -->
@@ -93,17 +93,16 @@
 		>
 			<ul class="px-4 py-2">
 				<li class="py-2">
-					<a href="/realisations" class="hover:underline" on:click={closeMobileMenu}>Réalisations</a
-					>
+					<a href="#realisations" class="hover:underline" on:click={closeMobileMenu}>Réalisations</a>
 				</li>
 				<li class="py-2">
-					<a href="/offre" class="hover:underline" on:click={closeMobileMenu}>Offre</a>
+					<a href="#offre" class="hover:underline" on:click={closeMobileMenu}>Offre</a>
 				</li>
 				<li class="py-2">
-					<a href="/tarifs" class="hover:underline" on:click={closeMobileMenu}>Tarifs</a>
+					<a href="#tarifs" class="hover:underline" on:click={closeMobileMenu}>Tarifs</a>
 				</li>
 				<li class="py-2">
-					<a href="/contact" class="hover:underline" on:click={closeMobileMenu}>Contact</a>
+					<a href="#contact" class="hover:underline" on:click={closeMobileMenu}>Contact</a>
 				</li>
 			</ul>
 		</div>
