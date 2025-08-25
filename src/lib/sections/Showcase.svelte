@@ -14,9 +14,10 @@
 	import 'swiper/css/navigation';
 
 	interface Project {
-		videoUrl: string;
+		url: string;
 		title: string;
 		iconUrl: string;
+		mediaType: 'video' | 'image';
 	}
 
 	let swiperContainer: HTMLElement;
@@ -101,7 +102,7 @@
 						{#each Array(3) as _, index}
 							<div class="swiper-slide">
 								<div class="project-card flex flex-col text-white rounded-lg gap-y-4">
-									<div class="video-container skeleton-video">
+									<div class="video-container skeleton-media">
 										<div class="skeleton-shimmer"></div>
 									</div>
 									<div class="project-card-subtitle flex gap-x-2 items-center">
@@ -125,15 +126,24 @@
 						<div class="swiper-slide">
 							<div class="project-card flex flex-col text-white rounded-lg gap-y-4">
 								<div class="video-container">
-									<iframe
-										class="rounded-lg project-video"
-										src={project.videoUrl}
-										title="{project.title} video"
-										frameborder="0"
-										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-										referrerpolicy="strict-origin-when-cross-origin"
-										allowfullscreen
-									></iframe>
+									{#if project.mediaType === 'video'}
+										<iframe
+											class="rounded-lg project-media"
+											src={project.url}
+											title="{project.title} video"
+											frameborder="0"
+											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+											referrerpolicy="strict-origin-when-cross-origin"
+											allowfullscreen
+										></iframe>
+									{:else if project.mediaType === 'image'}
+										<img
+											class="rounded-lg project-media"
+											src={project.url}
+											alt="{project.title} image"
+											loading="lazy"
+										/>
+									{/if}
 								</div>
 								<div class="project-card-subtitle flex gap-x-2 items-center">
 									<img src={project.iconUrl} alt="{project.title} Icon" />
@@ -182,7 +192,7 @@
 	}
 
 	/* Skeleton Loading Styles */
-	.skeleton-video {
+	.skeleton-media {
 		background: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
 		background-size: 200% 100%;
 		animation: skeleton-loading 1.5s infinite;
@@ -288,22 +298,33 @@
 		transition: transform 0.2s ease-out;
 	}
 
-	/* Conteneur vidéo avec aspect ratio 16:9 fixe */
+	/* Conteneur vidéo/image avec aspect ratio 16:9 fixe */
 	.video-container {
 		width: 100%;
-		aspect-ratio: 16 / 9; /* Ratio 16:9 pour toutes les vidéos */
+		aspect-ratio: 16 / 9; /* Ratio 16:9 pour tous les médias */
 		position: relative;
 		overflow: hidden;
 		border-radius: 0.5rem;
 	}
 
-	.project-video {
+	.project-media {
 		width: 100%;
 		height: 100%;
 		position: absolute;
 		top: 0;
 		left: 0;
-		object-fit: cover; /* Maintient le ratio sans déformation */
+		object-fit: cover; /* Maintient le ratio sans déformation pour les images ET vidéos */
+		border-radius: 0.5rem;
+		transition: transform 0.3s ease-in-out;
+	}
+
+	/* Style spécifique pour les images avec effet hover */
+	.project-media[alt*="image"] {
+		cursor: pointer;
+	}
+
+	.project-card:hover .project-media {
+		transform: scale(1.02);
 	}
 
 	.project-card:hover {
