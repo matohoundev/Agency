@@ -1,5 +1,3 @@
-
-
 <script lang="ts">
 	import Hamburger from '$lib/icons/hamburger.svelte';
 	import { gsap } from 'gsap';
@@ -25,21 +23,37 @@
 		const bubble = document.querySelector('.bubble');
 		const mobileNav = document.querySelector('.mobile-nav');
 		if (bubble && isOpen) {
-			gsap.to(
-				bubble,
-				{ scale: 10.5, duration: 0.5, ease: 'cubic-bezier(0.77, 0, 0.175, 1)' }
-			);
+			gsap.to(bubble, { scale: 10.5, duration: 0.5, ease: 'power2.out' });
 			if (mobileNav) {
 				gsap.fromTo(
 					mobileNav,
-					{ y: -30 },
-					{ opacity: 1, y:0, pointerEvents: 'auto', duration: 0.5, delay: 0.2, ease: 'cubic-bezier(0.77, 0, 0.175, 1)' }
+					{
+						opacity: 0,
+						y: -30,
+						pointerEvents: 'none',
+						transform: 'perspective(800px) rotateX(-80deg) scaleY(0.7) skewY(-20deg)'
+					},
+					{
+						opacity: 1,
+						y: 0,
+						pointerEvents: 'auto',
+						transform: 'perspective(800px) rotateX(0deg) scaleY(1) skewY(0deg)',
+						duration: 0.6,
+						ease: 'power2.out'
+					}
 				);
 			}
 		} else if (bubble && !isOpen) {
-			gsap.to(bubble, { scale: 1, duration: 0.5, ease: 'cubic-bezier(0.77, 0, 0.175, 1)' });
+			gsap.to(bubble, { scale: 1, duration: 0.5, ease: 'power2.out' });
 			if (mobileNav) {
-				gsap.to(mobileNav, { opacity: 0, y: -30, pointerEvents: 'none', duration: 0.15, ease: 'cubic-bezier(0.77, 0, 0.175, 1)' });
+				gsap.to(mobileNav, {
+					opacity: 0,
+					y: -30,
+					pointerEvents: 'none',
+					transform: 'perspective(800px) rotateX(-80deg) scaleY(0.7) skewY(-20deg)',
+					duration: 0.15,
+					ease: 'power2.in'
+				});
 			}
 		}
 	}
@@ -164,5 +178,7 @@
 	.mobile-nav {
 		opacity: 0;
 		pointer-events: none;
+		transform-origin: top left;
+		will-change: transform, opacity;
 	}
 </style>
