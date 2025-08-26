@@ -1,11 +1,15 @@
+<script lang="ts">
+	export let themeBtn: string = 'black';
+</script>
+
 <div class="buttonEffect">
-	<button class="relative z-15">
+	<button class="relative z-15 btn-color-{themeBtn}">
 		<a href="https://atohoun-marvin.fr/" target="_blank" rel="noopener noreferrer"
 			>Réserver un appel gratuit</a
 		>
 	</button>
 
-	<div class="button-3d text-lg md:text-xl lg:text-2xl"></div>
+	<div class="button-3d button-3d-color-{themeBtn} text-lg md:text-xl lg:text-2xl"></div>
 </div>
 
 <style>
@@ -55,13 +59,20 @@
 	}
 
 		button {
-		background-color: #000000;
 		position: relative;
-		color: white;
-
 		text-align: center;
 		text-decoration: none;
 		cursor: pointer;
+	}
+
+	.btn-color-black {
+		color: white;
+		background-color: #000000;
+	}
+
+	.btn-color-white {
+		background-color: #ffffff;
+		color: black;
 	}
 
 	a {
@@ -103,9 +114,18 @@
 		height: 100%;
 		position: absolute;
 		color: transparent;
-		background-color: white;
 		top: 4px;
 		left: 4px;
+	}
+
+	.button-3d-color-black {
+		background-color: white;
 		border: 1px solid #000000;
 	}
+
+	.button-3d-color-white {
+		background-color: black;
+		border: 1px solid #ffffff;
+	}
+	
 </style>

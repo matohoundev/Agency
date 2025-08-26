@@ -10,6 +10,7 @@
 		description: 'Description par défaut',
 		isPopular: true,
 		theme: 'purple',
+		themeBtn: 'black',
 		features: []
 	};
 </script>
@@ -35,7 +36,7 @@
 				{offer.description}
 			</p>
 			<div class="boxButtonPrice">
-				<Button />
+				<Button themeBtn={offer.themeBtn}/>
 			</div>
 		</div>
 	</div>
