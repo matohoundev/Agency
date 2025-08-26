@@ -39,6 +39,17 @@
 			Découvrez comment nous transformons des idées ambitieuses en sites à fort impact.
 		</p>
 	</div>
+
+    <div class="projects-content">
+       {#each projects as project}
+       <div class="projects-card">
+           <img src={project.url} alt={project.title} class="w-full h-auto rounded-lg shadow-lg" />
+           <div class="projects-logo">
+               <img src={project.iconUrl} alt="Project Icon" class="w-8 h-8" />
+           </div>
+       </div>
+       {/each}
+    </div>
 </section>
 
 <style>
