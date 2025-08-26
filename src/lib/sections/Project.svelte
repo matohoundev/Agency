@@ -5,7 +5,6 @@
 		url: string;
 		title: string;
 		iconUrl: string;
-		mediaType: 'video' | 'image';
 	}
 
     let projects: Project[] = [];

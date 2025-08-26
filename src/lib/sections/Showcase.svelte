@@ -17,7 +17,6 @@
 		url: string;
 		title: string;
 		iconUrl: string;
-		mediaType: 'video' | 'image';
 	}
 
 	let swiperContainer: HTMLElement;
@@ -126,24 +125,13 @@
 						<div class="swiper-slide">
 							<div class="project-card flex flex-col text-white rounded-lg gap-y-4">
 								<div class="video-container">
-									{#if project.mediaType === 'video'}
-										<iframe
-											class="rounded-lg project-media"
-											src={project.url}
-											title="{project.title} video"
-											frameborder="0"
-											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-											referrerpolicy="strict-origin-when-cross-origin"
-											allowfullscreen
-										></iframe>
-									{:else if project.mediaType === 'image'}
-										<img
-											class="rounded-lg project-media"
-											src={project.url}
-											alt="{project.title} image"
-											loading="lazy"
+									<img
+										class="rounded-lg project-media"
+										src={project.url}
+										alt="{project.title} image"
+										loading="lazy"
 										/>
-									{/if}
+								
 								</div>
 								<div class="project-card-subtitle flex gap-x-2 items-center">
 									<img src={project.iconUrl} alt="{project.title} Icon" />
