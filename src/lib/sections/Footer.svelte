@@ -1,5 +1,6 @@
 <script>
 	import Button from '$lib/components/button3d.svelte';
+	const currentYear = new Date().getFullYear();
 </script>
 
 <footer class="relative z-10">
@@ -20,7 +21,7 @@
 			<div class="social-box"></div>
 			<div class="flex flex-col md:flex-row justify-between items-center">
 				<div class="mb-4 md:mb-0">
-					<p class="text-gray-700">&copy; 2025 Agency. Tous droits réservés.</p>
+					<p class="text-gray-700">&copy; {currentYear} Agency. Tous droits réservés.</p>
 				</div>
 				<div class="flex space-x-4">
 					<a href="/contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
