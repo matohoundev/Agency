@@ -6,6 +6,7 @@
 	import Detail from '$lib/sections/Detail.svelte';
 	import Showcase from '$lib/sections/Showcase.svelte';
 	import Panel from '$lib/sections/Panel.svelte';
+	import Project from '$lib/sections/Project.svelte';
 </script>
 
 <svelte:head>
@@ -16,6 +17,7 @@
 <Home />
 <Panel />
 <About />
+<Project />
 <Showcase />
 <Detail />
 <Pricing />
