@@ -58,5 +58,20 @@
 		"demoUrl": "https://demo-projet-4.com",
 		"featured": false,
 		"date": "2024-02-01"
+	},
+	{
+		"id": "projet-5",
+		"title": "Nom du Projet 5",
+		"description": "Description détaillée du projet...",
+		"technologies": ["Angular", "Express", "MySQL"],
+		"image": "/images/projet-5.jpg",
+		"url": "https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg",
+		"mediaType": "image",
+		"iconUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg",
+		"splineModel": "https://prod.spline.design/ton-id-de-scene-4/scene.splinecode",
+		"githubUrl": "https://github.com/ton-username/projet-4",
+		"demoUrl": "https://demo-projet-4.com",
+		"featured": false,
+		"date": "2024-02-01"
 	}
 ]
