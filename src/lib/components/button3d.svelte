@@ -36,7 +36,7 @@
 		width: 100%;
 		border-radius: 50px;
 		font-family: 'Manrope', sans-serif;
-		font-weight: bold;
+		font-weight: 600;
 		text-align: center;
 		display: flex;
 		flex-direction: column;
