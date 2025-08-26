@@ -48,10 +48,10 @@
 			if (mobileNav) {
 				gsap.to(mobileNav, {
 					opacity: 0,
-					y: -30,
+					y: -25,
 					pointerEvents: 'none',
 					transform: 'perspective(800px) rotateX(-80deg) scaleY(0.7) skewY(-20deg)',
-					duration: 0.15,
+					duration: 0.1,
 					ease: 'power2.in'
 				});
 			}
