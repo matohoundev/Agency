@@ -152,7 +152,7 @@ export const projectAnimations = {
 		tl.to('.Projects', {
 				scrollTrigger: {
 					trigger: '.Projects',
-					end: '-180px',
+					end: '-350px',
 					scrub: true
 				},
 				scale: 1,
