@@ -74,7 +74,7 @@
 		<nav class="relative">
 			<div class="bubble"></div>
 			<ul class="hidden md:flex space-x-8 text-white">
-				<li><a href="#realisations" class="hover:underline">Réalisations</a></li>
+				<li><a href="#projects" class="hover:underline">Réalisations</a></li>
 				<li><a href="#offre" class="hover:underline">Offre</a></li>
 				<li><a href="#tarifs" class="hover:underline">Tarifs</a></li>
 				<li><a href="#contact" class="hover:underline">Contact</a></li>
@@ -93,7 +93,7 @@
 		>
 			<ul class="px-4 py-2">
 				<li class="py-2">
-					<a href="#realisations" class="hover:underline" on:click={closeMobileMenu}>Réalisations</a>
+					<a href="#projects" class="hover:underline" on:click={closeMobileMenu}>Réalisations</a>
 				</li>
 				<li class="py-2">
 					<a href="#offre" class="hover:underline" on:click={closeMobileMenu}>Offre</a>
