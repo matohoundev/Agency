@@ -1,6 +1,6 @@
 [
 	{
-		"id": "projet-1",
+		"id": "1",
 		"title": "Google",
 		"description": "Description détaillée du projet...",
 		"technologies": ["React", "Node.js", "MongoDB"],
@@ -14,8 +14,8 @@
 		"date": "2023-12-01"
 	},
 	{
-		"id": "projet-2",
-		"title": "Nom du Projet 2",
+		"id": "2",
+		"title": "Pexels",
 		"description": "Description détaillée du projet...",
 		"technologies": ["Vue.js", "Firebase"],
 		"image": "/images/projet-2.jpg",
@@ -28,8 +28,8 @@
 		"date": "2023-10-15"
 	},
 	{
-		"id": "projet-3",
-		"title": "Nom du Projet 3",
+		"id": "3",
+		"title": "Leaddy",
 		"description": "Description détaillée du projet...",
 		"technologies": ["Svelte", "Tailwind", "Firebase"],
 		"image": "/images/projet-3.jpg",
@@ -42,8 +42,8 @@
 		"date": "2024-01-15"
 	},
 	{
-		"id": "projet-4",
-		"title": "Nom du Projet 4",
+		"id": "4",
+		"title": "Pimms",
 		"description": "Description détaillée du projet...",
 		"technologies": ["Angular", "Express", "MySQL"],
 		"image": "/images/projet-4.jpg",
@@ -56,8 +56,8 @@
 		"date": "2024-02-01"
 	},
 	{
-		"id": "projet-5",
-		"title": "Nom du Projet 5",
+		"id": "5",
+		"title": "Warmr",
 		"description": "Description détaillée du projet...",
 		"technologies": ["Angular", "Express", "MySQL"],
 		"image": "/images/projet-5.jpg",
@@ -70,8 +70,8 @@
 		"date": "2024-02-01"
 	},
 	{
-		"id": "projet-6",
-		"title": "Nom du Projet 6",
+		"id": "6",
+		"title": "Pexels 2",
 		"description": "Description détaillée du projet...",
 		"technologies": ["Angular", "Express", "MySQL"],
 		"image": "/images/projet-6.jpg",

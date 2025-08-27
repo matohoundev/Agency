@@ -45,7 +45,7 @@
            <img src={project.url} alt={project.title} class="w-full h-auto rounded-lg shadow-lg" />
            <div class="projects-logo">
                <img src={project.iconUrl} alt="Project Icon" class="w-8 h-8" />
-               <p class="text-black">{project.title}</p>
+               <p>{project.title}</p>
            </div>
        </div>
        {/each}
@@ -97,9 +97,12 @@
         align-items: center;
         gap: 0.5rem;
         background: white;
+        /* background: rgb(0, 0, 0, 0.7); */
         border-radius: 2.5rem;
         padding: 0.5rem 1rem 0.5rem 0.5rem;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        /* color: white; */
+        color: black;
         font-family: 'Manrope', sans-serif;
         font-weight: bold;
     }
