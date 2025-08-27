@@ -145,6 +145,24 @@ export const pricingAnimations = {
 	}
 };
 
+export const projectAnimations = {
+	init() {
+		const tl = gsap.timeline();
+
+		tl.to('.Projects', {
+				scrollTrigger: {
+					trigger: '.Projects',
+					end: '-180px',
+					scrub: true
+				},
+				scale: 1,
+				y: 0
+			});
+
+		return tl;
+	}
+};
+
 // export const pricingAnimations = {
 // 	init() {
 // 		const tl = gsap.timeline();
@@ -183,6 +201,7 @@ export function initAllAnimations() {
 		.add(aboutAnimations.init())
 		// .add(detailAnimations.init());
 	// Ajoutez d'autres animations ici
+	.add(projectAnimations.init());
 }
 
 // Fonction pour nettoyer les animations (utile pour la navigation)

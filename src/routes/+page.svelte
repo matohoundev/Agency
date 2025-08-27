@@ -4,7 +4,6 @@
 	import Pricing from '$lib/sections/Pricing.svelte';
 	import Faq from '$lib/sections/Faq.svelte';
 	import Detail from '$lib/sections/Detail.svelte';
-	import Showcase from '$lib/sections/Showcase.svelte';
 	import Panel from '$lib/sections/Panel.svelte';
 	import Project from '$lib/sections/Project.svelte';
 </script>
@@ -18,7 +17,6 @@
 <Panel />
 <About />
 <Project />
-<Showcase />
 <Detail />
 <Pricing />
 <Faq />
