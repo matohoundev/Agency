@@ -45,6 +45,7 @@
            <img src={project.url} alt={project.title} class="w-full h-auto rounded-lg shadow-lg" />
            <div class="projects-logo">
                <img src={project.iconUrl} alt="Project Icon" class="w-8 h-8" />
+               <p class="text-black">{project.title}</p>
            </div>
        </div>
        {/each}
@@ -77,7 +78,7 @@
 
     @media (min-width: 1280px) {
         .projects-content {
-             padding-inline: 4rem;
+             padding-inline: 5rem;
              gap: 2.5rem;
         }
     }
@@ -90,12 +91,17 @@
 
     .projects-logo {
         position: absolute;
-        top: 1rem;
+        bottom: 1rem;
         left: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
         background: white;
-        border-radius: 50%;
-        padding: 0.5rem;
+        border-radius: 2.5rem;
+        padding: 0.5rem 1rem 0.5rem 0.5rem;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        font-family: 'Manrope', sans-serif;
+        font-weight: bold;
     }
 
     .projects-head h2 {
