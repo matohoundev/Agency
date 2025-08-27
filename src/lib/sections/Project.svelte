@@ -31,7 +31,7 @@
     });
 </script>
 
-<section id="projects" class="Projects container mx-auto flex flex-col py-12.5 px-3 md:px-15 lg:px-0 gap-y-10.5">
+<section id="projects" class="Projects container mx-auto flex flex-col py-12.5 px-3 md:px-15 lg:px-0 gap-y-10.5" style="min-height: 1800px;">
     <div class="projects-head flex flex-col justify-center items-center gap-y-6 md:gap-y-4">
 		<h2 class="text-center text-white text-4xl">Les dernières réalisations</h2>
 		<p class="text-center text-white text-lg">
@@ -58,7 +58,21 @@
         color: white;
         border-radius: 1rem 1rem 0 0; /* Coins arrondis en haut */
         transform: translateY(150px) scale(0.8);
+        /* temporaire aussi */
+        min-height: 1800px;
     }
+    /* temporaire de la*/
+    @media (max-width: 640px) {
+        .Projects { min-height: 1400px; }
+    }
+    @media (min-width: 641px) and (max-width: 1023px) {
+        .Projects { min-height: 1600px; }
+    }
+    @media (min-width: 1024px) {
+        .Projects { min-height: 1800px; }
+    }
+    /* temporaire a la */
+
     .projects-content {
         /* padding-inline: 1rem; */
         gap: 1.5rem;
