@@ -99,8 +99,14 @@
 
     .projects-card {
         position: relative;
+        transition: transform 0.35s cubic-bezier(.4,0,.2,1);
         /* display: inline-block; */
         /* margin: 1rem; */
+    }
+
+    .projects-card:hover {
+        transform: scale(1.03);
+        cursor: pointer;
     }
 
     .projects-logo {
