@@ -2,7 +2,7 @@
 	{
 		"id": "1",
 		"title": "Google",
-		"description": "Description détaillée du projet...",
+		"description": "Refonte stratégique de la landing page ",
 		"technologies": ["React", "Node.js", "MongoDB"],
 		"image": "/images/projet-1.jpg",
 		"url": "/images/magicpost.avif",
@@ -16,7 +16,7 @@
 	{
 		"id": "2",
 		"title": "Pexels",
-		"description": "Description détaillée du projet...",
+		"description": "Refonte de la page d'accueil",
 		"technologies": ["Vue.js", "Firebase"],
 		"image": "/images/projet-2.jpg",
 		"url": "/images/warmr.avif",
@@ -30,7 +30,7 @@
 	{
 		"id": "3",
 		"title": "Leaddy",
-		"description": "Description détaillée du projet...",
+		"description": "Création de 3 landing pages personas",
 		"technologies": ["Svelte", "Tailwind", "Firebase"],
 		"image": "/images/projet-3.jpg",
 		"url": "/images/leaddy.avif",
@@ -44,7 +44,7 @@
 	{
 		"id": "4",
 		"title": "Pimms",
-		"description": "Description détaillée du projet...",
+		"description": "Création d'une landing page de formation",
 		"technologies": ["Angular", "Express", "MySQL"],
 		"image": "/images/projet-4.jpg",
 		"url": "/images/pimms.avif",
@@ -58,7 +58,7 @@
 	{
 		"id": "5",
 		"title": "Warmr",
-		"description": "Description détaillée du projet...",
+		"description": "Refonte stratégique de la landing page et A/B testing",
 		"technologies": ["Angular", "Express", "MySQL"],
 		"image": "/images/projet-5.jpg",
 		"url": "/images/warmr.avif",
