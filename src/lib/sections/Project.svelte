@@ -8,6 +8,7 @@
         title: string;
         iconUrl: string;
         description: string;
+        technologies: string[];
     }
 
 
@@ -42,6 +43,7 @@ function toggleDescription(id: string | number) {
         desc.style.display = 'none';
         openedId = null;
         removeOutsideListener();
+        animateDescription(id, false);
         return;
     }
 
@@ -49,10 +51,11 @@ function toggleDescription(id: string | number) {
     if (openedId !== null && openedId !== id) {
         const prev = document.getElementById(`desc-${openedId}`);
         if (prev) prev.style.display = 'none';
+        animateDescription(openedId, false);
     }
 
     desc.style.display = 'block';
-    animateDescription(id);
+    animateDescription(id, true);
     openedId = id;
     addOutsideListener(id);
 }
@@ -67,6 +70,7 @@ function addOutsideListener(id: string | number) {
         if (!card.contains(e.target as Node) && !moreBtn.contains(e.target as Node)) {
             card.style.display = 'none';
             openedId = null;
+            animateDescription(id, false);
             removeOutsideListener();
         }
     };
@@ -80,21 +84,31 @@ function removeOutsideListener() {
     }
 }
 
-    const animateDescription = (id: string | number) => {
+    const animateDescription = (id: string | number, isOpen: boolean) => {
         const blockMore = document.getElementById(`more-${id}`);
-            
-        gsap.to(blockMore, { scale: 15, y: -200, duration: 0.5 });
+        if (blockMore && isOpen) {
+            gsap.to(blockMore, { scale: 15, y: -200, duration: 0.5 });
+        } else if (blockMore && !isOpen) {
+            gsap.to(blockMore, { scale: 1, y: 0, duration: 0.3 });
+        }
 
         const btnMore = document.getElementById(`more-btn-${id}`);
         
-        gsap.to(btnMore, { opacity: 0, duration: 0.1 });
+        if (btnMore && isOpen) {
+            gsap.to(btnMore, { opacity: 0, duration: 0.05 });
+        } else if (btnMore && !isOpen) {
+            gsap.to(btnMore, { opacity: 1, duration: 0.1, delay: 0.2 });
+        }
 
-        // const desc = document.getElementById(`desc-${id}`);
-        // if (desc) {
-        //     gsap.fromTo(desc, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3 });
-        // }
+        const desc = document.getElementById(`desc-${id}`);
 
-        // const descText = document.getElementById(`desc-text-${id}`);
+        if (desc && isOpen) {
+            gsap.fromTo(desc, 
+                { opacity: 0, y: 30 }, 
+                { opacity: 1, y: 0, duration: 0.5, delay: 0.3 });
+        } else if (desc && !isOpen) {
+            gsap.to(desc, { opacity: 0, y: 30, duration: 0.3 });
+        }
 
     };
 
@@ -123,7 +137,9 @@ function removeOutsideListener() {
                 <button on:click={() => toggleDescription(project.id)} id={"more-btn-" + project.id}>En savoir +</button>
             </div>
             <div class="projects-description " id={"desc-" + project.id} style="display: none;">
-                    <p id={"desc-text-" + project.id}>{project.description}</p>
+                    <p>{project.description}</p>
+                    <hr class="my-4 border-gray-700" />
+                    <p class="text-gray-400 text-sm">{project.technologies.join(", ")}</p>
                 </div>
        </div>
        {/each}
@@ -235,7 +251,9 @@ function removeOutsideListener() {
     }
     .projects-more {
         position: absolute;
-        background-color: rgba(255, 255, 255, 0.1);
+        /* background-color: rgba(255, 255, 255, 0.85); */
+        background-color: rgba(255, 255, 255, 0.35);
+        backdrop-filter: blur(0.3px);
         bottom: 0.7rem;
         right: 0.5rem;
         /* width: 41.5%; */
@@ -244,15 +262,12 @@ function removeOutsideListener() {
         justify-content: end;
         /* justify-content: center; */
         align-items: center;
-    }
-
-    .projects-more {
         cursor: pointer;
         transition: background-color 0.3s ease;
     }
 
     .projects-more:hover {
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: rgba(255, 255, 255, 0.45);
         transform: scale(1.05);
     }
 
@@ -272,13 +287,56 @@ function removeOutsideListener() {
 
     .projects-description {
         /* display: none; */
-        opacity: 0;
+        /* opacity: 0; */
         position: absolute;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.7);
+        /* background: rgba(0, 0, 0, 0.7); */
         top: 0;
         left: 0;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+
+    @media (max-width: 376px) {
+        .projects-description {
+            padding: 1.58rem;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        .projects-description {
+            padding: 3rem;
+        }
+    }
+
+    .projects-description p {
+        font-family: 'Manrope', sans-serif;
+        color: black;
+        font-weight: bold;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    @media (max-width: 325px) {
+        .projects-description p {
+            font-size: 0.9rem !important;
+        }
+    }
+
+    @media (max-width: 376px) {
+        .projects-description p {
+            font-size: 1rem;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        .projects-description p {
+            font-size: 1.5rem;
+        }
     }
 
 </style>

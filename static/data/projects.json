@@ -2,7 +2,7 @@
 	{
 		"id": "1",
 		"title": "Google",
-		"description": "Refonte stratégique de la landing page ",
+		"description": "Refonte stratégique de la landing page.",
 		"technologies": ["React", "Node.js", "MongoDB"],
 		"image": "/images/projet-1.jpg",
 		"url": "/images/magicpost.avif",
