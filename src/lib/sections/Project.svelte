@@ -1,30 +1,102 @@
 <script lang="ts">
     import { onMount } from 'svelte';
+    import { gsap } from 'gsap';
 
-    	interface Project {
-		url: string;
-		title: string;
-		iconUrl: string;
-	}
+        interface Project {
+        id: string | number;
+        url: string;
+        title: string;
+        iconUrl: string;
+        description: string;
+    }
 
-    let projects: Project[] = [];
-	let isLoading = true;
-	let error: string | null = null;
+
+let projects: Project[] = [];
+let isLoading = true;
+let error: string | null = null;
+let openedId: string | number | null = null;
+let outsideClickListener: ((e: MouseEvent) => void) | null = null;
 
     async function loadProjects() {
-		try {
-			const response = await fetch('/data/projects.json');
-			if (!response.ok) {
-				throw new Error(`Erreur HTTP! Statut: ${response.status}`);
-			}
-			projects = await response.json();
-			isLoading = false;
-		} catch (err) {
-			console.error('Erreur lors du chargement des projets:', err);
-			error = err instanceof Error ? err.message : String(err);
-			isLoading = false;
-		}
-	}
+        try {
+            const response = await fetch('/data/projects.json');
+            if (!response.ok) {
+                throw new Error(`Erreur HTTP! Statut: ${response.status}`);
+            }
+            projects = await response.json();
+            isLoading = false;
+        } catch (err) {
+            console.error('Erreur lors du chargement des projets:', err);
+            error = err instanceof Error ? err.message : String(err);
+            isLoading = false;
+        }
+    }
+
+
+function toggleDescription(id: string | number) {
+    const desc = document.getElementById(`desc-${id}`);
+    if (!desc) return;
+
+    // Si déjà ouvert, referme
+    if (openedId === id && desc.style.display === 'block') {
+        desc.style.display = 'none';
+        openedId = null;
+        removeOutsideListener();
+        return;
+    }
+
+    // Ferme l'ancienne si besoin
+    if (openedId !== null && openedId !== id) {
+        const prev = document.getElementById(`desc-${openedId}`);
+        if (prev) prev.style.display = 'none';
+    }
+
+    desc.style.display = 'block';
+    animateDescription(id);
+    openedId = id;
+    addOutsideListener(id);
+}
+
+function addOutsideListener(id: string | number) {
+    removeOutsideListener();
+    outsideClickListener = (e: MouseEvent) => {
+        const card = document.getElementById(`desc-${id}`);
+        const moreBtn = document.getElementById(`more-${id}`);
+        if (!card || !moreBtn) return;
+        // Si le clic n'est pas dans la description ni le bouton
+        if (!card.contains(e.target as Node) && !moreBtn.contains(e.target as Node)) {
+            card.style.display = 'none';
+            openedId = null;
+            removeOutsideListener();
+        }
+    };
+    document.addEventListener('mousedown', outsideClickListener);
+}
+
+function removeOutsideListener() {
+    if (outsideClickListener) {
+        document.removeEventListener('mousedown', outsideClickListener);
+        outsideClickListener = null;
+    }
+}
+
+    const animateDescription = (id: string | number) => {
+        const blockMore = document.getElementById(`more-${id}`);
+            
+        gsap.to(blockMore, { scale: 15, y: -200, duration: 0.5 });
+
+        const btnMore = document.getElementById(`more-btn-${id}`);
+        
+        gsap.to(btnMore, { opacity: 0, duration: 0.1 });
+
+        // const desc = document.getElementById(`desc-${id}`);
+        // if (desc) {
+        //     gsap.fromTo(desc, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3 });
+        // }
+
+        // const descText = document.getElementById(`desc-text-${id}`);
+
+    };
 
     onMount(() => {
         loadProjects();
@@ -33,20 +105,26 @@
 
 <section id="projects" class="Projects container mx-auto flex flex-col py-12.5 px-3 md:px-15 lg:px-0 gap-y-10.5" style="min-height: 1800px;">
     <div class="projects-head flex flex-col justify-center items-center gap-y-6 md:gap-y-4">
-		<h2 class="text-center text-white text-4xl">Les dernières réalisations</h2>
-		<p class="text-center text-white text-lg">
-			Découvrez comment nous transformons des idées ambitieuses en sites à fort impact.
-		</p>
-	</div>
+        <h2 class="text-center text-white text-4xl">Les dernières réalisations</h2>
+        <p class="text-center text-white text-lg">
+            Découvrez comment nous transformons des idées ambitieuses en sites à fort impact.
+        </p>
+    </div>
 
     <div class="projects-content grid grid-cols-1 sm:grid-cols-2 justify-items-center">
        {#each projects as project}
        <div class="projects-card">
            <img src={project.url} alt={project.title} class="w-full h-auto rounded-lg shadow-lg" />
-           <div class="projects-logo">
-               <img src={project.iconUrl} alt="Project Icon" class="w-8 h-8" />
-               <p>{project.title}</p>
-           </div>
+            <div class="projects-logo">
+                <img src={project.iconUrl} alt="Project Icon" class="w-8 h-8" />
+                <p>{project.title}</p>
+            </div>
+            <div class="projects-more" id={"more-" + project.id}>
+                <button on:click={() => toggleDescription(project.id)} id={"more-btn-" + project.id}>En savoir +</button>
+            </div>
+            <div class="projects-description " id={"desc-" + project.id} style="display: none;">
+                    <p id={"desc-text-" + project.id}>{project.description}</p>
+                </div>
        </div>
        {/each}
     </div>
@@ -97,37 +175,7 @@
         }
     }
 
-    .projects-card {
-        position: relative;
-        transition: transform 0.35s cubic-bezier(.4,0,.2,1);
-        /* display: inline-block; */
-        /* margin: 1rem; */
-    }
-
-    .projects-card:hover {
-        transform: scale(1.03);
-        cursor: pointer;
-    }
-
-    .projects-logo {
-        position: absolute;
-        bottom: 1rem;
-        left: 1rem;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        /* background: white; */
-        background: rgb(0, 0, 0, 0.7);
-        border-radius: 2.5rem;
-        padding: 0.5rem 1rem 0.5rem 0.5rem;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-        color: white;
-        /* color: black; */
-        font-family: 'Manrope', sans-serif;
-        font-weight: bold;
-    }
-
-    .projects-head h2 {
+        .projects-head h2 {
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
         line-height: 1.3;
@@ -152,6 +200,85 @@
             font-size: 1.3rem; 
         }
     }
-    
+
+    .projects-card {
+        position: relative;
+        transition: transform 0.35s cubic-bezier(.4,0,.2,1);
+        /* display: inline-block; */
+        /* margin: 1rem; */
+        overflow: hidden;
+    }
+
+    .projects-card:hover {
+        transform: scale(1.03);
+        cursor: pointer;
+    }
+
+    .projects-logo {
+        position: absolute;
+        bottom: 0.5rem;
+        left: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        width: fit-content;
+        /* background: white; */
+        background: rgb(0, 0, 0, 0.7);
+        border-radius: 2.5rem;
+        padding: 0.5rem 1rem 0.5rem 0.5rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        color: white;
+        /* color: black; */
+        font-family: 'Manrope', sans-serif;
+        font-weight: bold;
+        z-index: 10;
+    }
+    .projects-more {
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.1);
+        bottom: 0.7rem;
+        right: 0.5rem;
+        /* width: 41.5%; */
+        border-radius: 2.5rem;
+        display: flex;
+        justify-content: end;
+        /* justify-content: center; */
+        align-items: center;
+    }
+
+    .projects-more {
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .projects-more:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: scale(1.05);
+    }
+
+    .projects-more button {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 0.8rem;
+        cursor: pointer;
+        padding-inline: 1.2rem;
+        padding-block: 0.5rem;  
+        }
+
+    @media (min-width: 1280px) {
+        .projects-more button {
+            font-size: 1rem;
+        }
+    }
+
+    .projects-description {
+        /* display: none; */
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        top: 0;
+        left: 0;
+    }
 
 </style>

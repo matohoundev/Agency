@@ -27,4 +27,4 @@
 
 <Footer />
 
-<Background3d />
+<!-- <Background3d /> -->
