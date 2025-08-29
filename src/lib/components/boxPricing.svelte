@@ -1,8 +1,10 @@
-<script>
+<script lang="ts">
 	import Button from '$lib/components/button3d.svelte';
+	import type { Offer } from '$lib/types/offer';
 
 	// Props pour personnaliser chaque box
-	export let offer = {
+	export let offer: Offer = {
+		id: '1',
 		title: 'Vitrine 3D',
 		price: '590€ HT',
 		priceNote: '(à partir de)',

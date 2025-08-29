@@ -1,37 +1,14 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
+
     import { gsap } from 'gsap';
+    import type { Project } from '$lib/types/project';
 
-        interface Project {
-        id: string | number;
-        url: string;
-        title: string;
-        iconUrl: string;
-        description: string;
-        technologies: string[];
-    }
+    export let projects: Project[] = [];
+    export let isLoading: boolean = false;
+    export let error: string | null = null;
 
-
-let projects: Project[] = [];
-let isLoading = true;
-let error: string | null = null;
-let openedId: string | number | null = null;
-let outsideClickListener: ((e: MouseEvent) => void) | null = null;
-
-    async function loadProjects() {
-        try {
-            const response = await fetch('/data/projects.json');
-            if (!response.ok) {
-                throw new Error(`Erreur HTTP! Statut: ${response.status}`);
-            }
-            projects = await response.json();
-            isLoading = false;
-        } catch (err) {
-            console.error('Erreur lors du chargement des projets:', err);
-            error = err instanceof Error ? err.message : String(err);
-            isLoading = false;
-        }
-    }
+    let openedId: string | number | null = null;
+    let outsideClickListener: ((e: MouseEvent) => void) | null = null;
 
 
 function toggleDescription(id: string | number) {
@@ -112,9 +89,7 @@ function removeOutsideListener() {
 
     };
 
-    onMount(() => {
-        loadProjects();
-    });
+    // Suppression du chargement local, les données sont passées en props
 </script>
 
 <section id="projects" class="Projects container mx-auto flex flex-col py-12.5 px-3 md:px-15 lg:px-0 gap-y-10.5" style="min-height: 1800px;">
@@ -153,10 +128,10 @@ function removeOutsideListener() {
         border-radius: 1rem 1rem 0 0; /* Coins arrondis en haut */
         transform: translateY(150px) scale(0.8);
         /* temporaire aussi */
-        min-height: 1800px;
+        /* min-height: 1800px; */
     }
     /* temporaire de la*/
-    @media (max-width: 640px) {
+    /* @media (max-width: 640px) {
         .Projects { min-height: 1400px; }
     }
     @media (min-width: 641px) and (max-width: 1023px) {
@@ -164,7 +139,7 @@ function removeOutsideListener() {
     }
     @media (min-width: 1024px) {
         .Projects { min-height: 1800px; }
-    }
+    } */
     /* temporaire a la */
 
     .projects-content {

@@ -1,46 +1,10 @@
 <script lang="ts">
-	import { onMount, tick } from 'svelte';
 	import BoxPricing from '$lib/components/boxPricing.svelte';
-	import { pricingAnimations } from '$lib/animations/gsapTimeline';
+	import type { Offer } from '$lib/types/offer';
 
-	interface Offer {
-		id: string | number;
-		// Add other properties that exist in your offers
-		title: string;
-		price: string;
-		priceNote: string;
-		deliveryTime: string;
-		description: string;
-		isPopular: boolean;
-		theme: string;
-		features: string[];
-	}
-
-	let offers: Offer[] = [];
-	let isLoading = true;
-	let error: string | null = null;
-
-	// Chargement des offres depuis le fichier JSON
-	async function loadOffers() {
-		try {
-			const response = await fetch('/data/offers.json');
-			if (!response.ok) {
-				throw new Error(`Erreur HTTP! Statut: ${response.status}`);
-			}
-			offers = await response.json();
-			isLoading = false;
-			await tick(); // attendre le rendu des BoxPricing
-			pricingAnimations.init(); // lancer l'animation pricing
-		} catch (err) {
-			console.error('Erreur lors du chargement des offres:', err);
-			error = err instanceof Error ? err.message : String(err);
-			isLoading = false;
-		}
-	}
-
-	onMount(() => {
-		loadOffers();
-	});
+	export let offers: Offer[] = [];
+	export let isLoading = true;
+	export let error: string | null = null;
 </script>
 
 <section
