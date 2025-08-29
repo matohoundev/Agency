@@ -52,9 +52,9 @@ export const aboutAnimations = {
 				opacity: 0,
 				x: 100,
 				duration: 1,
-				ease: 'power2.out'
-			},
-			'-=0.5'
+				ease: 'power2.out',
+				delay: 0.5
+			}
 		);
 
 		return tl;
@@ -196,6 +196,7 @@ export const projectAnimations = {
 
 // Fonction pour initialiser toutes les animations
 export function initAllAnimations() {
+	ScrollTrigger.refresh();
 	masterTimeline
 		// .add(homeAnimations.init())
 		.add(aboutAnimations.init())
