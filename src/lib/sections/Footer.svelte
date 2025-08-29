@@ -24,9 +24,7 @@
 					<p class="text-gray-700">&copy; {currentYear} Agency. Tous droits réservés.</p>
 				</div>
 				<div class="flex space-x-4">
-					<a href="/contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
-					<a href="/about" class="text-gray-600 hover:text-blue-600 transition-colors">À propos</a>
-					<a href="/legal" class="text-gray-600 hover:text-blue-600 transition-colors"
+					<a href="/legal-notice" class="text-gray-600 hover:text-blue-600 transition-colors"
 						>Mentions légales
 					</a>
 				</div>
