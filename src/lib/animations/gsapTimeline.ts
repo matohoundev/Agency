@@ -29,28 +29,33 @@ export const aboutAnimations = {
 	init() {
 		const tl = gsap.timeline();
 
-		tl.from('.about-title', {
+		tl.fromTo('.about-title', {
+			opacity: 0,
+			y: 100
+		}, {
 			scrollTrigger: {
 				trigger: '.About',
 				start: 'top 80%',
 				end: 'bottom 40%',
 				scrub: true
 			},
-			opacity: 0.3,
-			y: 100,
+			opacity: 1,
+			y: 0,
 			duration: 1,
 			ease: 'power2.out'
-		}).from(
-			'.about-content',
-			{
+		}).fromTo(
+			'.about-content', {
+				opacity: 0,
+				x: 100
+			}, {
 				scrollTrigger: {
 					trigger: '.About',
 					start: 'top 70%',
 					end: 'bottom 70%',
 					scrub: true
 				},
-				opacity: 0,
-				x: 100,
+				opacity: 1,
+				x: 0,
 				duration: 1,
 				ease: 'power2.out',
 				delay: 0.5
