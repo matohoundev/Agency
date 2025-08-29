@@ -7,6 +7,7 @@
     import { fetchAllData } from '$lib/api/fetchAllData';
     import { initAllAnimations, cleanupAnimations } from '$lib/animations/gsapTimeline';
     import { setAppData, setAppError, setAppLoading } from '$lib/stores/appData';
+	import { afterNavigate } from '$app/navigation';
 
     let { children } = $props();
 
@@ -33,6 +34,15 @@
             cancelled = true;
             cleanupAnimations();
         };
+    });
+
+    // a voir si ça fonctionne bien je garde ça pour l'instant
+    afterNavigate(() => {
+        cleanupAnimations();
+        initAllAnimations();
+
+        // Smooth scroll to the top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 </script>
 
