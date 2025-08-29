@@ -61,7 +61,7 @@
 
 </script>
 
-<header class="fixed w-full z-10 ">
+<header class="fixed w-full z-15 ">
 	<div
 		class="container mx-auto px-8 xl:px-16 py-4 flex justify-between items-center align-middle pointer-events-auto"
 	>
@@ -74,10 +74,10 @@
 		<nav class="relative">
 			<div class="bubble"></div>
 			<ul class="hidden md:flex space-x-8 text-white">
-				<li><a href="#projects" class="hover:underline">Réalisations</a></li>
-				<li><a href="#offre" class="hover:underline">Offre</a></li>
-				<li><a href="#tarifs" class="hover:underline">Tarifs</a></li>
-				<li><a href="#footer" class="hover:underline">Contact</a></li>
+				<li><a href="/#projects" class="hover:underline">Réalisations</a></li>
+				<li><a href="/#offre" class="hover:underline">Offre</a></li>
+				<li><a href="/#tarifs" class="hover:underline">Tarifs</a></li>
+				<li><a href="/#footer" class="hover:underline">Contact</a></li>
 			</ul>
 
 			<!-- Mobile menu button -->
