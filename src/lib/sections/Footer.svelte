@@ -3,10 +3,10 @@
 	const currentYear = new Date().getFullYear();
 </script>
 
-<footer class="relative z-10">
+<footer class="relative z-10" id="footer">
 	<!-- <footer class="relative z-10 bg-amber-300"> -->
 	<div
-		class="container h-screen mx-auto px-6 pt-20 md:pt-40 pb-6 border-2 flex flex-col justify-between"
+		class="container h-screen mx-auto px-6 pt-20 md:pt-40 pb-6 flex flex-col justify-between"
 	>
 		<div class="flex justify-center">
 			<h6 class="text-white text-6xl lg:text-7xl">
@@ -24,8 +24,11 @@
 					<p class="text-gray-700">&copy; {currentYear} Agency. Tous droits réservés.</p>
 				</div>
 				<div class="flex space-x-4">
-					<a href="/legal-notice" class="text-gray-600 hover:text-blue-600 transition-colors"
-						>Mentions légales
+					<a href="/legal-notice" class="text-gray-400 hover:text-white transition-colors underline-offset-4 hover:underline">
+						Mentions légales
+					</a>
+					<a href="/privacy-policy" class="text-gray-400 hover:text-white transition-colors underline-offset-4 hover:underline">
+						Politique de confidentialité
 					</a>
 				</div>
 			</div>

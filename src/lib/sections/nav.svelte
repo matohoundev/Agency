@@ -77,7 +77,7 @@
 				<li><a href="#projects" class="hover:underline">Réalisations</a></li>
 				<li><a href="#offre" class="hover:underline">Offre</a></li>
 				<li><a href="#tarifs" class="hover:underline">Tarifs</a></li>
-				<li><a href="#contact" class="hover:underline">Contact</a></li>
+				<li><a href="#footer" class="hover:underline">Contact</a></li>
 			</ul>
 
 			<!-- Mobile menu button -->
