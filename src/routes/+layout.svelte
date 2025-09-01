@@ -37,13 +37,12 @@
     });
 
     // a voir si ça fonctionne bien je garde ça pour l'instant
-    afterNavigate(() => {
-        cleanupAnimations();
-        initAllAnimations();
+    // afterNavigate(() => {
+    //     cleanupAnimations();
+    //     initAllAnimations();
 
-        // Smooth scroll to the top
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    //     window.scrollTo({ top: 0, behavior: 'smooth' });
+    // });
 </script>
 
 <Nav />
