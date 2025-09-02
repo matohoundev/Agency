@@ -205,9 +205,9 @@ export function initAllAnimations() {
 	masterTimeline
 		// .add(homeAnimations.init())
 		.add(aboutAnimations.init())
+		.add(projectAnimations.init())
 		.add(pricingAnimations.init())
 		// .add(detailAnimations.init());
-		.add(projectAnimations.init());
 }
 
 // Fonction pour nettoyer les animations (utile pour la navigation)
