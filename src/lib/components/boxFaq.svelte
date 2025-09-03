@@ -10,11 +10,13 @@
 
 <div class="faq-box space-y-4">
 	{#each faqItems as item, i}
-		<div class="faq-item bg-gray-700 rounded-xl overflow-hidden">
+		<div class="faq-item bg-gray-700 rounded-xl">
 			<button
-				class="w-full px-6 py-3.5 text-left flex justify-between items-center focus:outline-none gap-x-2 transition-colors duration-200 hover:bg-gray-600"
+				type="button"
+				class="w-full px-6 py-3.5 text-left flex justify-between items-center gap-x-2 transition-colors duration-200 hover:bg-gray-600"
 				on:click={() => toggleFaq(i)}
 				aria-expanded={activeIndex === i}
+				aria-controls={"faq-answer-" + i}
 			>
 				<p class="text-md md:text-xl font-semibold">{item.question}</p>
 				<svg
@@ -33,7 +35,10 @@
 					/>
 				</svg>
 			</button>
-			<div class="faq-answer {activeIndex === i ? 'open' : 'closed'}">
+			<div
+				class="faq-answer {activeIndex === i ? 'open' : 'closed'}"
+				id={"faq-answer-" + i}
+			>
 				<div class="px-6 pb-4">
 					<p class="text-md md:text-xl">{item.answer}</p>
 				</div>
@@ -49,6 +54,11 @@
 
 	.faq-item {
 		transition: all 0.3s ease-in-out;
+	}
+
+	.faq-item:hover {
+		background-color: #4b5563; /* Couleur de fond au survol */
+		cursor: pointer;
 	}
 
 	.faq-answer {
