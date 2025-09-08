@@ -12,14 +12,17 @@ export const homeAnimations = {
 	init() {
 		const tl = gsap.timeline();
 
-		tl.to('.title-effect', {
+		tl.to('.header', {
 			opacity: 1,
-			x: 4,
-			y: 2.5,
-			position: 'absolute',
-			duration: 1.2,
-			ease: 'power2.out'
-		});
+			scale: 1,
+			duration: 1,
+			ease: 'ease.out'
+		}).to('.Home', {
+			opacity: 1,
+			scale: 1,
+			duration: 0.8,
+			ease: 'ease.InOut'
+		}, '1');
 
 		return tl;
 	}
@@ -203,7 +206,7 @@ export const projectAnimations = {
 export function initAllAnimations() {
 	ScrollTrigger.refresh();
 	masterTimeline
-		// .add(homeAnimations.init())
+		.add(homeAnimations.init())
 		.add(aboutAnimations.init())
 		.add(projectAnimations.init())
 		.add(pricingAnimations.init())

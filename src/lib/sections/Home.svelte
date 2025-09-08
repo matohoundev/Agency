@@ -22,9 +22,11 @@
 
 <style>
 	/* base */
-	section {
+	.Home {
 		height: 100vh;
 		/* border: 1px solid green; */
+		opacity: 0;
+		scale: 0.8;
 	}
 
 	/* custom */

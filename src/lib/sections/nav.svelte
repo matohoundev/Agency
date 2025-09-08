@@ -61,7 +61,7 @@
 
 </script>
 
-<header class="fixed w-full z-15 ">
+<header class="fixed w-full z-15 header">
 	<div
 		class="container mx-auto px-8 xl:px-16 py-4 flex justify-between items-center align-middle pointer-events-auto"
 	>
@@ -112,6 +112,12 @@
 	/* header div {
 		backdrop-filter: blur(10px);
 	} */
+
+	.header {
+		opacity: 0;
+		scale: 0.9;
+	}
+
 	a {
 		font-family: 'Montserrat', sans-serif;
 		font-weight: 500;
