@@ -17,12 +17,18 @@ export const homeAnimations = {
 			scale: 1,
 			duration: 1,
 			ease: 'ease.out'
-		}).to('.Home', {
+		}).to('.hero-title-section', {
 			opacity: 1,
 			scale: 1,
 			duration: 0.8,
 			ease: 'ease.InOut'
-		}, '1');
+		}, '1').to('.button-base', {
+			x: 0,
+			y: 0,
+			// opacity: 1,
+			duration: 0.5,
+			ease: 'ease.out'
+		});
 
 		return tl;
 	}

@@ -3,7 +3,7 @@
 </script>
 
 <section class="Home container mx-auto flex flex-col justify-center items-center gap-y-12">
-	<div class="relative">
+	<div class="relative hero-title-section">
 		<img src="/icons/logo-white-35-opacity.svg" alt="Logo" class="logo absolute" />
 		<div class="title-content">
 			<p class="relative suptitle z-10 text-black">C'est promis</p>
@@ -15,7 +15,7 @@
 			</div>
 		</div>
 	</div>
-	<div>
+	<div class="button-home">
 		<Button />
 	</div>
 </section>
@@ -25,6 +25,9 @@
 	.Home {
 		height: 100vh;
 		/* border: 1px solid green; */
+	}
+
+	.hero-title-section {
 		opacity: 0;
 		scale: 0.8;
 	}
