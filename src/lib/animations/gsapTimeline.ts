@@ -22,11 +22,7 @@ export const homeAnimations = {
 			scale: 1,
 			duration: 0.8,
 			ease: 'ease.InOut'
-		}, '1').to('.button-base', {
-			opacity: 1,
-			duration: 0.5,
-			ease: 'ease.out'
-		}).to('.button-3d', {
+		}, '1').to('.buttonEffect', {
 			opacity: 1,
 			duration: 0.5,
 			ease: 'ease.out'
@@ -217,17 +213,17 @@ export const projectAnimations = {
 
 // Fonction pour initialiser toutes les animations
 export function initAllAnimations() {
-	ScrollTrigger.refresh();
+	// L'animation Home est lancée une seule fois indépendamment
+	homeAnimations.init();
 	masterTimeline
-		.add(homeAnimations.init())
 		.add(aboutAnimations.init())
 		.add(projectAnimations.init())
-		.add(pricingAnimations.init())
+		.add(pricingAnimations.init());
 		// .add(detailAnimations.init());
 }
 
 // Fonction pour nettoyer les animations (utile pour la navigation)
 export function cleanupAnimations() {
 	ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-	masterTimeline.kill();
+	masterTimeline.clear();
 }
