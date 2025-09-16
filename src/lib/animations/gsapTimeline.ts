@@ -23,12 +23,19 @@ export const homeAnimations = {
 			duration: 0.8,
 			ease: 'ease.InOut'
 		}, '1').to('.button-base', {
-			x: 0,
-			y: 0,
-			// opacity: 1,
+			opacity: 1,
 			duration: 0.5,
 			ease: 'ease.out'
-		});
+		}).to('.button-3d', {
+			opacity: 1,
+			duration: 0.5,
+			ease: 'ease.out'
+		}).to('.button-base', {
+			x: 0,
+			y: 0,
+			duration: 0.5,
+			ease: 'ease.out'
+		}, '2.5');
 
 		return tl;
 	}

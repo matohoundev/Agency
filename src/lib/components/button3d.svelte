@@ -20,7 +20,7 @@
 	}
 
 	.button-base {
-		/* opacity: 0; */
+		opacity: 0;
 		transform: translateY(4px) translateX(4px);
 	}
 
@@ -121,6 +121,7 @@
 		color: transparent;
 		top: 4px;
 		left: 4px;
+		opacity: 0;
 	}
 
 	.button-3d-color-black {
