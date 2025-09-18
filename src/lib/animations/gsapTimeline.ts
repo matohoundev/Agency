@@ -180,41 +180,11 @@ export const projectAnimations = {
 	}
 };
 
-// export const pricingAnimations = {
-// 	init() {
-// 		const tl = gsap.timeline();
-
-// 		tl.from('.bg-opacity', {
-// 			scrollTrigger: {
-// 				trigger: '.Pricing',
-// 				markers: true,
-// 				end: 'bottom 90%',
-// 				scrub: true
-// 			},
-// 			y: -5000,
-// 			duration: 2,
-// 			ease: 'power2.out'
-// 		}).to('.BoxPricing-pink', {
-// 			scrollTrigger: {
-// 				trigger: '.Pricing',
-// 				markers: true,
-// 				end: '100px',
-// 				scrub: true
-// 			},
-// 			rotate: 0,
-// 			x: 0,
-// 			duration: 1,
-// 			ease: 'power2.out'
-// 		});
-
-// 		return tl;
-// 	}
-// };
-
 // Fonction pour initialiser toutes les animations
 export function initAllAnimations() {
 	// L'animation Home est lancée une seule fois indépendamment
 	homeAnimations.init();
+
 	masterTimeline
 		.add(aboutAnimations.init())
 		.add(projectAnimations.init())
