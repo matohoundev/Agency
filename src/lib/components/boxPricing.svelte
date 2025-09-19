@@ -38,7 +38,7 @@
 				{offer.description}
 			</p>
 			<div class="boxButtonPrice">
-				<Button themeBtn={offer.themeBtn}/>
+				<Button themeBtn={offer.themeBtn} animate={false}/>
 			</div>
 		</div>
 	</div>

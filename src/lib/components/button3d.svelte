@@ -1,9 +1,11 @@
 <script lang="ts">
 	export let themeBtn: string = 'black';
+	// When false, show immediately without intro animation
+	export let animate: boolean = true;
 </script>
 
-<div class="buttonEffect">
-	<button class="button-base relative z-15 btn-color-{themeBtn}">
+<div class="buttonEffect" style="opacity: {animate ? undefined : 1}">
+	<button class="button-base relative z-15 btn-color-{themeBtn}" style="transform: {animate ? 'translateY(4px) translateX(4px)' : 'none'}">
 		<a href="https://atohoun-marvin.fr/" target="_blank" rel="noopener noreferrer"
 			>Réserver un appel gratuit</a
 		>
@@ -20,9 +22,7 @@
 		opacity: 0;
 	}
 
-	.button-base {
-		transform: translateY(4px) translateX(4px);
-	}
+	.button-base {}
 
 		/* @media screen and (max-width: 1280px) {
 		.buttonEffect {
