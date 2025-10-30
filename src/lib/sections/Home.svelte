@@ -6,11 +6,10 @@
 	<div class="relative hero-title-section">
 		<img src="/icons/logo-white-35-opacity.svg" alt="Logo" class="logo absolute" />
 		<div class="title-content">
-			<p class="relative suptitle z-10 text-black">C'est promis</p>
 			<div class="relative z-10 text-black">
-				<p class="relative title z-15">Déclenchez <br /> Le wow effect <br /> À vos clients</p>
+				<p class="relative title z-15">Déclenchez <br /> Le "wow effect" <br /> À vos clients</p>
 				<span class="title-effect">
-					Déclenchez <br /> Le wow effect <br /> À vos clients
+					Déclenchez <br /> Le "wow effect" <br /> À vos clients
 				</span>
 			</div>
 		</div>
@@ -42,20 +41,9 @@
 	}
 
 	.title,
-	.suptitle,
 	.title-effect {
 		font-family: 'Manrope', sans-serif;
 		font-weight: bold;
-	}
-
-	.suptitle {
-		font-size: 1rem;
-	}
-
-		@media screen and (min-width: 1024px) {
-		.suptitle {
-			font-size: 1.3rem;
-		}
 	}
 
 	.title,

@@ -2,13 +2,16 @@
 	export let themeBtn: string = 'black';
 	// When false, show immediately without intro animation
 	export let animate: boolean = true;
+	// Link & label customization
+	export let href: string = 'https://atohoun-marvin.fr/';
+	export let label: string = 'Réserver un appel gratuit';
+	export let target: string | null = '_blank';
+	export let rel: string | null = 'noopener noreferrer';
 </script>
 
 <div class="buttonEffect" style="opacity: {animate ? undefined : 1}">
 	<button class="button-base relative z-15 btn-color-{themeBtn}" style="transform: {animate ? 'translateY(4px) translateX(4px)' : 'none'}">
-		<a href="https://atohoun-marvin.fr/" target="_blank" rel="noopener noreferrer"
-			>Réserver un appel gratuit</a
-		>
+		<a href={href} target={target} rel={rel}>{label}</a>
 	</button>
 
 	<div class="button-3d button-3d-color-{themeBtn} text-lg md:text-xl lg:text-2xl"></div>
