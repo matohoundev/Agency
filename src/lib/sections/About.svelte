@@ -1,14 +1,18 @@
+<script lang="ts">
+	const titleLines: [string, string] = ['Transformez vos visiteurs', "en clients fidèles"];
+</script>
+
 <section
-	class="About container mx-auto flex flex-col justify-center gap-y-12 sm:gap-y-24 2xl:gap-y-36"
+	class="About mx-auto max-w-7xl px-6 lg:px-12 flex flex-col justify-center gap-y-12 sm:gap-y-24 2xl:gap-y-36"
 >
 	<div class="about-title text-center sm:w-fit">
-		<h2 class="font-bold">Bringing Vibrancy<br /> To Your Identity</h2>
+		<h2 class="font-bold">{titleLines[0]}<br /> {titleLines[1]}</h2>
 	</div>
 	<div class="about-content flex justify-center sm:justify-end sm:w-fit">
 		<p>
-			<span>"Votre projet est le mien"</span> c'est ainsi que j'envisage une mission, votre motivation
-			est la mienne et c'est ce qui me permet d'atteindre un rendu fidèle au design. Creer et polir chaque détail avec toujours cette soif d'innover, ce sont mes valeurs. Développeur
-			passionné par le design et l'expérience utilisateur avec plus de 6 ans d'expérience dans le monde du web.
+			<span>"Votre projet est le mien"</span> c'est ainsi que j'envisage chaque mission. J'accompagne à chaque étape pour
+            construire des expériences digitales sur‑mesure, mémorables et performantes. Creer et polir chaque détail avec toujours cette soif d'innover, ce sont mes valeurs. Avec plus de 6 ans
+            d'expérience en conception d'interfaces, j'allie exigence visuelle et pragmatisme technique pour livrer des sites rapides, accessibles et pensés pour votre clientèle.
 		</p>
 	</div>
 </section>
@@ -17,7 +21,7 @@
 	/* base */
 	section {
 		min-height: 100vh;
-		/* border: 1px solid black; */
+		/* border: 1px solid blue; */
 		padding-inline: 8%;
 	}
 
@@ -35,7 +39,7 @@
 
 	@media screen and (min-width: 1440px) {
 		h2 {
-			font-size: 5rem;
+			font-size: 4rem;
 		}
 	}
 
@@ -78,7 +82,7 @@
 	@media screen and (min-width: 1440px) {
 		p {
 			width: 70%;
-			font-size: 1.7rem;
+			font-size: 1.4rem;
 		}
 	}
 
