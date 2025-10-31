@@ -29,6 +29,7 @@
 		font-family: 'Montserrat', sans-serif;
 		font-size: 2.5rem;
 		line-height: 1.3;
+		/* color: black; */
 	}
 
 	@media screen and (min-width: 768px) {
