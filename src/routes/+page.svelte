@@ -4,7 +4,6 @@
 	import Pricing from '$lib/sections/Pricing.svelte';
 	import Faq from '$lib/sections/Faq.svelte';
 	import Detail from '$lib/sections/Detail.svelte';
-	import Panel from '$lib/sections/Panel.svelte';
 	import Project from '$lib/sections/Project.svelte';
 
 	// Lecture des données globales depuis le store rempli par le layout
@@ -17,7 +16,6 @@
 </svelte:head>
 
 <Home />
-<Panel />
 <About />
 <Project projects={$appData.projects} isLoading={$appData.isLoading} error={$appData.error} />
 <Detail />
