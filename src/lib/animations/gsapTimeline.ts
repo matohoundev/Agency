@@ -17,21 +17,32 @@ export const homeAnimations = {
 			scale: 1,
 			duration: 1,
 			ease: 'ease.out'
-		}).to('.hero-title-section', {
-			opacity: 1,
-			scale: 1,
-			duration: 0.8,
-			ease: 'ease.InOut'
-		}, '1').to('.buttonEffect', {
-			opacity: 1,
-			duration: 0.5,
-			ease: 'ease.out'
-		}).to('.button-base', {
-			x: 0,
-			y: 0,
-			duration: 0.5,
-			ease: 'ease.out'
-		}, '2.5');
+		})
+			.to(
+				'.hero-title-section',
+				{
+					opacity: 1,
+					scale: 1,
+					duration: 0.8,
+					ease: 'ease.InOut'
+				},
+				'1'
+			)
+			.to('.buttonEffect', {
+				opacity: 1,
+				duration: 0.5,
+				ease: 'ease.out'
+			})
+			.to(
+				'.button-base',
+				{
+					x: 0,
+					y: 0,
+					duration: 0.5,
+					ease: 'ease.out'
+				},
+				'2.5'
+			);
 
 		return tl;
 	}
@@ -41,25 +52,31 @@ export const aboutAnimations = {
 	init() {
 		const tl = gsap.timeline();
 
-		tl.fromTo('.about-title', {
-			opacity: 0,
-			y: 100
-		}, {
-			scrollTrigger: {
-				trigger: '.About',
-				start: 'top 80%',
-				end: 'bottom 40%',
-				scrub: true
+		tl.fromTo(
+			'.about-title',
+			{
+				opacity: 0,
+				y: 100
 			},
-			opacity: 1,
-			y: 0,
-			duration: 1,
-			ease: 'power2.out'
-		}).fromTo(
-			'.about-content', {
+			{
+				scrollTrigger: {
+					trigger: '.About',
+					start: 'top 80%',
+					end: 'bottom 40%',
+					scrub: true
+				},
+				opacity: 1,
+				y: 0,
+				duration: 1,
+				ease: 'power2.out'
+			}
+		).fromTo(
+			'.about-content',
+			{
 				opacity: 0,
 				x: 100
-			}, {
+			},
+			{
 				scrollTrigger: {
 					trigger: '.About',
 					start: 'top 70%',
@@ -111,6 +128,40 @@ export const detailAnimations = {
 					ease: 'power2.out'
 				},
 				'-=1'
+			)
+			.from('.detail-card-3', {
+				x: 200
+			})
+			.to(
+				'.detail-card-3',
+				{
+					scrollTrigger: {
+						trigger: '.Detail',
+						end: '500px',
+						scrub: true
+					},
+					x: 0,
+					duration: 1,
+					ease: 'power2.out'
+				},
+				'-=1'
+			)
+			.from('.detail-card-4', {
+				x: -200
+			})
+			.to(
+				'.detail-card-4',
+				{
+					scrollTrigger: {
+						trigger: '.Detail',
+						end: '600px',
+						scrub: true
+					},
+					x: 0,
+					duration: 1,
+					ease: 'power2.out'
+				},
+				'-=1'
 			);
 
 		return tl;
@@ -121,7 +172,7 @@ export const pricingAnimations = {
 	init() {
 		const tl = gsap.timeline();
 
-        const isMobile = window.innerWidth < 768;
+		const isMobile = window.innerWidth < 768;
 
 		tl.from('.BoxPricing-purple', {
 			rotate: -10,
@@ -147,7 +198,7 @@ export const pricingAnimations = {
 				{
 					scrollTrigger: {
 						trigger: isMobile ? '.BoxPricing-pink' : '.Pricing',
-                        end: '100px',
+						end: '100px',
 						scrub: true
 					},
 					rotate: 0,
@@ -167,14 +218,14 @@ export const projectAnimations = {
 		const tl = gsap.timeline();
 
 		tl.to('.Projects', {
-				scrollTrigger: {
-					trigger: '.Projects',
-					end: '-350px',
-					scrub: true
-				},
-				scale: 1,
-				y: 0
-			});
+			scrollTrigger: {
+				trigger: '.Projects',
+				end: '-350px',
+				scrub: true
+			},
+			scale: 1,
+			y: 0
+		});
 
 		return tl;
 	}
@@ -188,8 +239,8 @@ export function initAllAnimations() {
 	masterTimeline
 		.add(aboutAnimations.init())
 		.add(projectAnimations.init())
-		.add(pricingAnimations.init());
-		// .add(detailAnimations.init());
+		.add(pricingAnimations.init())
+		.add(detailAnimations.init());
 }
 
 // Fonction pour nettoyer les animations (utile pour la navigation)

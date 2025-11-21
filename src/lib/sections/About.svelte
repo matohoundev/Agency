@@ -1,5 +1,5 @@
 <script lang="ts">
-	const titleLines: [string, string] = ['Transformez vos visiteurs', "en clients fidèles"];
+	const titleLines: [string, string] = ['Transformez vos visiteurs', 'en clients fidèles'];
 </script>
 
 <section
@@ -10,9 +10,11 @@
 	</div>
 	<div class="about-content flex justify-center sm:justify-end sm:w-fit">
 		<p>
-			<span>"Votre projet est le mien"</span> c'est ainsi que j'envisage chaque mission. J'accompagne à chaque étape pour
-            construire des expériences digitales sur‑mesure, mémorables et performantes. Creer et polir chaque détail avec toujours cette soif d'innover, ce sont mes valeurs. Avec plus de 6 ans
-            d'expérience en conception d'interfaces, j'allie exigence visuelle et pragmatisme technique pour livrer des sites rapides, accessibles et pensés pour votre clientèle.
+			<span>"Votre projet est le mien"</span> c'est ainsi que j'envisage chaque mission. J'accompagne
+			à chaque étape pour construire des expériences digitales sur‑mesure, mémorables et performantes.
+			Creer et polir chaque détail avec toujours cette soif d'innover, ce sont mes valeurs. Avec plus
+			de 6 ans d'expérience en conception d'interfaces, j'allie exigence visuelle et pragmatisme technique
+			pour livrer des sites rapides, accessibles et pensés pour votre clientèle.
 		</p>
 	</div>
 </section>
@@ -82,7 +84,7 @@
 
 	@media screen and (min-width: 1440px) {
 		p {
-			width: 70%;
+			/* width: 70%; */
 			font-size: 1.4rem;
 		}
 	}
