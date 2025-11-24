@@ -6,7 +6,7 @@
 	export let offer: Offer = {
 		id: '1',
 		title: 'Vitrine 3D',
-		price: '590€ HT',
+		price: '790€ HT',
 		priceNote: '(à partir de)',
 		deliveryTime: 'Livraison en 8 jours',
 		description: 'Description par défaut',
@@ -38,7 +38,7 @@
 				{offer.description}
 			</p>
 			<div class="boxButtonPrice">
-				<Button themeBtn={offer.themeBtn} animate={false}/>
+				<Button themeBtn={offer.themeBtn} animate={false} />
 			</div>
 		</div>
 	</div>

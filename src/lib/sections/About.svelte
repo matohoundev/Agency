@@ -1,12 +1,19 @@
 <script lang="ts">
-	const titleLines: [string, string] = ['Transformez vos visiteurs', 'en clients fidèles'];
+	const titleLines: [string, string, string] = [
+		'Déclenchez le',
+		' "wow effect"',
+		'chez vos clients'
+	];
 </script>
 
 <section
 	class="About mx-auto max-w-7xl px-6 lg:px-12 flex flex-col justify-center gap-y-12 sm:gap-y-24 2xl:gap-y-36"
 >
 	<div class="about-title text-center sm:w-fit">
-		<h2 class="font-bold">{titleLines[0]}<br /> {titleLines[1]}</h2>
+		<h2 class="font-bold">
+			{titleLines[0]} <span class="text-white">{titleLines[1]}</span><br />
+			{titleLines[2]}
+		</h2>
 	</div>
 	<div class="about-content flex justify-center sm:justify-end sm:w-fit">
 		<p>

@@ -3,39 +3,39 @@
 
 	const faqItems = [
 		{
-			question: 'Je ne suis pas satisfait, que se passe-t-il ?',
+			question: ' Quels types de sites web développez-vous ?',
 			answer:
-				"Je suis là pour vous aider. Si vous n'êtes pas satisfait de mon service, je ferai de mon mieux pour résoudre le problème."
+				'Je crée principalement des sites vitrines 3D interactifs pour les entreprises souhaitant une présence en ligne innovante et immersive.'
 		},
 		{
-			question: 'Quels sont les délais de livraison ?',
+			question: 'Quels sont les délais de livraison pour recevoir mon site ?',
 			answer:
 				'Les délais de livraison dépendent du projet. Généralement, un projet standard est livré en 2 à 4 semaines après validation du concept.'
 		},
 		{
-			question: 'Quelles méthodes de paiement acceptez-vous ?',
-			answer: "J'accepte les virements bancaires, PayPal et les paiements par carte de crédit."
-		},
-		{
-			question: 'Quelles méthodes de paiement acceptez-vous ?',
-			answer: "J'accepte les virements bancaires, PayPal et les paiements par carte de crédit."
-		},
-		{
-			question: 'Quelles méthodes de paiement acceptez-vous ?',
-			answer: "J'accepte les virements bancaires, PayPal et les paiements par carte de crédit."
-		},
-		{
-			question: 'Quelles méthodes de paiement acceptez-vous ?',
-			answer: "J'accepte les virements bancaires, PayPal et les paiements par carte de crédit."
-		},
-		{
-			question: 'Quelles méthodes de paiement acceptez-vous ?',
-			answer: "J'accepte les virements bancaires, PayPal et les paiements par carte de crédit."
-		},
-		{
-			question: 'Offrez-vous un support après la livraison du projet ?',
+			question: 'Comment se déroule la collaboration ?',
 			answer:
-				"Oui, j'offre un support technique pendant 3 mois après la livraison finale du projet."
+				"Au programme, je vous propose un planning et des points de validation réguliers pour obtenir vos retours et garantir le bon avancement du projet en toute transparence.\n\nL'objectif est de s'assurer que le résultat final corresponde parfaitement à vos attentes."
+		},
+		{
+			question: 'Puis-je demander des modifications après la livraison ?',
+			answer:
+				'Oui pas de soucis, je propose un support post-livraison pour effectuer des ajustements mineurs et vous aider à prendre en main votre site.'
+		},
+		{
+			question: 'Si je n’ai pas de contenu prêt, pouvez-vous m’aider ?',
+			answer:
+				'Absolument, je peux vous accompagner dans la création de contenu visuel et textuel adapté à votre site et vous conseiller sur la meilleure façon de le présenter.'
+		},
+		{
+			question: 'Comment se passe le paiement ?',
+			answer:
+				"Un acompte de 30% est demandé au démarrage, puis le solde à la livraison. Les paiements s'effectuent par virement bancaire."
+		},
+		{
+			question: 'Puis-je gérer mon site moi-même après sa mise en ligne ?',
+			answer:
+				"Oui avec l'outil Sanity, vous pouvez facilement gérer et mettre à jour le contenu de votre site sans connaissances techniques.\n\n Je fournis une formation rapide pour vous familiariser avec l'interface."
 		}
 	];
 </script>

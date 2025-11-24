@@ -16,7 +16,7 @@
 				class="w-full px-6 py-3.5 text-left flex justify-between items-center gap-x-2 transition-colors duration-200 hover:bg-gray-600"
 				on:click={() => toggleFaq(i)}
 				aria-expanded={activeIndex === i}
-				aria-controls={"faq-answer-" + i}
+				aria-controls={'faq-answer-' + i}
 			>
 				<p class="text-md md:text-xl font-semibold">{item.question}</p>
 				<svg
@@ -35,10 +35,7 @@
 					/>
 				</svg>
 			</button>
-			<div
-				class="faq-answer {activeIndex === i ? 'open' : 'closed'}"
-				id={"faq-answer-" + i}
-			>
+			<div class="faq-answer {activeIndex === i ? 'open' : 'closed'}" id={'faq-answer-' + i}>
 				<div class="px-6 pb-4">
 					<p class="text-md md:text-xl">{item.answer}</p>
 				</div>
@@ -58,13 +55,16 @@
 
 	.faq-item:hover {
 		background-color: #4b5563; /* Couleur de fond au survol */
-		cursor: pointer;
+		/* cursor: pointer; */
 	}
 
 	.faq-answer {
 		max-height: 0;
 		overflow: hidden;
-		transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+		transition:
+			max-height 0.4s ease-in-out,
+			opacity 0.3s ease-in-out,
+			padding 0.3s ease-in-out;
 		opacity: 0;
 	}
 
@@ -83,6 +83,7 @@
 	/* Animation plus fluide pour le texte */
 	.faq-answer p {
 		transition: transform 0.3s ease-in-out;
+		white-space: pre-line;
 	}
 
 	.faq-answer.open p {

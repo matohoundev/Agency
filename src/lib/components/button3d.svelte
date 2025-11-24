@@ -3,15 +3,18 @@
 	// When false, show immediately without intro animation
 	export let animate: boolean = true;
 	// Link & label customization
-	export let href: string = 'https://atohoun-marvin.fr/';
+	export let href: string = 'https://calendly.com/matohoundev/startprojet';
 	export let label: string = 'Réserver un appel gratuit';
 	export let target: string | null = '_blank';
 	export let rel: string | null = 'noopener noreferrer';
 </script>
 
 <div class="buttonEffect" style="opacity: {animate ? undefined : 1}">
-	<button class="button-base relative z-15 btn-color-{themeBtn}" style="transform: {animate ? 'translateY(4px) translateX(4px)' : 'none'}">
-		<a href={href} target={target} rel={rel}>{label}</a>
+	<button
+		class="button-base relative z-15 btn-color-{themeBtn}"
+		style="transform: {animate ? 'translateY(4px) translateX(4px)' : 'none'}"
+	>
+		<a {href} {target} {rel}>{label}</a>
 	</button>
 
 	<div class="button-3d button-3d-color-{themeBtn} text-lg md:text-xl lg:text-2xl"></div>
@@ -25,9 +28,10 @@
 		opacity: 0;
 	}
 
-	.button-base {}
+	.button-base {
+	}
 
-		/* @media screen and (max-width: 1280px) {
+	/* @media screen and (max-width: 1280px) {
 		.buttonEffect {
 			max-width: 350px;
 		}
@@ -66,7 +70,7 @@
 		left: 0px;
 	}
 
-		button {
+	button {
 		position: relative;
 		text-align: center;
 		text-decoration: none;
@@ -110,7 +114,7 @@
 		}
 	}
 
-		@media screen and (min-width: 1920px) {
+	@media screen and (min-width: 1920px) {
 		a {
 			font-size: var(--text-xl);
 			margin-block: 21px;
@@ -135,5 +139,4 @@
 		background-color: black;
 		border: 1px solid #ffffff;
 	}
-	
 </style>
