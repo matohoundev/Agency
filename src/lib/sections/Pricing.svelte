@@ -8,19 +8,20 @@
 </script>
 
 <section
-	id="tarifs" class="Pricing container mx-auto flex flex-col py-12.5 px-3 md:px-15 lg:px-0 gap-y-10.5 bg-amber-200"
+	id="tarifs"
+	class="Pricing container mx-auto flex flex-col py-12.5 px-3 md:px-15 lg:px-0 gap-y-10.5 bg-amber-200"
 >
 	<div class="Pricing-head flex flex-col justify-center items-center gap-y-6 md:gap-y-4">
 		<div class="relative z-10 text-black text-center">
 			<p class="relative pricing-title z-15">
-				Des offres simples,<br /> adaptées à votre croissance
+				Des tarifs clairs <br /> pour des résultats concrets
 			</p>
 			<span class="princing-title-effect"
-				>Des offres simples,<br /> adaptées à votre croissance
+				>Des tarifs clairs <br /> pour des résultats concrets
 			</span>
 		</div>
 		<p class="text-center princing-subtitle text-lg">
-			Obtenez un site web qui tient ses promesses.
+			Deux formules pensées pour répondre aux besoins spécifiques de votre projet web.
 		</p>
 		<!-- <p class="text-center princing-subtitle">3 offres pour tous les gouverner</p> -->
 	</div>

@@ -44,11 +44,11 @@
 	</div>
 	<div class="pricing-details">
 		<ul>
-			{#each offer.features as feature}
+			{#each offer.features as feature, index}
 				{#if feature === '---'}
 					<div class="stroke-appearance"></div>
-				{:else}
-					<li>
+				{:else if feature !== ''}
+					<li class:highlight-feature={index === offer.features.length + 12 && offer.id === 2}>
 						<img src="/icons/check.svg" alt="Icon Check" />
 						<span>{feature}</span>
 					</li>
@@ -238,6 +238,20 @@
 		gap: 31px;
 		font-size: 15px;
 		color: #000000;
+	}
+
+	.highlight-feature {
+		background: linear-gradient(225deg, #7d68da 0%, #4729cb 49%, #4729cb 100%);
+		color: white;
+		padding: 0.75rem 0rem;
+		border-radius: 20px;
+		margin: 0 -1rem;
+		padding-left: 1rem;
+	}
+
+	.highlight-feature span {
+		color: white;
+		font-weight: 900;
 	}
 
 	.stroke-appearance {
