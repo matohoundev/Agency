@@ -221,10 +221,35 @@ export const projectAnimations = {
 			scrollTrigger: {
 				trigger: '.Projects',
 				end: '-350px',
-				scrub: true
+				scrub: 1
 			},
 			scale: 1,
 			y: 0
+		});
+
+		return tl;
+	}
+};
+
+export const splineBackgroundAnimations = {
+	init() {
+		// Un seul ScrollTrigger qui pilote la timeline pour garantir une interpolation fluide
+		const tl = gsap.timeline({ defaults: { ease: 'ease.out' } });
+
+		// Phase 1: dé-zoom progressif quand on traverse About
+		tl.to('.spline-background', { scaleX: 0.9, scaleY: 0.85 })
+			// Phase 2: retour à l'échelle normale à l'approche de Projects
+			.to('.spline-background', { scale: 1.01 }, '+=0.5');
+
+		ScrollTrigger.create({
+			animation: tl,
+			trigger: '.About',
+			start: 'top 80%',
+			endTrigger: '.Projects',
+			end: 'bottom 40%',
+			scrub: 1,
+			markers: true,
+			invalidateOnRefresh: true
 		});
 
 		return tl;
@@ -237,6 +262,7 @@ export function initAllAnimations() {
 	homeAnimations.init();
 
 	masterTimeline
+		.add(splineBackgroundAnimations.init())
 		.add(aboutAnimations.init())
 		.add(projectAnimations.init())
 		.add(pricingAnimations.init())
