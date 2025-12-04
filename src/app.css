@@ -4,10 +4,30 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 :root {
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
+/* Permet de cliquer sur le background 3D même si le contenu est au-dessus */
+main,
+footer {
+	pointer-events: none;
+}
+
+/* Réactive les interactions sur les éléments réellement cliquables */
+main button,
+main a,
+main [data-interactive='true'],
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+	pointer-events: auto;
+}

@@ -47,7 +47,7 @@
 
 <Nav />
 
-<main class="relative z-5 overflow-hidden">
+<main class="relative z-1 overflow-hidden">
 	{@render children()}
 </main>
 

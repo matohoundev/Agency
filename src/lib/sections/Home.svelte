@@ -6,8 +6,8 @@
 	<div class="relative hero-title-section">
 		<img src="/icons/logo-white-35-opacity.svg" alt="Logo" class="logo absolute" />
 		<div class="title-content">
-			<div class="relative z-10 text-black text-center">
-				<p class="relative title z-15">
+			<div class="relative text-black text-center">
+				<p class="relative title z-10">
 					Déclenchez <br /> Le "wow effect" <br /> Avec un site qui impacte !
 				</p>
 				<span class="title-effect">
@@ -25,7 +25,6 @@
 	/* base */
 	.Home {
 		height: 100vh;
-		/* border: 1px solid green; */
 	}
 
 	.hero-title-section {
