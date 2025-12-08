@@ -28,6 +28,7 @@ h4,
 h5,
 h6,
 p,
-span {
+span,
+footer a {
 	pointer-events: auto;
 }
