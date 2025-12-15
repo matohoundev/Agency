@@ -114,7 +114,7 @@
 
 <style>
 	section {
-		border: 1px solid black;
+		/* border: 1px solid black; */
 		/* background-color: #fbf9f7; */
 		background-color: #ffffff;
 	}

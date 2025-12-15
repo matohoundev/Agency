@@ -40,9 +40,7 @@
 	];
 </script>
 
-<section
-	class="Faq container mx-auto py-16 px-4 flex flex-col justify-center bg-gray-800 text-white"
->
+<section class="Faq mx-auto py-16 px-4 flex flex-col justify-center text-white">
 	<div class="max-w-6xl mx-auto w-full">
 		<div class="text-center mb-12">
 			<h5 class="text-4xl font-bold mb-4">Vos questions</h5>
@@ -66,6 +64,7 @@
 <style>
 	.Faq {
 		scroll-margin-top: 2rem;
+		background-color: #1a202c;
 	}
 
 	h5 {

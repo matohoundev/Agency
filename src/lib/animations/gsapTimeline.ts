@@ -237,16 +237,16 @@ export const splineBackgroundAnimations = {
 		const tl = gsap.timeline({ defaults: { ease: 'ease.out' } });
 
 		// Phase 1: dé-zoom progressif quand on traverse About
-		tl.to('.spline', { scaleX: 0.9, scaleY: 0.85 })
+		tl.to('.splineBackground', { scaleX: 0.9, scaleY: 0.85 })
 			// Phase 2: retour à l'échelle normale à l'approche de Projects
-			.to('.spline', { scale: 1.01 }, '+=0.5');
+			.to('.splineBackground', { scale: 1.01 }, '+=1');
 
 		ScrollTrigger.create({
 			animation: tl,
 			trigger: '.About',
 			start: 'top 80%',
-			endTrigger: '.Projects',
-			end: 'bottom 40%',
+			endTrigger: '.Detail',
+			end: 'bottom 50%',
 			scrub: 1,
 			markers: true,
 			invalidateOnRefresh: true
