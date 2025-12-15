@@ -18,7 +18,11 @@
 
 /* Permet de cliquer sur le background 3D même si le contenu est au-dessus */
 main,
-footer {
+.Home p,
+.Home span,
+footer,
+footer h6,
+footer span {
 	pointer-events: none;
 }
 
@@ -34,6 +38,7 @@ h5,
 h6,
 p,
 span,
-footer a {
+footer a,
+footer .buttonEffect {
 	pointer-events: auto;
 }
