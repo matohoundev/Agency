@@ -9,6 +9,11 @@
 
 :root {
 	scroll-behavior: smooth;
+	--ink: #0c0f14;
+	--paper: #fdf9f7;
+	--lavender: #be9dca;
+	--pink: #f4b7c7;
+	--orange: #fca46d;
 }
 
 /* Permet de cliquer sur le background 3D même si le contenu est au-dessus */
@@ -28,6 +33,7 @@ h4,
 h5,
 h6,
 p,
-span {
+span,
+footer a {
 	pointer-events: auto;
 }

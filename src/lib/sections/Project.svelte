@@ -122,9 +122,41 @@
 
 <style>
 	.Projects {
-		background-color: #1a202c; /* Couleur de fond sombre */
+		background:
+			radial-gradient(
+				circle at 12% 18%,
+				color-mix(in srgb, var(--lavender) 28%, transparent) 0,
+				transparent 45%
+			),
+			radial-gradient(
+				circle at 82% 24%,
+				color-mix(in srgb, var(--pink) 24%, transparent) 0,
+				transparent 40%
+			),
+			radial-gradient(
+				circle at 90% 85%,
+				color-mix(in srgb, var(--orange) 20%, transparent) 0,
+				transparent 45%
+			),
+			linear-gradient(
+				145deg,
+				color-mix(in srgb, var(--ink) 96%, #000 10%) 0%,
+				color-mix(in srgb, var(--ink) 92%, #111 15%) 55%,
+				color-mix(in srgb, var(--ink) 96%, #000 8%) 100%
+			);
+		background-size:
+			140% 140%,
+			140% 140%,
+			160% 160%,
+			100% 100%;
+		background-position:
+			12% 18%,
+			82% 24%,
+			90% 85%,
+			0% 0%;
 		color: white;
-		border-radius: 1rem 1rem 0 0; /* Coins arrondis en haut */
+		border: 1px solid rgba(255, 255, 255, 0.12);
+		border-radius: 1rem 1rem 0 0;
 		transform: translateY(150px) scale(0.8);
 		width: 100%;
 		/* temporaire aussi */
