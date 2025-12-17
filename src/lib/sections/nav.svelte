@@ -56,9 +56,7 @@
 				});
 			}
 		}
-	}
-
-
+	};
 </script>
 
 <header class="fixed w-full z-15 header">
@@ -88,31 +86,27 @@
 	</div>
 
 	<!-- Mobile menu (only visible when open) -->
-		<div
-			class="md:hidden mobile-nav absolute flex flex-col text-right top-16 left-0 w-full text-white "
-		>
-			<ul class="px-4 py-2">
-				<li class="py-2">
-					<a href="#projects" class="hover:underline" on:click={closeMobileMenu}>Réalisations</a>
-				</li>
-				<li class="py-2">
-					<a href="#offre" class="hover:underline" on:click={closeMobileMenu}>Offre</a>
-				</li>
-				<li class="py-2">
-					<a href="#tarifs" class="hover:underline" on:click={closeMobileMenu}>Tarifs</a>
-				</li>
-				<li class="py-2">
-					<a href="#contact" class="hover:underline" on:click={closeMobileMenu}>Contact</a>
-				</li>
-			</ul>
-		</div>
+	<div
+		class="md:hidden mobile-nav absolute flex flex-col text-right top-16 left-0 w-full text-white"
+	>
+		<ul class="px-4 py-2">
+			<li class="py-2">
+				<a href="#projects" class="hover:underline" on:click={closeMobileMenu}>Réalisations</a>
+			</li>
+			<li class="py-2">
+				<a href="#offre" class="hover:underline" on:click={closeMobileMenu}>Offre</a>
+			</li>
+			<li class="py-2">
+				<a href="#tarifs" class="hover:underline" on:click={closeMobileMenu}>Tarifs</a>
+			</li>
+			<li class="py-2">
+				<a href="#contact" class="hover:underline" on:click={closeMobileMenu}>Contact</a>
+			</li>
+		</ul>
+	</div>
 </header>
 
 <style>
-	/* header div {
-		backdrop-filter: blur(10px);
-	} */
-
 	.header {
 		opacity: 0;
 		scale: 0.9;
@@ -139,10 +133,7 @@
 		position: absolute;
 		padding: 25px 34px;
 		/* background-color: red; */
-		background-color: white;
-		backdrop-filter: blur(1px);
-		/* opacity: 0.9; */
-		background-color: rgba(255, 255, 255, 0.1);
+		background-color: rgba(12, 15, 20, 0.8);
 		border-radius: 40px;
 		pointer-events: none;
 		z-index: -1;
@@ -151,6 +142,13 @@
 		/* transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1); */
 		/* background: radial-gradient(circle at center, rgba(255, 255, 255, 0.2), transparent 70%); */
 		/* background-position: center; */
+	}
+
+	@supports (backdrop-filter: blur(1px)) {
+		.bubble {
+			backdrop-filter: blur(1px);
+			background-color: rgba(255, 255, 255, 0.1);
+		}
 	}
 
 	@media screen and (min-width: 768px) {

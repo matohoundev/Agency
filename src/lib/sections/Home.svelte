@@ -6,12 +6,12 @@
 	<div class="relative hero-title-section">
 		<img src="/icons/logo-white-35-opacity.svg" alt="Logo" class="logo absolute" />
 		<div class="title-content">
-			<div class="relative text-black text-center">
+			<div class="relative text-center">
 				<p class="relative title z-10">
-					Déclenchez <br /> Le "wow effect" <br /> Avec un site qui impacte !
+					Déclenchez <br /> Le "wow effect" <br /> Avec un site qui
 				</p>
 				<span class="title-effect">
-					Déclenchez <br /> Le "wow effect" <br /> Avec un site qui impacte !
+					Déclenchez <br /> Le "wow effect" <br /> Avec un site qui
 				</span>
 			</div>
 		</div>
@@ -39,6 +39,10 @@
 		top: 10%;
 		object-fit: cover;
 		overflow: visible;
+	}
+
+	.title-content {
+		color: black;
 	}
 
 	.title,

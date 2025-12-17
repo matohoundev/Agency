@@ -11,7 +11,7 @@
 >
 	<div class="about-title font-bold text-center">
 		<h2>{titleLines[0]}</h2>
-		<h2 class="text-white">{titleLines[1]}</h2>
+		<h2>{titleLines[1]}</h2>
 		<h2>{titleLines[2]}</h2>
 	</div>
 	<div class="about-content flex justify-center sm:justify-end sm:w-fit">
@@ -37,7 +37,14 @@
 		font-family: 'Montserrat', sans-serif;
 		font-size: 2.5rem;
 		line-height: 1.3;
-		/* color: black; */
+	}
+	h2:first-child,
+	h2:nth-child(3) {
+		color: black;
+	}
+
+	h2:nth-child(2) {
+		color: var(--paper);
 	}
 
 	@media screen and (min-width: 768px) {

@@ -7,10 +7,7 @@
 	export let error: string | null = null;
 </script>
 
-<section
-	id="tarifs"
-	class="Pricing container mx-auto flex flex-col py-12.5 px-3 md:px-15 lg:px-0 gap-y-10.5"
->
+<section id="tarifs" class="Pricing mx-auto flex flex-col py-12.5 px-3 md:px-15 lg:px-0 gap-y-10.5">
 	<div class="Pricing-head flex flex-col justify-center items-center gap-y-6 md:gap-y-4">
 		<div class="relative z-10 text-black text-center">
 			<p class="relative pricing-title z-15">

@@ -90,8 +90,8 @@
 <section id="projects" class="Projects">
 	<div class="container mx-auto flex flex-col py-12.5 px-3 md:px-15 lg:px-0 gap-y-10.5">
 		<div class="projects-head flex flex-col justify-center items-center gap-y-6 md:gap-y-4">
-			<h2 class="text-center text-white text-4xl">Les dernières réalisations</h2>
-			<p class="text-center text-white text-lg">
+			<h2 class="text-center text-4xl">Les dernières réalisations</h2>
+			<p class="text-center text-lg">
 				Quand nous travaillons ensemble, voici ce que nous pouvons accomplir
 			</p>
 		</div>
@@ -140,9 +140,9 @@
 			),
 			linear-gradient(
 				145deg,
-				color-mix(in srgb, var(--ink) 96%, #000 10%) 0%,
+				color-mix(in srgb, var(--ink) 96%, var(--ink) 10%) 0%,
 				color-mix(in srgb, var(--ink) 92%, #111 15%) 55%,
-				color-mix(in srgb, var(--ink) 96%, #000 8%) 100%
+				color-mix(in srgb, var(--ink) 96%, var(--ink) 8%) 100%
 			);
 		background-size:
 			140% 140%,
@@ -155,7 +155,13 @@
 			90% 85%,
 			0% 0%;
 		color: white;
-		border: 1px solid rgba(255, 255, 255, 0.12);
+		/* background-color: white; */
+		/* background-color: var(--ink); */
+		/* background: linear-gradient(180deg, rgb(234, 223, 232) 1%, #ffffff 30%, #ffffff 100%); */
+		/* background: rgba(255, 255, 255, 1); */
+		/* backdrop-filter: blur(10px) saturate(120%); */
+		/* border: 2px solid var(--pink); */
+		/* border: 1px solid rgba(255, 255, 255, 0.12); */
 		border-radius: 1rem 1rem 0 0;
 		transform: translateY(150px) scale(0.8);
 		width: 100%;
@@ -177,6 +183,7 @@
 	.projects-content {
 		/* padding-inline: 1rem; */
 		gap: 1.5rem;
+		color: white;
 	}
 
 	@media (min-width: 640px) {

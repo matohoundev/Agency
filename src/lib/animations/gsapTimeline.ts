@@ -248,7 +248,7 @@ export const splineBackgroundAnimations = {
 			endTrigger: '.Detail',
 			end: 'bottom 50%',
 			scrub: 1,
-			markers: true,
+			// markers: true,
 			invalidateOnRefresh: true
 		});
 

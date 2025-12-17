@@ -64,7 +64,38 @@
 <style>
 	.Faq {
 		scroll-margin-top: 2rem;
-		background-color: #1a202c;
+		background:
+			radial-gradient(
+				circle at 14% 16%,
+				color-mix(in srgb, var(--lavender) 24%, transparent) 0,
+				transparent 40%
+			),
+			radial-gradient(
+				circle at 78% 22%,
+				color-mix(in srgb, var(--pink) 22%, transparent) 0,
+				transparent 42%
+			),
+			radial-gradient(
+				circle at 88% 86%,
+				color-mix(in srgb, var(--orange) 18%, transparent) 0,
+				transparent 44%
+			),
+			linear-gradient(
+				155deg,
+				color-mix(in srgb, var(--ink) 95%, var(--ink) 5%) 0%,
+				color-mix(in srgb, var(--ink) 90%, #0a0c12 10%) 60%,
+				color-mix(in srgb, var(--ink) 96%, var(--ink) 6%) 100%
+			);
+		background-size:
+			140% 140%,
+			140% 140%,
+			160% 160%,
+			100% 100%;
+		background-position:
+			14% 16%,
+			78% 22%,
+			88% 86%,
+			0% 0%;
 	}
 
 	h5 {
