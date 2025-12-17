@@ -97,25 +97,39 @@
 		</div>
 
 		<div class="projects-content grid grid-cols-1 sm:grid-cols-2 justify-items-center">
-			{#each projects as project}
-				<div class="projects-card">
-					<img src={project.url} alt={project.title} class="w-full h-auto rounded-lg shadow-lg" />
-					<div class="projects-logo">
-						<img src={project.iconUrl} alt="Project Icon" class="w-8 h-8" />
-						<p>{project.title}</p>
+			{#if isLoading}
+				{#each Array(6) as _, i}
+					<div class="projects-card">
+						<div class="project-skeleton"></div>
 					</div>
-					<div class="projects-more" id={'more-' + project.id}>
-						<button on:click={() => toggleDescription(project.id)} id={'more-btn-' + project.id}
-							>En savoir +</button
-						>
+				{/each}
+			{:else}
+				{#each projects as project}
+					<div class="projects-card">
+						<div class="project-image-container">
+							<img
+								src={project.url}
+								alt={project.title}
+								class="w-full h-full rounded-lg shadow-lg object-cover"
+							/>
+						</div>
+						<div class="projects-logo">
+							<img src={project.iconUrl} alt="Project Icon" class="w-8 h-8" />
+							<p>{project.title}</p>
+						</div>
+						<div class="projects-more" id={'more-' + project.id}>
+							<button on:click={() => toggleDescription(project.id)} id={'more-btn-' + project.id}
+								>En savoir +</button
+							>
+						</div>
+						<div class="projects-description" id={'desc-' + project.id} style="display: none;">
+							<p>{project.description}</p>
+							<hr class="my-4 border-gray-700" />
+							<p class="text-gray-400 text-sm">{project.technologies.join(', ')}</p>
+						</div>
 					</div>
-					<div class="projects-description" id={'desc-' + project.id} style="display: none;">
-						<p>{project.description}</p>
-						<hr class="my-4 border-gray-700" />
-						<p class="text-gray-400 text-sm">{project.technologies.join(', ')}</p>
-					</div>
-				</div>
-			{/each}
+				{/each}
+			{/if}
 		</div>
 	</div>
 </section>
@@ -234,14 +248,44 @@
 	.projects-card {
 		position: relative;
 		transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-		/* display: inline-block; */
-		/* margin: 1rem; */
+		width: 100%;
 		overflow: hidden;
 	}
 
 	.projects-card:hover {
 		transform: scale(1.03);
 		cursor: pointer;
+	}
+
+	.project-image-container {
+		width: 100%;
+		aspect-ratio: 4 / 3;
+		background-color: rgba(255, 255, 255, 0.05);
+		border-radius: 0.5rem;
+		overflow: hidden;
+	}
+
+	.project-skeleton {
+		width: 100%;
+		aspect-ratio: 4 / 3;
+		background: linear-gradient(
+			90deg,
+			rgba(255, 255, 255, 0.05) 0%,
+			rgba(255, 255, 255, 0.15) 50%,
+			rgba(255, 255, 255, 0.05) 100%
+		);
+		background-size: 200% 100%;
+		animation: skeleton-loading 1.5s ease-in-out infinite;
+		border-radius: 0.5rem;
+	}
+
+	@keyframes skeleton-loading {
+		0% {
+			background-position: 200% 0;
+		}
+		100% {
+			background-position: -200% 0;
+		}
 	}
 
 	.projects-logo {
