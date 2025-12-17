@@ -68,7 +68,7 @@
 	p {
 		font-family: 'Manrope', sans-serif;
 		font-weight: 400;
-		color: white;
+		color: var(--paper);
 		font-size: 1.15rem;
 		text-align: justify;
 	}

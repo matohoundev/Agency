@@ -75,7 +75,7 @@
 		"description": "Description détaillée du projet...",
 		"technologies": ["Angular", "Express", "MySQL"],
 		"image": "/images/projet-6.jpg",
-		"url": "https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg",
+		"url": "/images/magicpost.avif",
 		"iconUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg",
 		"splineModel": "https://prod.spline.design/ton-id-de-scene-4/scene.splinecode",
 		"githubUrl": "https://github.com/ton-username/projet-6",

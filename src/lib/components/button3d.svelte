@@ -65,8 +65,8 @@
 		left: 0px;
 	}
 
-	.buttonEffect:active .button-3d {
-		top: 0px;
+	.buttonEffect:active .button-base {
+		top: 4px;
 		left: 0px;
 	}
 
@@ -131,7 +131,7 @@
 	}
 
 	.button-3d-color-black {
-		background-color: white;
+		background-color: var(--paper);
 		border: 1px solid #000000;
 	}
 

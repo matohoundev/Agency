@@ -154,7 +154,7 @@
 			82% 24%,
 			90% 85%,
 			0% 0%;
-		color: white;
+		color: var(--paper);
 		/* background-color: white; */
 		/* background-color: var(--ink); */
 		/* background: linear-gradient(180deg, rgb(234, 223, 232) 1%, #ffffff 30%, #ffffff 100%); */
@@ -162,7 +162,7 @@
 		/* backdrop-filter: blur(10px) saturate(120%); */
 		/* border: 2px solid var(--pink); */
 		/* border: 1px solid rgba(255, 255, 255, 0.12); */
-		border-radius: 1rem 1rem 0 0;
+		border-radius: 2rem 2rem 0 0;
 		transform: translateY(150px) scale(0.8);
 		width: 100%;
 		/* temporaire aussi */
