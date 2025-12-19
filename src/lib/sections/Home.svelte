@@ -7,13 +7,18 @@
 		<img src="/icons/logo-white-35-opacity.svg" alt="Logo" class="logo absolute" />
 		<div class="title-content">
 			<div class="relative text-center">
-				<p class="relative title z-10">
-					Déclenchez <br /> Le "wow effect" <br /> Avec un site qui
+				<p class="title relative z-10">
+					Augmentez votre impact <br /> grâce à une expérience <br /> visuelle sur-mesure
 				</p>
 				<span class="title-effect">
-					Déclenchez <br /> Le "wow effect" <br /> Avec un site qui
+					Augmentez votre impact <br /> grâce à une expérience <br /> visuelle sur-mesure
 				</span>
 			</div>
+		</div>
+		<div class="subtitle-content mt-6">
+			<p class="text-center subtitle text-lg md:text-xl lg:text-2xl px-3 md:px-0">
+				Alliez design 3D immersif et performance web pour une présence en ligne inoubliable.
+			</p>
 		</div>
 	</div>
 	<div class="button-home">
@@ -30,31 +35,38 @@
 	.hero-title-section {
 		opacity: 0;
 		scale: 0.8;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 
 	/* custom */
 
 	img {
 		height: 80%;
-		top: 10%;
+		top: 5%;
+		/* left: 3%; */
 		object-fit: cover;
 		overflow: visible;
+		opacity: 0.35;
 	}
 
 	.title-content {
-		color: black;
+		/* color: black; */
+		color: var(--paper);
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.title,
 	.title-effect {
+		font-size: 2.1rem;
 		font-family: 'Manrope', sans-serif;
 		font-weight: bold;
 	}
 
-	.title,
-	.title-effect {
-		font-size: 2.6rem;
-	}
 	@media screen and (min-width: 768px) {
 		.title,
 		.title-effect {
@@ -84,15 +96,21 @@
 	}
 
 	.title-effect {
+		position: absolute;
+		text-wrap: nowrap;
 		color: transparent;
-		-webkit-text-stroke: 1px #000000;
+		/* -webkit-text-stroke: 1px #000000; */
+		-webkit-text-stroke: 1px var(--paper);
 		top: 2.5px;
 		left: 4px;
 		/* top: 0;
 		left: 0;
 		opacity: 0.5; */
 		/* transform: translate(4px, 2.5px); */
-		position: absolute;
-		text-wrap: nowrap;
+	}
+
+	.subtitle {
+		font-family: 'Manrope', Courier, monospace;
+		color: var(--paper);
 	}
 </style>
