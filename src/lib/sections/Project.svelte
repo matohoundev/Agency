@@ -223,6 +223,7 @@
 		font-family: 'Montserrat', sans-serif;
 		font-weight: bold;
 		line-height: 1.3;
+		color: var(--paper);
 	}
 
 	.projects-head p {

@@ -67,7 +67,7 @@
 		background:
 			radial-gradient(
 				circle at 14% 16%,
-				color-mix(in srgb, var(--lavender) 24%, transparent) 0,
+				color-mix(in srgb, var(--orange) 24%, transparent) 0,
 				transparent 40%
 			),
 			radial-gradient(
@@ -77,7 +77,7 @@
 			),
 			radial-gradient(
 				circle at 88% 86%,
-				color-mix(in srgb, var(--orange) 18%, transparent) 0,
+				color-mix(in srgb, var(--lavender) 18%, transparent) 0,
 				transparent 44%
 			),
 			linear-gradient(

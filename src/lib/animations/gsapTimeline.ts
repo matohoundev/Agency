@@ -181,6 +181,7 @@ export const pricingAnimations = {
 			.to('.BoxPricing-purple', {
 				scrollTrigger: {
 					trigger: '.Pricing',
+					// markers: true,
 					end: '100px',
 					scrub: true
 				},
@@ -246,7 +247,7 @@ export const splineBackgroundAnimations = {
 			trigger: '.About',
 			start: 'top 80%',
 			endTrigger: '.Detail',
-			end: 'bottom 50%',
+			end: 'bottom 10%',
 			scrub: 1,
 			// markers: true,
 			invalidateOnRefresh: true
@@ -264,9 +265,9 @@ export function initAllAnimations() {
 	masterTimeline
 		.add(splineBackgroundAnimations.init())
 		.add(aboutAnimations.init())
-		.add(projectAnimations.init())
-		.add(pricingAnimations.init())
-		.add(detailAnimations.init());
+		.add(projectAnimations.init());
+	// .add(pricingAnimations.init())
+	// .add(detailAnimations.init());
 }
 
 // Fonction pour nettoyer les animations (utile pour la navigation)
