@@ -40,10 +40,15 @@
 	];
 </script>
 
-<section class="Faq mx-auto py-16 px-4 flex flex-col justify-center text-white">
+<section class="Faq mx-auto py-16 px-4 flex flex-col justify-center">
 	<div class="max-w-6xl mx-auto w-full">
 		<div class="text-center mb-12">
-			<h5 class="text-4xl font-bold mb-4">Vos questions</h5>
+			<div class="title-special-container mb-4">
+				<div class="title-special relative">
+					<h5 class="text-4xl font-bold">Vos questions</h5>
+					<span class="faq-title-effect text-4xl font-bold">Vos questions</span>
+				</div>
+			</div>
 			<p class="faq-subtitle text-lg">Trouvez rapidement des réponses à vos questions</p>
 		</div>
 
@@ -66,44 +71,41 @@
 		scroll-margin-top: 2rem;
 		background:
 			radial-gradient(
-				circle at 14% 16%,
-				color-mix(in srgb, var(--orange) 24%, transparent) 0,
-				transparent 40%
+				circle at -30% 50%,
+				color-mix(in srgb, var(--orange) 100%, transparent) 0,
+				transparent 45%
 			),
 			radial-gradient(
-				circle at 78% 22%,
-				color-mix(in srgb, var(--pink) 22%, transparent) 0,
-				transparent 42%
+				circle at 130% 50%,
+				color-mix(in srgb, var(--lavender) 100%, transparent) 0,
+				transparent 45%
 			),
-			radial-gradient(
-				circle at 88% 86%,
-				color-mix(in srgb, var(--lavender) 18%, transparent) 0,
-				transparent 44%
-			),
-			linear-gradient(
-				155deg,
-				color-mix(in srgb, var(--ink) 95%, var(--ink) 5%) 0%,
-				color-mix(in srgb, var(--ink) 90%, #0a0c12 10%) 60%,
-				color-mix(in srgb, var(--ink) 96%, var(--ink) 6%) 100%
-			);
-		background-size:
-			140% 140%,
-			140% 140%,
-			160% 160%,
-			100% 100%;
-		background-position:
-			14% 16%,
-			78% 22%,
-			88% 86%,
-			0% 0%;
+			linear-gradient(180deg, var(--paper) 0%, var(--paper) 90%, var(--paper-variant) 100%);
 	}
 
-	h5 {
+	h5,
+	.faq-title-effect {
 		font-family: 'Montserrat', sans-serif;
+		color: var(--ink);
+	}
+
+	.title-special-container {
+		display: flex;
+		justify-content: center;
+	}
+
+	.faq-title-effect {
+		width: 100%;
+		position: absolute;
+		color: transparent;
+		-webkit-text-stroke: 1px var(--ink);
+		top: 2.5px;
+		left: 4px;
 	}
 
 	@media screen and (min-width: 768px) {
-		h5 {
+		h5,
+		.faq-title-effect {
 			font-size: 2.7rem;
 		}
 
@@ -113,8 +115,9 @@
 	}
 
 	@media screen and (min-width: 1920px) {
-		h5 {
-			font-size: 3rem;
+		h5,
+		.faq-title-effect {
+			font-size: 3.5rem;
 		}
 
 		.faq-subtitle {

@@ -9,7 +9,7 @@
 
 <section
 	id="tarifs"
-	class="Pricing container mx-auto flex flex-col py-12.5 px-3 md:px-15 lg:px-0 gap-y-10.5"
+	class="Pricing container mx-auto flex flex-col py-25 lg:py-20 px-3 md:px-15 lg:px-0 gap-y-20"
 >
 	<div class="Pricing-head flex flex-col justify-center items-center gap-y-6 md:gap-y-4">
 		<div class="relative z-10 text-black text-center">

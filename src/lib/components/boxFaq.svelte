@@ -47,6 +47,7 @@
 <style>
 	.faq-box {
 		font-family: 'Montserrat', sans-serif;
+		color: var(--ink);
 	}
 
 	.faq-box :hover {
@@ -55,15 +56,13 @@
 
 	.faq-item {
 		transition: all 0.3s ease-in-out;
-		background-color: #1a202ca0;
-	}
-
-	.faq-item:hover {
-		background-color: #1a202cf0;
+		background-color: var(--paper-variant);
+		border: 1px solid rgb(214, 201, 185);
 	}
 
 	button:hover {
-		background-color: #1a202ca0;
+		color: var(--paper);
+		background-color: #dbcfc8;
 	}
 
 	.faq-answer {

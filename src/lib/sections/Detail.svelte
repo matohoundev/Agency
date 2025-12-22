@@ -59,9 +59,12 @@
 	];
 </script>
 
-<section id="offre" class="Detail mx-auto flex flex-col py-12.5 px-3 md:px-15 lg:px-0 gap-y-10.5">
+<section
+	id="offre"
+	class="Detail mx-auto flex flex-col pt-25 pb-20 lg:py-20 xl:pt-20 xl:pb-40 px-3 md:px-15 lg:px-0 gap-y-20 bg-detail"
+>
 	<div class="Detail-head flex flex-col justify-center items-center gap-y-6 md:gap-y-4">
-		<div class="relative z-10 text-black text-center">
+		<div class="relative z-10 text-center">
 			<p class="relative detail-title z-15">Votre site web, de A à Z</p>
 			<span class="detail-title-effect">Votre site web, de A à Z</span>
 		</div>
@@ -69,9 +72,11 @@
 			Chaque étape de votre projet web, maîtrisée pour un résultat exceptionnel.
 		</p>
 	</div>
-	<div class="Detail-content flex flex-col justify-center items-center gap-y-16 sm:gap-y-12">
+	<div
+		class="Detail-content flex flex-col justify-center items-center gap-y-16 sm:gap-y-12 xl:gap-y-28"
+	>
 		{#each detailCards as card}
-			<div class="detail-card detail-card-{card.id} relative border-1 bg-white rounded-lg">
+			<div class="detail-card detail-card-{card.id} relative border-1 bg-detail rounded-lg">
 				{#if card.reversed}
 					<div
 						class="flex flex-col-reverse lg:flex-row justify-between gap-x-10 items-center px-5 pt-5 pb-7 lg:py-3 lg:pr-3 lg:pl-8"
@@ -87,10 +92,12 @@
 							</div>
 						</div>
 						<img src={card.imageUrl} alt={card.imageAlt} />
-						<span class="detail-card-title-return text-2xl font-bold absolute">{card.title}</span>
+						<span class="detail-card-title-return bg-detail text-2xl font-bold absolute"
+							>{card.title}</span
+						>
 					</div>
 				{:else}
-					<span class="detail-card-title text-2xl font-bold absolute">{card.title}</span>
+					<span class="detail-card-title bg-detail text-2xl font-bold absolute">{card.title}</span>
 					<div
 						class="flex flex-col lg:flex-row gap-x-10 items-center pt-7 pb-5 px-5 lg:px-3 lg:py-3"
 					>
@@ -113,10 +120,40 @@
 </section>
 
 <style>
-	section {
+	.Detail {
+		background:
+			radial-gradient(
+				circle at 10% -100%,
+				color-mix(in srgb, var(--orange) 50%, transparent) 0,
+				transparent 45%
+			),
+			radial-gradient(
+				circle at 90% -100%,
+				color-mix(in srgb, var(--lavender) 50%, transparent) 0,
+				transparent 45%
+			),
+			linear-gradient(180deg, var(--paper-variant) 0%, var(--paper) 10%, var(--paper) 100%);
 		/* border: 1px solid black; */
-		/* background-color: #fbf9f7; */
-		background-color: #ffffff;
+		color: var(--ink);
+		/* border-top: 5px solid #ffffff; */
+		/* fais onduler la bordure comme des vagues prend l'image sur internet */
+		/* border: 5px solid blue; */
+		border-radius: 0 0 3rem 3rem;
+	}
+
+	.bg-detail {
+		/* background-color: #fcfbfa; */
+		background-color: var(--paper);
+		/* background-color: white; */
+	}
+
+	.detail-title {
+		/* background: -webkit-linear-gradient(var(--pink), var(--pink) 65%, var(--orange));
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent; */
+
+		/* color: black; */
 	}
 
 	.detail-title,
@@ -130,6 +167,8 @@
 	.detail-title-effect {
 		color: transparent;
 		-webkit-text-stroke: 1px #000000;
+		/* -webkit-text-stroke: 1px var(--paper); */
+		/* -webkit-text-stroke: 1px var(--pink); */
 		top: 2.5px;
 		left: 2px;
 		position: absolute;
@@ -139,9 +178,13 @@
 	.detail-subtitle {
 		font-family: 'Manrope', sans-serif;
 		line-height: 1.4;
+		color: black;
 	}
 
 	@media screen and (min-width: 1024px) {
+		.Detail {
+			border-radius: 0 0 5rem 5rem;
+		}
 		.detail-title-effect {
 			top: 2.5px;
 			left: 2px;
@@ -149,17 +192,18 @@
 	}
 
 	@media screen and (min-width: 1920px) {
-		.detail-title {
-			font-size: 3rem;
-		}
-
+		.detail-title,
 		.detail-title-effect {
-			font-size: 3rem;
+			font-size: 3.5rem;
 		}
 
 		.detail-subtitle {
 			font-size: 1.3rem;
 		}
+	}
+
+	.Detail-content {
+		/* border: 5px solid red; */
 	}
 
 	.detail-card {
@@ -173,10 +217,38 @@
 		}
 	}
 
+	@media screen and (min-width: 1280px) {
+		.detail-card {
+			width: 85%;
+			max-width: 1000px;
+		}
+
+		.detail-card-1 {
+			transform: translateX(-20%);
+		}
+
+		.detail-card-2 {
+			transform: translateX(25%);
+		}
+
+		.detail-card-3 {
+			transform: translateX(-20%);
+		}
+	}
+
 	@media screen and (min-width: 1920px) {
 		.detail-card {
 			width: 60%;
 		}
+
+		/* .detail-card-1,
+		.detail-card-3 {
+			transform: translateX(-20%);
+		}
+
+		.detail-card-2 {
+			transform: translateX(20%);
+		} */
 	}
 
 	img {
@@ -200,8 +272,10 @@
 		font-family: 'Montserrat', sans-serif;
 		font-weight: bold;
 		font-size: 2.2rem;
-		color: #000;
-		background-color: #fff;
+		/* color: #000; */
+		color: var(--white);
+		/* color: var(--pink); */
+		color: var(--ink);
 		top: -32px;
 		right: -5px;
 		/* border: 1px solid red; */
@@ -213,8 +287,8 @@
 		font-family: 'Montserrat', sans-serif;
 		font-weight: bold;
 		font-size: 2.2rem;
-		color: #000;
-		background-color: #fff;
+		/* color: #000; */
+		color: var(--ink);
 		bottom: -30px;
 		left: -5px;
 		padding: 0.5rem 1rem 0.5rem 0;
@@ -224,12 +298,14 @@
 		font-family: 'Manrope', sans-serif;
 		font-weight: bold;
 		font-size: 1.2rem;
-		color: #000000;
+		/* color: #000000; */
+		color: var(--ink);
 	}
 
 	.detail-features {
 		font-family: 'Manrope', sans-serif;
 		font-size: 1rem;
-		color: #555;
+		/* color: #555; */
+		color: var(--ink);
 	}
 </style>

@@ -13,7 +13,7 @@
 		<h2>{titleLines[0]}</h2>
 		<div class="title-special-container">
 			<div class="title-special relative">
-				<h2 class="relative">{titleLines[1]}</h2>
+				<h2 class="relative z-10">{titleLines[1]}</h2>
 				<span class="title-effect">{titleLines[1]}</span>
 			</div>
 		</div>
@@ -45,7 +45,7 @@
 		line-height: 1.3;
 	}
 	.about-title {
-		color: black;
+		color: var(--ink);
 	}
 
 	.title-special-container {
@@ -54,7 +54,7 @@
 	}
 
 	.title-special {
-		color: var(--paper);
+		color: var(--paper) !important;
 	}
 
 	.title-effect {

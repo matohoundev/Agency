@@ -88,9 +88,14 @@
 </script>
 
 <section id="projects" class="Projects">
-	<div class="container mx-auto flex flex-col py-12.5 px-3 md:px-15 lg:px-0 gap-y-10.5">
+	<div class="container mx-auto flex flex-col py-25 lg:py-20 px-3 md:px-15 lg:px-0 gap-y-20">
 		<div class="projects-head flex flex-col justify-center items-center gap-y-6 md:gap-y-4">
-			<h2 class="text-center text-4xl">Les dernières réalisations</h2>
+			<div class="title-special-container">
+				<div class="title-special relative">
+					<h2 class="text-center text-4xl relative z-10">Les dernières réalisations</h2>
+					<span class="projects-title-effect text-center text-4xl">Les dernières réalisations</span>
+				</div>
+			</div>
 			<p class="text-center text-lg">
 				Quand nous travaillons ensemble, voici ce que nous pouvons accomplir
 			</p>
@@ -136,68 +141,28 @@
 
 <style>
 	.Projects {
+		color: var(--ink);
 		background:
 			radial-gradient(
-				circle at 12% 18%,
-				color-mix(in srgb, var(--lavender) 28%, transparent) 0,
+				circle at 10% 50%,
+				color-mix(in srgb, var(--orange) 50%, transparent) 0,
 				transparent 45%
 			),
 			radial-gradient(
-				circle at 82% 24%,
-				color-mix(in srgb, var(--pink) 24%, transparent) 0,
-				transparent 40%
-			),
-			radial-gradient(
-				circle at 90% 85%,
-				color-mix(in srgb, var(--orange) 20%, transparent) 0,
+				circle at 90% 50%,
+				color-mix(in srgb, var(--lavender) 50%, transparent) 0,
 				transparent 45%
 			),
-			linear-gradient(
-				145deg,
-				color-mix(in srgb, var(--ink) 96%, var(--ink) 10%) 0%,
-				color-mix(in srgb, var(--ink) 92%, #111 15%) 55%,
-				color-mix(in srgb, var(--ink) 96%, var(--ink) 8%) 100%
-			);
-		background-size:
-			140% 140%,
-			140% 140%,
-			160% 160%,
-			100% 100%;
-		background-position:
-			12% 18%,
-			82% 24%,
-			90% 85%,
-			0% 0%;
-		color: var(--paper);
-		/* background-color: white; */
-		/* background-color: var(--ink); */
-		/* background: linear-gradient(180deg, rgb(234, 223, 232) 1%, #ffffff 30%, #ffffff 100%); */
-		/* background: rgba(255, 255, 255, 1); */
-		/* backdrop-filter: blur(10px) saturate(120%); */
-		/* border: 2px solid var(--pink); */
-		/* border: 1px solid rgba(255, 255, 255, 0.12); */
-		border-radius: 2rem 2rem 0 0;
+			linear-gradient(180deg, var(--paper) 0%, var(--paper-variant) 10%, var(--paper-variant) 100%);
+		border-radius: 1rem 1rem 0 0;
 		transform: translateY(150px) scale(0.8);
 		width: 100%;
-		/* temporaire aussi */
-		/* min-height: 1800px; */
 	}
-	/* temporaire de la*/
-	/* @media (max-width: 640px) {
-        .Projects { min-height: 1400px; }
-    }
-    @media (min-width: 641px) and (max-width: 1023px) {
-        .Projects { min-height: 1600px; }
-    }
-    @media (min-width: 1024px) {
-        .Projects { min-height: 1800px; }
-    } */
-	/* temporaire a la */
 
 	.projects-content {
 		/* padding-inline: 1rem; */
 		gap: 1.5rem;
-		color: white;
+		color: var(--paper);
 	}
 
 	@media (min-width: 640px) {
@@ -219,11 +184,33 @@
 		}
 	}
 
-	.projects-head h2 {
+	h2 {
+		color: var(--ink);
+	}
+
+	.projects-head h2,
+	.projects-title-effect {
 		font-family: 'Montserrat', sans-serif;
 		font-weight: bold;
 		line-height: 1.3;
-		color: var(--paper);
+	}
+
+	.title-special-container {
+		display: flex;
+		justify-content: center;
+	}
+
+	.title-special {
+		color: var(--paper) !important;
+	}
+
+	.projects-title-effect {
+		width: 100%;
+		position: absolute;
+		color: transparent;
+		-webkit-text-stroke: 1px var(--ink);
+		top: 2.5px;
+		left: 4px;
 	}
 
 	.projects-head p {
@@ -231,14 +218,16 @@
 	}
 
 	@media (min-width: 768px) {
-		.projects-head h2 {
+		.projects-head h2,
+		.projects-title-effect {
 			font-size: 2.7rem; /* 48px */
 		}
 	}
 
 	@media (min-width: 1920px) {
-		.projects-head h2 {
-			font-size: 3rem;
+		.projects-head h2,
+		.projects-title-effect {
+			font-size: 3.5rem;
 		}
 
 		.projects-head p {
