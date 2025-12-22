@@ -142,25 +142,157 @@ export const detailAnimations = {
 	init() {
 		const tl = gsap.timeline();
 
-		tl.fromTo(
-			'.Detail',
+		// Animation du titre et sous-titre de la section
+		gsap.fromTo(
+			'.detail-title-content',
 			{
-				y: 150,
-				scale: 0.8
+				opacity: 0,
+				y: 50
 			},
 			{
 				scrollTrigger: {
-					trigger: '.Detail',
-					end: '-350px',
-					scrub: true,
-					markers: true
+					trigger: '.Detail-head',
+					start: 'top 80%'
 				},
-				scale: 1,
+				opacity: 1,
 				y: 0,
-				duration: 1,
+				duration: 0.8,
 				ease: 'power2.out'
 			}
 		);
+
+		gsap.fromTo(
+			'.detail-subtitle',
+			{
+				opacity: 0,
+				y: 30
+			},
+			{
+				scrollTrigger: {
+					trigger: '.Detail-head',
+					start: 'top 75%'
+				},
+				opacity: 1,
+				y: 0,
+				duration: 0.6,
+				delay: 0.2,
+				ease: 'power2.out'
+			}
+		);
+
+		// Animation pour chaque carte individuellement
+		for (let i = 1; i <= 4; i++) {
+			const card = `.detail-card-${i}`;
+			// Ajustement pour que la carte 4 démarre plus tôt
+			const startOffset = i === 4 ? '90%' : '85%';
+
+			// Animation du conteneur de carte
+			gsap.fromTo(
+				card,
+				{
+					opacity: 0,
+					y: 100,
+					scale: 0.9
+				},
+				{
+					scrollTrigger: {
+						trigger: card,
+						start: `top ${startOffset}`
+					},
+					opacity: 1,
+					y: 0,
+					scale: 1,
+					duration: 0.8,
+					ease: 'power2.out'
+				}
+			);
+
+			// Animation de l'image avec effet de zoom
+			gsap.fromTo(
+				`${card} img`,
+				{
+					opacity: 0,
+					scale: 1.2,
+					rotation: i % 2 === 0 ? 5 : -5
+				},
+				{
+					scrollTrigger: {
+						trigger: card,
+						start: `top ${startOffset}`
+					},
+					opacity: 1,
+					scale: 1,
+					rotation: 0,
+					duration: 1,
+					delay: 0.2,
+					ease: 'power2.out'
+				}
+			);
+
+			// Animation du titre de la carte
+			const titleClass = i % 2 === 0 ? '.detail-card-title-return' : '.detail-card-title';
+			gsap.fromTo(
+				`${card} ${titleClass}`,
+				{
+					opacity: 0,
+					x: i % 2 === 0 ? -50 : 50,
+					rotation: i % 2 === 0 ? -10 : 10
+				},
+				{
+					scrollTrigger: {
+						trigger: card,
+						start: `top ${startOffset}`
+					},
+					opacity: 1,
+					x: 0,
+					rotation: 0,
+					duration: 0.8,
+					delay: 0.1,
+					ease: 'back.out(1.2)'
+				}
+			);
+
+			// Animation du highlight
+			gsap.fromTo(
+				`${card} .detail-highlight`,
+				{
+					opacity: 0,
+					y: 30
+				},
+				{
+					scrollTrigger: {
+						trigger: card,
+						start: `top ${startOffset}`
+					},
+					opacity: 1,
+					y: 0,
+					duration: 0.6,
+					delay: 0.4,
+					ease: 'power2.out'
+				}
+			);
+
+			// Animation des features une par une
+			gsap.fromTo(
+				`${card} .detail-features p`,
+				{
+					opacity: 0,
+					x: i % 2 === 0 ? 30 : -30
+				},
+				{
+					scrollTrigger: {
+						trigger: card,
+						start: `top ${startOffset}`
+					},
+					opacity: 1,
+					x: 0,
+					duration: 0.6,
+					delay: 0.5,
+					stagger: 0.1,
+					ease: 'power2.out'
+				}
+			);
+		}
 
 		return tl;
 	}
@@ -245,8 +377,8 @@ export function initAllAnimations() {
 	masterTimeline
 		.add(splineBackgroundAnimations.init())
 		.add(aboutAnimations.init())
-		.add(projectAnimations.init());
-	// .add(detailAnimations.init());
+		.add(projectAnimations.init())
+		.add(detailAnimations.init());
 	// .add(pricingAnimations.init());
 }
 

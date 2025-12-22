@@ -64,7 +64,7 @@
 	class="Detail mx-auto flex flex-col pt-25 pb-20 lg:py-20 xl:pt-20 xl:pb-40 px-3 md:px-15 lg:px-0 gap-y-20 bg-detail"
 >
 	<div class="Detail-head flex flex-col justify-center items-center gap-y-6 md:gap-y-4">
-		<div class="relative z-10 text-center">
+		<div class="detail-title-content relative z-10 text-center">
 			<p class="relative detail-title z-15">Votre site web, de A à Z</p>
 			<span class="detail-title-effect">Votre site web, de A à Z</span>
 		</div>
@@ -187,6 +187,8 @@
 
 	.detail-card {
 		width: 95%;
+		opacity: 0;
+		will-change: transform, opacity;
 	}
 
 	@media screen and (min-width: 1024px) {
@@ -239,6 +241,8 @@
 		/* width: 300px; */
 		height: auto;
 		object-fit: cover;
+		opacity: 0;
+		will-change: transform, opacity;
 	}
 
 	@media screen and (min-width: 1024px) {
@@ -260,6 +264,8 @@
 		/* border: 1px solid red; */
 		padding: 0.5rem 0 0.5rem 1rem;
 		/* border-radius: 0 0.5rem 0.5rem 0; */
+		opacity: 0;
+		will-change: transform, opacity;
 	}
 
 	.detail-card-title-return {
@@ -271,6 +277,8 @@
 		bottom: -30px;
 		left: -5px;
 		padding: 0.5rem 1rem 0.5rem 0;
+		opacity: 0;
+		will-change: transform, opacity;
 	}
 
 	.detail-highlight {
@@ -279,6 +287,8 @@
 		font-size: 1.2rem;
 		/* color: #000000; */
 		color: var(--ink);
+		opacity: 0;
+		will-change: transform, opacity;
 	}
 
 	.detail-features {
@@ -286,5 +296,10 @@
 		font-size: 1rem;
 		/* color: #555; */
 		color: var(--ink);
+	}
+
+	.detail-features p {
+		opacity: 0;
+		will-change: transform, opacity;
 	}
 </style>
