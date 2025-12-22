@@ -76,7 +76,7 @@
 	.princing-title-effect {
 		color: transparent;
 		/* -webkit-text-stroke: 1px #000000; */
-		-webkit-text-stroke: 1px var(--pink);
+		-webkit-text-stroke: 1px var(--paper);
 		top: 2.5px;
 		left: 2px;
 		position: absolute;
