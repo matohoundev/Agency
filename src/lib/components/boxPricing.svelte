@@ -30,7 +30,7 @@
 					<p class="badge-pop relative">Populaire</p>
 				{/if}
 			</div>
-			<p class="price text-white pb-2.5 relative">{offer.price} <span>{offer.priceNote}</span></p>
+			<p class="price pb-2.5 relative">{offer.price} <span>{offer.priceNote}</span></p>
 			<div class="pb-5">
 				<span class="badge-date relative">{offer.deliveryTime}</span>
 			</div>
@@ -129,7 +129,7 @@
 	}
 
 	.box3d-text p {
-		-webkit-text-stroke: 1px rgb(255, 255, 255, 0.7);
+		color: var(--paper);
 	}
 
 	.box3d-text p,
@@ -148,22 +148,22 @@
 
 	.box3d-text span {
 		color: transparent;
-		top: 2px;
-		left: 2px;
+		top: 1.5px;
+		left: 1.5px;
 		position: absolute;
 		text-wrap: nowrap;
-		-webkit-text-stroke: 1px #ffffff;
+		-webkit-text-stroke: 1px var(--paper);
 	}
 
 	.badge-pop {
 		background-image: linear-gradient(90deg, #000000 0%, #000000 74%, #666666 100%);
-		color: #ffffff;
+		color: var(--paper);
 		font-family: 'Montserrat', sans-serif;
 		font-weight: bold;
 		font-size: 0.9rem;
 		padding: 0.15rem 0.5rem;
 		border-radius: 27px;
-		border: 1px solid #ffffff;
+		border: 1px solid var(--paper);
 	}
 
 	.price,
@@ -176,6 +176,7 @@
 		font-family: 'Montserrat', sans-serif;
 		font-size: 2.7rem;
 		font-weight: bold;
+		color: var(--paper);
 	}
 
 	@media screen and (max-width: 330px) {
@@ -202,7 +203,7 @@
 	.pricing-content {
 		font-family: 'Manrope', sans-serif;
 		font-size: 15px;
-		color: white;
+		color: var(--paper);
 		font-weight: bold;
 		text-align: justify;
 	}
@@ -250,7 +251,7 @@
 	}
 
 	.highlight-feature span {
-		color: white;
+		color: var(--paper);
 		font-weight: 900;
 	}
 
