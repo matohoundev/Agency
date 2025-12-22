@@ -95,74 +95,47 @@ export const aboutAnimations = {
 	}
 };
 
+export const projectAnimations = {
+	init() {
+		const tl = gsap.timeline();
+
+		tl.to('.Projects', {
+			scrollTrigger: {
+				trigger: '.Projects',
+				end: '-350px',
+				scrub: 1
+			},
+			scale: 1,
+			y: 0
+		});
+
+		return tl;
+	}
+};
+
 export const detailAnimations = {
 	init() {
 		const tl = gsap.timeline();
 
-		tl.from('.detail-card-1', {
-			x: 200
-		})
-			.to('.detail-card-1', {
+		tl.fromTo(
+			'.Detail',
+			{
+				y: 150,
+				scale: 0.8
+			},
+			{
 				scrollTrigger: {
 					trigger: '.Detail',
-					end: '100px',
-					scrub: true
+					end: '-350px',
+					scrub: true,
+					markers: true
 				},
-				x: 0,
-				duration: 2,
+				scale: 1,
+				y: 0,
+				duration: 1,
 				ease: 'power2.out'
-			})
-			.from('.detail-card-2', {
-				x: -200
-			})
-			.to(
-				'.detail-card-2',
-				{
-					scrollTrigger: {
-						trigger: '.Detail',
-						end: '400px',
-						scrub: true
-					},
-					x: 0,
-					duration: 1,
-					ease: 'power2.out'
-				},
-				'-=1'
-			)
-			.from('.detail-card-3', {
-				x: 200
-			})
-			.to(
-				'.detail-card-3',
-				{
-					scrollTrigger: {
-						trigger: '.Detail',
-						end: '500px',
-						scrub: true
-					},
-					x: 0,
-					duration: 1,
-					ease: 'power2.out'
-				},
-				'-=1'
-			)
-			.from('.detail-card-4', {
-				x: -200
-			})
-			.to(
-				'.detail-card-4',
-				{
-					scrollTrigger: {
-						trigger: '.Detail',
-						end: '600px',
-						scrub: true
-					},
-					x: 0,
-					duration: 1,
-					ease: 'power2.out'
-				},
-				'-=1'
-			);
+			}
+		);
 
 		return tl;
 	}
@@ -214,24 +187,6 @@ export const pricingAnimations = {
 	}
 };
 
-export const projectAnimations = {
-	init() {
-		const tl = gsap.timeline();
-
-		tl.to('.Projects', {
-			scrollTrigger: {
-				trigger: '.Projects',
-				end: '-350px',
-				scrub: 1
-			},
-			scale: 1,
-			y: 0
-		});
-
-		return tl;
-	}
-};
-
 export const splineBackgroundAnimations = {
 	init() {
 		// Un seul ScrollTrigger qui pilote la timeline pour garantir une interpolation fluide
@@ -266,8 +221,8 @@ export function initAllAnimations() {
 		.add(splineBackgroundAnimations.init())
 		.add(aboutAnimations.init())
 		.add(projectAnimations.init());
-	// .add(pricingAnimations.init())
 	// .add(detailAnimations.init());
+	// .add(pricingAnimations.init());
 }
 
 // Fonction pour nettoyer les animations (utile pour la navigation)

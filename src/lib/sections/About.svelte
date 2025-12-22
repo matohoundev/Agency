@@ -11,7 +11,12 @@
 >
 	<div class="about-title font-bold text-center">
 		<h2>{titleLines[0]}</h2>
-		<h2>{titleLines[1]}</h2>
+		<div class="title-special-container">
+			<div class="title-special relative">
+				<h2 class="relative">{titleLines[1]}</h2>
+				<span class="title-effect">{titleLines[1]}</span>
+			</div>
+		</div>
 		<h2>{titleLines[2]}</h2>
 	</div>
 	<div class="about-content flex justify-center sm:justify-end sm:w-fit">
@@ -33,34 +38,51 @@
 		padding-inline: 8%;
 	}
 
-	h2 {
+	h2,
+	.title-effect {
 		font-family: 'Montserrat', sans-serif;
 		font-size: 2.5rem;
 		line-height: 1.3;
 	}
-	h2:first-child,
-	h2:nth-child(3) {
+	.about-title {
 		color: black;
 	}
 
-	h2:nth-child(2) {
+	.title-special-container {
+		display: flex;
+		justify-content: center;
+	}
+
+	.title-special {
 		color: var(--paper);
 	}
 
+	.title-effect {
+		position: absolute;
+		text-wrap: nowrap;
+		color: transparent;
+		-webkit-text-stroke: 1px var(--paper);
+		top: 2.5px;
+		left: 4px;
+	}
+
 	@media screen and (min-width: 768px) {
-		h2 {
+		h2,
+		.title-effect {
 			font-size: 4.25rem;
 		}
 	}
 
 	@media screen and (min-width: 1440px) {
-		h2 {
+		h2,
+		.title-effect {
 			font-size: 4rem;
 		}
 	}
 
 	@media screen and (min-width: 1920px) {
-		h2 {
+		h2,
+		.title-effect {
 			font-size: 5.5rem;
 		}
 	}
