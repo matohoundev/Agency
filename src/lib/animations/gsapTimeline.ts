@@ -44,6 +44,31 @@ export const homeAnimations = {
 				'2.5'
 			);
 
+		// Animation des éléments "objectif desktop/mobile" entre About et Footer
+		gsap
+			.timeline({
+				scrollTrigger: {
+					trigger: '.About',
+					start: 'top center',
+					endTrigger: '.Footer',
+					end: 'bottom bottom',
+					scrub: true,
+					markers: true
+				}
+			})
+			.to('.logo-dark, .bg-desktop-dark, .bubble-dark, .bg-mobile-dark', {
+				opacity: 1,
+				duration: 0.5
+			})
+			.to(
+				'.logo-dark, .bg-desktop-dark, .bubble-dark, .bg-mobile-dark',
+				{
+					opacity: 0,
+					duration: 0.5
+				},
+				'>'
+			);
+
 		return tl;
 	}
 };

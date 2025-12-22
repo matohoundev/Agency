@@ -3,7 +3,7 @@
 	const currentYear = new Date().getFullYear();
 </script>
 
-<footer class="relative z-10" id="footer">
+<footer class="Footer relative z-10" id="footer">
 	<!-- <footer class="relative z-10 bg-amber-300"> -->
 	<div class="container h-screen mx-auto px-6 pt-20 md:pt-40 pb-6 flex flex-col justify-between">
 		<div class="flex justify-center">
