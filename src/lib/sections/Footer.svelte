@@ -21,20 +21,21 @@
 				<div class="mb-4 md:mb-0">
 					<p class="text-gray-700">&copy; {currentYear} Agency. Tous droits réservés.</p>
 				</div>
-				<div class="flex space-x-4">
+				<!-- temporairement éteint pour tester le site-->
+				<!-- <div class="flex space-x-4">
 					<a
 						href="/legal-notice"
-						class="text-gray-700 hover:text-white transition-colors underline-offset-4 hover:underline"
+						class="text-gray-700 transition-colors underline-offset-4 hover:underline"
 					>
 						Mentions légales
 					</a>
 					<a
 						href="/privacy-policy"
-						class="text-gray-700 hover:text-white transition-colors underline-offset-4 hover:underline"
+						class="text-gray-700 transition-colors underline-offset-4 hover:underline"
 					>
 						Politique de confidentialité
 					</a>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
@@ -54,5 +55,9 @@
 		text-decoration: underline;
 		text-underline-offset: 4px;
 		text-decoration-thickness: 2px;
+	}
+
+	a:hover {
+		color: var(--ink);
 	}
 </style>

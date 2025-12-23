@@ -36,7 +36,6 @@
 		};
 	});
 
-	// a voir si ça fonctionne bien je garde ça pour l'instant
 	afterNavigate(() => {
 		cleanupAnimations();
 		initAllAnimations();
