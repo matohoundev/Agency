@@ -52,8 +52,8 @@ export const homeAnimations = {
 					start: 'top center',
 					endTrigger: '.Footer',
 					end: 'bottom bottom',
-					scrub: true,
-					markers: true
+					scrub: true
+					// markers: true
 				}
 			})
 			.to('.logo-dark, .bg-desktop-dark, .bubble-dark, .bg-mobile-dark', {
