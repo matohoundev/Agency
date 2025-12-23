@@ -137,13 +137,13 @@
 	.box3d-text span {
 		font-family: 'Montserrat', sans-serif;
 		font-weight: bold;
-		font-size: 2.3rem;
+		font-size: 2rem;
 	}
 
-	@media screen and (max-width: 330px) {
+	@media screen and (min-width: 768px) {
 		.box3d-text p,
 		.box3d-text span {
-			font-size: 1.7rem;
+			font-size: 2.3rem;
 		}
 	}
 
@@ -175,14 +175,14 @@
 
 	.price {
 		font-family: 'Montserrat', sans-serif;
-		font-size: 2.7rem;
+		font-size: 2.2rem;
 		font-weight: bold;
 		color: var(--paper);
 	}
 
-	@media screen and (max-width: 330px) {
+	@media screen and (min-width: 768px) {
 		.price {
-			font-size: 2.2rem;
+			font-size: 2.7rem;
 		}
 	}
 

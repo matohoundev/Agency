@@ -63,7 +63,7 @@
 
 	.title,
 	.title-effect {
-		font-size: 2.1rem;
+		font-size: 1.7rem;
 		font-family: 'Manrope', sans-serif;
 		font-weight: bold;
 	}
@@ -104,10 +104,16 @@
 		-webkit-text-stroke: 1px var(--paper);
 		top: 2.5px;
 		left: 4px;
-		/* top: 0;
-		left: 0;
-		opacity: 0.5; */
+		opacity: 0.5;
 		/* transform: translate(4px, 2.5px); */
+	}
+
+	@media screen and (min-width: 768px) {
+		.title-effect {
+			top: 2.5px;
+			left: 4px;
+			opacity: 1;
+		}
 	}
 
 	.subtitle {

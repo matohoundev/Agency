@@ -69,7 +69,7 @@
 	.princing-title-effect {
 		font-family: 'Montserrat', sans-serif;
 		font-weight: bold;
-		font-size: 2.25rem;
+		font-size: 2.1rem;
 		line-height: 1.3;
 	}
 

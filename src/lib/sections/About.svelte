@@ -41,7 +41,7 @@
 	h2,
 	.title-effect {
 		font-family: 'Montserrat', sans-serif;
-		font-size: 2.5rem;
+		font-size: 2.2rem;
 		line-height: 1.3;
 	}
 	.about-title {
