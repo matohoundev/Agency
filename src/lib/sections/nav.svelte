@@ -69,9 +69,9 @@
 		<!-- Logo -->
 		<div class="logo-content relative">
 			<a href="/" class="relative z-10">
-				<img src="/icons/logo-white.svg" alt="Logo" class="logo-light w-11" />
+				<img src="/icons/logo-white.svg" alt="Logo" class="relative logo-light w-11" />
+				<img src="/icons/logo-white.svg" alt="Logo" class="w-11 logo-dark z-10" />
 			</a>
-			<img src="/icons/logo-white.svg" alt="Logo" class="w-11 logo-dark z-10" />
 		</div>
 
 		<!-- Navigation -->
