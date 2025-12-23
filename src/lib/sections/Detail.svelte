@@ -9,8 +9,7 @@
 				'Expérience utilisateur fluide et intuitive',
 				'Chaque clic compte : interface pensée pour maximiser vos conversions'
 			],
-			imageUrl:
-				'https://images.unsplash.com/photo-1500522144261-ea64433bbe27?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+			imageUrl: '/images/Design.webp',
 			imageAlt: 'UX/UI Design',
 			reversed: false
 		},
@@ -23,8 +22,7 @@
 				'Points de validation réguliers pour ajuster en temps réel',
 				'Communication claire et transparente tout au long du processus'
 			],
-			imageUrl:
-				'https://images.unsplash.com/photo-1500522144261-ea64433bbe27?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+			imageUrl: '/images/onboarding.webp',
 			imageAlt: 'Onboarding',
 			reversed: true
 		},
@@ -37,8 +35,7 @@
 				'Optimisation SEO intégrée dès la conception',
 				'Responsive sur tous les appareils : mobile, tablette, desktop'
 			],
-			imageUrl:
-				'https://images.unsplash.com/photo-1500522144261-ea64433bbe27?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+			imageUrl: '/images/developpement.jpg',
 			imageAlt: 'Développement',
 			reversed: false
 		},
@@ -51,8 +48,7 @@
 				'Formation à la gestion de votre site',
 				'Support technique inclus pour un démarrage serein'
 			],
-			imageUrl:
-				'https://images.unsplash.com/photo-1500522144261-ea64433bbe27?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+			imageUrl: '/images/lancement.jpg',
 			imageAlt: 'Lancement',
 			reversed: true
 		}
@@ -235,9 +231,6 @@
 	img {
 		z-index: 10;
 		border-radius: 0.5rem;
-		box-shadow:
-			0 10px 15px -3px rgb(0 0 0 / 0.1),
-			0 4px 6px -4px rgb(0 0 0 / 0.1);
 		/* width: 300px; */
 		height: auto;
 		object-fit: cover;
