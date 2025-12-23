@@ -22,6 +22,7 @@
 					<p class="text-gray-700">&copy; {currentYear} Agency. Tous droits réservés.</p>
 				</div>
 				<!-- temporairement éteint pour tester le site-->
+
 				<!-- <div class="flex space-x-4">
 					<a
 						href="/legal-notice"
