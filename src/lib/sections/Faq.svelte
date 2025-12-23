@@ -57,9 +57,8 @@
 		<div class="text-center mt-12">
 			<p class="mb-2 text-2xl">Une autre question ?</p>
 			<p class="mail text-2xl">
-				Contactez-moi sur <a
-					href="mailto:matohoundev@gmail.com"
-					class="text-blue-400 hover:underline">matohoundev@gmail.com</a
+				Contactez-moi sur <a href="mailto:matohoundev@gmail.com" class=" hover:underline"
+					>matohoundev@gmail.com</a
 				>
 			</p>
 		</div>
@@ -128,5 +127,9 @@
 	.faq-subtitle,
 	.mail {
 		font-family: 'Manrope', sans-serif;
+	}
+
+	.mail a {
+		color: var(--ink);
 	}
 </style>

@@ -113,15 +113,17 @@
 					<div class="projects-card">
 						<div class="project-image-container">
 							<img
-								src={project.url}
+								src={project.image}
 								alt={project.title}
 								class="w-full h-full rounded-lg shadow-lg object-cover"
 							/>
 						</div>
-						<div class="projects-logo">
-							<img src={project.iconUrl} alt="Project Icon" class="w-8 h-8" />
-							<p>{project.title}</p>
-						</div>
+						<a href={project.url} target="_blank" rel="noopener noreferrer">
+							<div class="projects-logo">
+								<img src={project.iconUrl} alt="Project Icon" class="w-8 h-8" />
+								<p>{project.title}</p>
+							</div>
+						</a>
 						<div class="projects-more" id={'more-' + project.id}>
 							<button on:click={() => toggleDescription(project.id)} id={'more-btn-' + project.id}
 								>En savoir +</button
@@ -299,7 +301,6 @@
 	}
 	.projects-more {
 		position: absolute;
-		/* background-color: rgba(255, 255, 255, 0.85); */
 		background-color: rgba(255, 255, 255, 0.35);
 		backdrop-filter: blur(0.3px);
 		bottom: 0.7rem;
@@ -312,6 +313,9 @@
 		align-items: center;
 		cursor: pointer;
 		transition: background-color 0.3s ease;
+		/* temporaire */
+		color: var(--ink);
+		background-color: rgba(255, 255, 255, 0.85);
 	}
 
 	.projects-more:hover {
