@@ -22,6 +22,9 @@ devDependencies:
   '@eslint/js':
     specifier: ^9.18.0
     version: 9.23.0
+  '@sveltejs/adapter-static':
+    specifier: ^3.0.10
+    version: 3.0.10(@sveltejs/kit@2.20.2)
   '@sveltejs/adapter-vercel':
     specifier: ^5.5.2
     version: 5.6.3(@sveltejs/kit@2.20.2)
@@ -854,6 +857,14 @@ packages:
       acorn: ^8.9.0
     dependencies:
       acorn: 8.14.1
+    dev: true
+
+  /@sveltejs/adapter-static@3.0.10(@sveltejs/kit@2.20.2):
+    resolution: {integrity: sha512-7D9lYFWJmB7zxZyTE/qxjksvMqzMuYrrsyh1f4AlZqeZeACPRySjbC3aFiY55wb1tWUaKOQG9PVbm74JcN2Iew==}
+    peerDependencies:
+      '@sveltejs/kit': ^2.0.0
+    dependencies:
+      '@sveltejs/kit': 2.20.2(@sveltejs/vite-plugin-svelte@5.0.3)(svelte@5.25.6)(vite@6.2.4)
     dev: true
 
   /@sveltejs/adapter-vercel@5.6.3(@sveltejs/kit@2.20.2):

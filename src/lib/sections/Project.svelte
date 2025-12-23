@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { gsap } from 'gsap';
+	import { base } from '$app/paths';
 	import type { Project } from '$lib/types/project';
 
 	export let projects: Project[] = [];
@@ -8,6 +9,9 @@
 
 	let openedId: string | number | null = null;
 	let outsideClickListener: ((e: MouseEvent) => void) | null = null;
+
+	const withBase = (path: string) =>
+		path.startsWith('http') || path.startsWith('data:') ? path : `${base}${path}`;
 
 	function toggleDescription(id: string | number) {
 		const desc = document.getElementById(`desc-${id}`);
@@ -113,7 +117,7 @@
 					<div class="projects-card">
 						<div class="project-image-container">
 							<img
-								src={project.image}
+								src={withBase(project.image)}
 								alt={project.title}
 								class="w-full h-full rounded-lg shadow-lg object-cover"
 							/>

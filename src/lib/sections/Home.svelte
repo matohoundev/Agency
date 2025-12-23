@@ -1,10 +1,11 @@
 <script>
+	import { base } from '$app/paths';
 	import Button from '$lib/components/button3d.svelte';
 </script>
 
 <section class="Home container mx-auto flex flex-col justify-center items-center gap-y-12">
 	<div class="relative hero-title-section">
-		<img src="/icons/logo-white-35-opacity.svg" alt="Logo" class="logo absolute" />
+		<img src={`${base}/icons/logo-white-35-opacity.svg`} alt="Logo" class="logo absolute" />
 		<div class="title-content">
 			<div class="relative text-center">
 				<p class="title relative z-10">

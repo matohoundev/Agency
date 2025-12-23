@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import Button from '$lib/components/button3d.svelte';
 	import type { Offer } from '$lib/types/offer';
 
@@ -49,7 +50,7 @@
 					<div class="stroke-appearance"></div>
 				{:else if feature !== ''}
 					<li class:highlight-feature={index === offer.features.length + 12 && offer.id === 2}>
-						<img src="/icons/check.svg" alt="Icon Check" />
+						<img src={`${base}/icons/check.svg`} alt="Icon Check" />
 						<span>{feature}</span>
 					</li>
 				{/if}

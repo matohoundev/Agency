@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { base } from '$app/paths';
+
 	const detailCards = [
 		{
 			id: 1,
@@ -9,7 +11,7 @@
 				'Expérience utilisateur fluide et intuitive',
 				'Chaque clic compte : interface pensée pour maximiser vos conversions'
 			],
-			imageUrl: '/images/Design.webp',
+			imageUrl: `${base}/images/Design.webp`,
 			imageAlt: 'UX/UI Design',
 			reversed: false
 		},
@@ -22,7 +24,7 @@
 				'Points de validation réguliers pour ajuster en temps réel',
 				'Communication claire et transparente tout au long du processus'
 			],
-			imageUrl: '/images/onboarding.webp',
+			imageUrl: `${base}/images/onboarding.webp`,
 			imageAlt: 'Onboarding',
 			reversed: true
 		},
@@ -35,7 +37,7 @@
 				'Optimisation SEO intégrée dès la conception',
 				'Responsive sur tous les appareils : mobile, tablette, desktop'
 			],
-			imageUrl: '/images/developpement.jpg',
+			imageUrl: `${base}/images/developpement.jpg`,
 			imageAlt: 'Développement',
 			reversed: false
 		},
@@ -48,7 +50,7 @@
 				'Formation à la gestion de votre site',
 				'Support technique inclus pour un démarrage serein'
 			],
-			imageUrl: '/images/lancement.jpg',
+			imageUrl: `${base}/images/lancement.jpg`,
 			imageAlt: 'Lancement',
 			reversed: true
 		}

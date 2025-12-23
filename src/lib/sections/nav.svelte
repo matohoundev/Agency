@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Hamburger from '$lib/icons/hamburger.svelte';
 	import { gsap } from 'gsap';
+	import { base } from '$app/paths';
 
 	let isMobileMenuOpen = false;
 
@@ -68,9 +69,9 @@
 	>
 		<!-- Logo -->
 		<div class="logo-content relative">
-			<a href="/" class="relative z-10">
-				<img src="/icons/logo-white.svg" alt="Logo" class="relative logo-light w-11" />
-				<img src="/icons/logo-white.svg" alt="Logo" class="w-11 logo-dark z-10" />
+			<a href={`${base}/`} class="relative z-10">
+				<img src={`${base}/icons/logo-white.svg`} alt="Logo" class="relative logo-light w-11" />
+				<img src={`${base}/icons/logo-white.svg`} alt="Logo" class="w-11 logo-dark z-10" />
 			</a>
 		</div>
 
@@ -81,10 +82,10 @@
 			<div class="relative">
 				<div class="bg-desktop-dark z-10"></div>
 				<ul class="hidden md:flex space-x-8 text-white relative z-20">
-					<li><a href="/#projects" class="hover:underline">Réalisations</a></li>
-					<li><a href="/#offre" class="hover:underline">Offre</a></li>
-					<li><a href="/#tarifs" class="hover:underline">Tarifs</a></li>
-					<li><a href="/#footer" class="hover:underline">Contact</a></li>
+					<li><a href={`${base}/#projects`} class="hover:underline">Réalisations</a></li>
+					<li><a href={`${base}/#offre`} class="hover:underline">Offre</a></li>
+					<li><a href={`${base}/#tarifs`} class="hover:underline">Tarifs</a></li>
+					<li><a href={`${base}/#footer`} class="hover:underline">Contact</a></li>
 				</ul>
 			</div>
 
@@ -102,16 +103,18 @@
 	>
 		<ul class="px-4 py-2">
 			<li class="py-2">
-				<a href="#projects" class="hover:underline" on:click={closeMobileMenu}>Réalisations</a>
+				<a href={`${base}/#projects`} class="hover:underline" on:click={closeMobileMenu}
+					>Réalisations</a
+				>
 			</li>
 			<li class="py-2">
-				<a href="#offre" class="hover:underline" on:click={closeMobileMenu}>Offre</a>
+				<a href={`${base}/#offre`} class="hover:underline" on:click={closeMobileMenu}>Offre</a>
 			</li>
 			<li class="py-2">
-				<a href="#tarifs" class="hover:underline" on:click={closeMobileMenu}>Tarifs</a>
+				<a href={`${base}/#tarifs`} class="hover:underline" on:click={closeMobileMenu}>Tarifs</a>
 			</li>
 			<li class="py-2">
-				<a href="#contact" class="hover:underline" on:click={closeMobileMenu}>Contact</a>
+				<a href={`${base}/#footer`} class="hover:underline" on:click={closeMobileMenu}>Contact</a>
 			</li>
 		</ul>
 	</div>

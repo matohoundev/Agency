@@ -1,9 +1,9 @@
-import adapter from '@sveltejs/adapter-vercel';
-import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import adapter from '@sveltejs/adapter-static';
 
 const config = {
-	preprocess: vitePreprocess(),
-	kit: { adapter: adapter() }
+	kit: {
+		adapter: adapter(),
+		paths: { base: process.env.NODE_ENV === 'production' ? '/agency-3d' : '' }
+	}
 };
-
 export default config;
